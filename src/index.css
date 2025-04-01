@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #0F172A;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-cinzel {
+    font-family: 'Cinzel', serif;
+}
+
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A2A44;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b8941e;
+}
+
+
+/* Custom animations */
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Shadow effects */
+
+.shadow-gold {
+    box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.39);
+}

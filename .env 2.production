@@ -1,0 +1,16 @@
+# This file contains the environment variables for production
+# Actual values will be provided by Render environment variables
+
+# Frontend environment variables
+VITE_API_URL=https://tendermitra-api.onrender.com
+VITE_SUPABASE_URL=https://kggqewrvgozdqbmlwcmv.supabase.co
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_will_be_set_in_render
+
+# These will be ignored in the frontend build but are here for documentation
+NODE_ENV=production
+PORT=10000
+MONGODB_URI=your_mongodb_uri_will_be_set_in_render
+JWT_SECRET=your_jwt_secret_will_be_set_in_render
+JWT_EXPIRES_IN=90d
+JWT_COOKIE_EXPIRES_IN=90
+CLIENT_URL=https://tendermitra-web.onrender.com 

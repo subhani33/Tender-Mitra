@@ -1,0 +1,46 @@
+services:
+  # Backend API service
+  - type: web
+    name: tendermitra-api
+    runtime: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: node server/server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        fromDatabase:
+          name: tendermitra-db
+          property: connectionString
+      - fromGroup: tender-secrets
+
+  # Frontend web service
+  - type: web
+    name: tendermitra-web
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://tendermitra-api.onrender.com
+      - fromGroup: tender-secrets
+
+databases:
+  - name: tendermitra-db
+    plan: free
+    databaseName: tendermitra
+    ipAllowList: [] # only allow internal connections
+
+envVarGroups:
+  - name: tender-secrets
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 90d
+      - key: JWT_COOKIE_EXPIRES_IN
+        value: 90 

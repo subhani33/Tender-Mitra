@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark blue circular background -->
+  <circle cx="32" cy="32" r="32" fill="#1A2A44"/>
+  
+  <!-- Gold crystal/diamond shape -->
+  <path d="M32 8L48 24L32 56L16 24L32 8Z" fill="#D4AF37"/>
+  
+  <!-- Highlight/shine effect -->
+  <path d="M32 8L48 24L32 40L32 8Z" fill="#F2D675" fill-opacity="0.5"/>
+  
+  <!-- Subtle facet lines -->
+  <path d="M32 8L32 56" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1"/>
+  <path d="M16 24L48 24" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1"/>
+</svg> 

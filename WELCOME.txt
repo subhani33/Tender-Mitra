@@ -1,0 +1,38 @@
+===============================================
+  WELCOME TO EDTODO TECHNOVATIONS TENDER PLATFORM
+===============================================
+
+This application provides a comprehensive platform for managing government tenders,
+bids, analytics, and learning resources.
+
+QUICK START:
+-----------
+1. Run both frontend and backend: ./run-dev.sh
+   OR
+   Backend: npm run server
+   Frontend: npm run client
+
+2. Access the application at:
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:3000
+
+3. Login with mock credentials:
+   - Email: user@example.com
+   - Password: password123
+
+FEATURES:
+--------
+- Tender Portal: Browse, search, and save tenders
+- Bid Management: Create and manage bid submissions
+- Analytics: Visualize tender data and bid performance
+- Knowledge Base: Articles and resources
+- Task Management: Organize bid-related tasks
+- Learning Hub: Educational resources
+
+DOCUMENTATION:
+-------------
+- README.md: Overview and basic setup
+- GUIDE.md: Detailed step-by-step instructions
+- API documentation is available in the code comments
+
+For more information, contact info@edtodo.tech 
