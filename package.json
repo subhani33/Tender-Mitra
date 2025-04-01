@@ -37,6 +37,7 @@
         "compression": "^1.7.4",
         "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
+        "csrf-csrf": "^3.1.0",
         "dotenv": "^16.4.7",
         "express": "^4.21.2",
         "express-mongo-sanitize": "^2.2.0",
