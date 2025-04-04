@@ -11,6 +11,10 @@
     <meta name="description" content="Explore prestigious government tenders with comprehensive tools and insights. Premier tender management platform with interactive visualizations." />
     <meta name="keywords" content="tenders, government tenders, procurement, bid management, tender dashboard, eprocure, tender mitra" />
 
+    <!-- Add resource hints for performance -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="preconnect" href="/">
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Tender Mitra | EdtoDo Technovations" />
@@ -24,21 +28,42 @@
     <meta name="twitter:description" content="Discover an efficient approach to tender management with interactive visualizations and real-time data." />
     <meta name="twitter:image" content="/images/twitter-image.jpg" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Performance optimization: DNS prefetch and preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload critical fonts with high priority -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" as="style" />
+
+    <!-- Load fonts after preloading -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="/textures/black-marble.jpg" />
-    <link rel="preload" as="image" href="/textures/gold-veins.png" />
+    <!-- Preload Critical Assets with high priority -->
+    <link rel="preload" as="image" href="/textures/black-marble.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/textures/gold-veins.png" fetchpriority="high" />
 
+    <!-- Critical CSS inlined to avoid render blocking -->
     <style>
+        /* Reset and critical styles */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             margin: 0;
             padding: 0;
-            background-color: #1A2A44;
+            background-color: #0D1629;
+            /* Darker than #1A2A44 for better contrast */
             font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-rendering: optimizeSpeed;
+            -webkit-font-smoothing: antialiased;
         }
         
         .font-cinzel {
@@ -48,12 +73,169 @@
         .font-montserrat {
             font-family: 'Montserrat', sans-serif;
         }
+        /* Initial load animation */
+        
+        #root:empty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0D1629;
+        }
+        
+        #root:empty::after {
+            content: "";
+            width: 80px;
+            height: 80px;
+            border: 4px solid #D4AF37;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            will-change: transform;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* Optimize contentful paint */
+        
+        .text-primary {
+            color: #D4AF37;
+        }
+        
+        .bg-secondary {
+            background-color: #1A2A44;
+        }
+        /* Loading animation */
+        
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        /* Page load transitions */
+        
+        .page-loaded .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* Progressive loading - blur-up technique */
+        
+        img.loading {
+            filter: blur(10px);
+            transition: filter 0.3s;
+        }
+        
+        img.loaded {
+            filter: blur(0);
+        }
     </style>
+
+    <!-- Preload main script - executed as soon as possible -->
+    <script src="/preload.js" async></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        // Register service worker for improved performance and offline capability
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New content is available; notify user
+                                    if (confirm('New version available! Click OK to update.')) {
+                                        navigator.serviceWorker.controller.postMessage({
+                                            type: 'SKIP_WAITING'
+                                        });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch(function(err) {
+                        console.error('ServiceWorker registration failed: ', err);
+                    });
+
+                // Handle controller change
+                let refreshing = false;
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (!refreshing) {
+                        refreshing = true;
+                        window.location.reload();
+                    }
+                });
+            });
+        }
+    </script>
 </head>
 
-<body class="bg-[#1A2A44] text-white">
+<body>
     <div id="root"></div>
+
+    <!-- Execute main app script with priority -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Defer non-critical JavaScript -->
+    <script>
+        // Mark when the page is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add loaded class to body to trigger transitions
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 100);
+
+            // Optimize image loading
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                img.classList.add('loading');
+                img.onload = () => {
+                    img.classList.add('loaded');
+                    img.classList.remove('loading');
+                };
+            });
+        });
+
+        // Implement requestIdleCallback polyfill for older browsers
+        window.requestIdleCallback = window.requestIdleCallback ||
+            function(cb) {
+                const start = Date.now();
+                return setTimeout(function() {
+                    cb({
+                        didTimeout: false,
+                        timeRemaining: function() {
+                            return Math.max(0, 50 - (Date.now() - start));
+                        }
+                    });
+                }, 1);
+            };
+
+        // Execute lower priority tasks during idle time
+        window.addEventListener('load', () => {
+            requestIdleCallback(() => {
+                // Load any non-critical resources
+                const deferredStyles = document.querySelectorAll('link[data-deferred="true"]');
+                deferredStyles.forEach(link => {
+                    link.setAttribute('rel', 'stylesheet');
+                    link.removeAttribute('data-deferred');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#831843" rx="30" ry="30" />
+  
+  <!-- Water Treatment Plant Base -->
+  <rect x="120" y="300" width="300" height="40" fill="#1e293b" />
+  
+  <!-- Treatment Tanks -->
+  <rect x="140" y="200" width="60" height="100" fill="#0c4a6e" stroke="#94a3b8" stroke-width="3" />
+  <rect x="210" y="200" width="60" height="100" fill="#0c4a6e" stroke="#94a3b8" stroke-width="3" />
+  <rect x="280" y="200" width="60" height="100" fill="#0c4a6e" stroke="#94a3b8" stroke-width="3" />
+  
+  <!-- Broken Pipe -->
+  <path d="M170 200 L170 150 L280 150 L280 200" fill="none" stroke="#94a3b8" stroke-width="8" />
+  <path d="M190 150 L190 130" fill="none" stroke="#94a3b8" stroke-width="8" />
+  <path d="M220 150 L220 130" fill="none" stroke="#94a3b8" stroke-width="8" />
+  <path d="M250 150 L250 130" fill="none" stroke="#94a3b8" stroke-width="8" />
+  
+  <!-- Water/Chemical Leaks -->
+  <path d="M190 145 Q200 155, 210 135 T230 145" fill="none" stroke="#14b8a6" stroke-width="4" stroke-dasharray="1,3" />
+  <path d="M190 147 Q205 160, 220 137 T250 147" fill="none" stroke="#14b8a6" stroke-width="4" stroke-dasharray="1,3" />
+  
+  <!-- Polluted Water -->
+  <rect x="80" y="350" width="350" height="30" fill="#166534" />
+  <path d="M90 350 Q120 335, 150 350 T210 350 T270 350 T330 350 T390 350" fill="none" stroke="#16a34a" stroke-width="2" />
+  <rect x="80" y="380" width="350" height="20" fill="#0c4a6e" />
+  
+  <!-- Warning Signs -->
+  <g transform="translate(110, 250)">
+    <path d="M0 0 L-15 25 L15 25 Z" fill="#facc15" stroke="#000" stroke-width="2" />
+    <text x="0" y="18" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#000">!</text>
+  </g>
+  
+  <g transform="translate(340, 250)">
+    <path d="M0 0 L-15 25 L15 25 Z" fill="#facc15" stroke="#000" stroke-width="2" />
+    <text x="0" y="18" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#000">!</text>
+  </g>
+  
+  <!-- Inspection Team -->
+  <g transform="translate(380, 320)">
+    <circle cx="0" cy="-15" r="8" fill="#fde68a" />
+    <rect x="-5" y="-7" width="10" height="15" fill="#2563eb" />
+    <path d="M-5 8 L-10 20 M5 8 L10 20" stroke="#2563eb" stroke-width="3" />
+    <rect x="-10" y="-20" width="20" height="5" fill="#fff" />
+  </g>
+  
+  <g transform="translate(410, 310)">
+    <circle cx="0" cy="-15" r="8" fill="#fde68a" />
+    <rect x="-5" y="-7" width="10" height="15" fill="#2563eb" />
+    <path d="M-5 8 L-10 20 M5 8 L10 20" stroke="#2563eb" stroke-width="3" />
+    <rect x="-15" y="-30" width="30" height="15" fill="#fff" />
+    <path d="M-10 -25 L10 -20 M-10 -20 L10 -25" stroke="#000" stroke-width="1" />
+  </g>
+  
+  <!-- Failure Indicator -->
+  <circle cx="100" cy="100" r="45" fill="#ef4444" />
+  <path d="M80 80 L120 120 M120 80 L80 120" stroke="white" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Design Document with Errors -->
+  <g transform="translate(430, 180)">
+    <rect x="-30" y="-40" width="60" height="80" fill="#fff" />
+    <path d="M-20 -20 L20 -20 M-20 -10 L10 -10 M-20 0 L15 0 M-20 10 L5 10 M-20 20 L20 20" fill="none" stroke="#000" stroke-width="2" />
+    <path d="M-10 -35 L0 -30 L10 -35" fill="none" stroke="#ef4444" stroke-width="2" />
+  </g>
+  
+  <!-- Text -->
+  <text x="256" y="430" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">
+    Water Treatment Plant
+  </text>
+  <text x="256" y="460" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Abandoned due to design flaws
+  </text>
+</svg> 

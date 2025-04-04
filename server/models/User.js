@@ -24,16 +24,28 @@ const userSchema = new mongoose.Schema({
         unique: true,
         lowercase: true,
         trim: true,
-        match: [
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-            'Please provide a valid email address'
-        ]
+        validate: {
+            validator: function(v) {
+                return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v);
+            },
+            message: props => `${props.value} is not a valid email address!`
+        }
     },
     password: {
         type: String,
         required: [true, 'Password is required'],
         minlength: [8, 'Password must be at least 8 characters'],
-        select: false // Don't return password in queries
+        select: false, // Don't return password in queries
+        validate: {
+            validator: function(v) {
+                // Check password strength - must have letters, numbers and special chars
+                const hasLetter = /[a-zA-Z]/.test(v);
+                const hasNumber = /\d/.test(v);
+                const hasSpecial = /[@$!%*#?&]/.test(v);
+                return hasLetter && hasNumber && hasSpecial;
+            },
+            message: () => 'Password must contain letters, numbers, and special characters'
+        }
     },
     role: {
         type: String,
@@ -178,6 +190,12 @@ userSchema.methods.createVerificationToken = function() {
     this.verificationTokenExpires = Date.now() + 24 * 60 * 60 * 1000;
 
     return verificationToken;
+};
+
+// Method to check if email exists (used for registration validation)
+userSchema.statics.emailExists = async function(email) {
+    const user = await this.findOne({ email: email.toLowerCase() });
+    return !!user;
 };
 
 // Export the model

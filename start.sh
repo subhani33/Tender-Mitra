@@ -12,7 +12,7 @@ echo -e "${GREEN}  Starting EdtoDo Technovations Website  ${NC}"
 echo -e "${GREEN}==================================================${NC}"
 
 echo -e "${BLUE}Backend API: ${YELLOW}http://localhost:3000${NC}"
-echo -e "${BLUE}Frontend UI: ${YELLOW}http://localhost:5173${NC}"
+echo -e "${BLUE}Frontend UI: ${YELLOW}http://localhost:4173${NC}"
 
 # Check if server directory exists
 if [ ! -d "server" ]; then
@@ -44,7 +44,7 @@ cd ..
 
 # Start frontend
 echo -e "${BLUE}Starting frontend server...${NC}"
-npx vite --port 5173 --host
+npx vite --port 4173 --host
 
 # When the script is terminated with Ctrl+C, kill the backend server
 trap "kill $SERVER_PID 2>/dev/null || true" EXIT 

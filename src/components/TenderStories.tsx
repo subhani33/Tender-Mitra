@@ -42,7 +42,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Implemented innovative drainage systems to work during monsoons",
       "Engaged local communities for smoother land acquisition"
     ],
-    image: "/images/success-stories/highway-project.jpg",
+    image: "/images/success-stories/highway-project.svg",
     metrics: [
       { label: "Time Saved", value: "180 days", icon: "clock" },
       { label: "Cost Efficiency", value: "12% under budget", icon: "money" },
@@ -68,7 +68,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Created comprehensive compliance documentation system",
       "Deployed specialized installation team with training program"
     ],
-    image: "/images/success-stories/hospital-equipment.jpg",
+    image: "/images/success-stories/hospital-equipment.svg",
     metrics: [
       { label: "Delivery", value: "15 days early", icon: "clock" },
       { label: "Quality", value: "98% rating", icon: "star" },
@@ -94,7 +94,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Advanced grid synchronization technology deployment",
       "Weather-resistant construction methodology"
     ],
-    image: "/images/success-stories/solar-plant.jpg",
+    image: "/images/success-stories/solar-plant.svg",
     metrics: [
       { label: "Capacity", value: "120 MW", icon: "zap" },
       { label: "Efficiency", value: "22% above target", icon: "trending-up" },
@@ -120,7 +120,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Modular design allowing phased implementation",
       "Use of recycled materials and renewable energy sources"
     ],
-    image: "/images/success-stories/smart-city.jpg",
+    image: "/images/success-stories/smart-city.svg",
     metrics: [
       { label: "Connectivity", value: "98.5% coverage", icon: "wifi" },
       { label: "Energy Savings", value: "32% reduction", icon: "battery" },
@@ -146,7 +146,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Advanced filtration systems for contaminated water sources",
       "Comprehensive local training and employment program"
     ],
-    image: "/images/success-stories/water-supply.jpg",
+    image: "/images/success-stories/water-supply.svg",
     metrics: [
       { label: "Coverage", value: "5,257 households", icon: "home" },
       { label: "Water Quality", value: "100% WHO standards", icon: "droplet" },
@@ -172,7 +172,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "International collaboration with experienced partners",
       "Centralized coordination office with agency representatives"
     ],
-    image: "/images/success-stories/defense-facility.jpg",
+    image: "/images/success-stories/defense-facility.svg",
     metrics: [
       { label: "Security Rating", value: "A+ classification", icon: "shield" },
       { label: "Maintenance Capacity", value: "24 aircraft/month", icon: "plane" },
@@ -198,7 +198,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "3D mapping of all underground utilities before work",
       "Night-time construction schedule for critical intersections"
     ],
-    image: "/images/success-stories/metro-rail.jpg",
+    image: "/images/success-stories/metro-rail.svg",
     metrics: [
       { label: "Daily Capacity", value: "120,000 passengers", icon: "users" },
       { label: "Travel Time Saved", value: "28 min/journey", icon: "clock" },
@@ -224,7 +224,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Satellite-based internet connectivity in ultra-remote areas",
       "Comprehensive digital literacy program for residents"
     ],
-    image: "/images/success-stories/digital-village.jpg",
+    image: "/images/success-stories/digital-village.svg",
     metrics: [
       { label: "Internet Access", value: "98.7% coverage", icon: "wifi" },
       { label: "Digital Services", value: "45+ available", icon: "smartphone" },
@@ -250,7 +250,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Nature-based solutions including mangrove restoration",
       "Specialized amphibious construction equipment"
     ],
-    image: "/images/success-stories/coastal-protection.jpg",
+    image: "/images/success-stories/coastal-protection.svg",
     metrics: [
       { label: "Coast Protected", value: "120 km", icon: "map" },
       { label: "Communities Secured", value: "42 villages", icon: "home" },
@@ -280,7 +280,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Redesign of project scope to reduce costs",
       "Negotiation with suppliers for extended payment terms"
     ],
-    image: "/images/failure-stories/housing-project.jpg",
+    image: "/images/failure-stories/housing-project.svg",
     metrics: [
       { label: "Cost Overrun", value: "68% above budget", icon: "trending-up" },
       { label: "Time Delay", value: "14 months", icon: "clock" },
@@ -306,7 +306,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Community engagement programs for local acceptance",
       "Revised routing for transmission infrastructure"
     ],
-    image: "/images/failure-stories/rural-power.jpg",
+    image: "/images/failure-stories/rural-power.svg",
     metrics: [
       { label: "Villages Connected", value: "28% of target", icon: "home" },
       { label: "Equipment Failure", value: "43% of installations", icon: "x-circle" },
@@ -332,7 +332,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Public consultations to address community concerns",
       "Technical consultants engaged to resolve system issues"
     ],
-    image: "/images/failure-stories/waste-management.jpg",
+    image: "/images/failure-stories/waste-management.svg",
     metrics: [
       { label: "Compliance Gap", value: "Failed 7 critical standards", icon: "alert-triangle" },
       { label: "System Efficiency", value: "28% below specification", icon: "activity" },
@@ -358,7 +358,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Alternative routing proposals to minimize disputes",
       "Engagement of legal experts for resolution"
     ],
-    image: "/images/failure-stories/highway-expansion.jpg",
+    image: "/images/failure-stories/highway-expansion.svg",
     metrics: [
       { label: "Legal Cases", value: "143 pending", icon: "file-text" },
       { label: "Completion Status", value: "12% of total length", icon: "percent" },
@@ -384,7 +384,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Engagement of additional technical experts",
       "Data anonymization protocols implementation"
     ],
-    image: "/images/failure-stories/traffic-system.jpg",
+    image: "/images/failure-stories/traffic-system.svg",
     metrics: [
       { label: "System Downtime", value: "42% of operational period", icon: "wifi-off" },
       { label: "False Alerts", value: "Thousands daily", icon: "bell" },
@@ -410,7 +410,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Scaling up capacity in revised plans",
       "Additional filtration systems proposal"
     ],
-    image: "/images/failure-stories/water-treatment.jpg",
+    image: "/images/failure-stories/water-treatment.svg",
     metrics: [
       { label: "Design Flaws", value: "17 critical issues identified", icon: "x-octagon" },
       { label: "Treatment Efficiency", value: "65% below required standards", icon: "droplet" },
@@ -436,7 +436,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Alternative financing attempts through PPP model",
       "Phased implementation approach proposal"
     ],
-    image: "/images/failure-stories/airport-project.jpg",
+    image: "/images/failure-stories/airport-project.svg",
     metrics: [
       { label: "Scope Reduction", value: "65% of original plans", icon: "scissors" },
       { label: "Funding Gap", value: "₹230 Crore", icon: "dollar-sign" },
@@ -462,7 +462,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Quality inspection and remediation program",
       "Revised project management framework"
     ],
-    image: "/images/failure-stories/court-complex.jpg",
+    image: "/images/failure-stories/court-complex.svg",
     metrics: [
       { label: "Work Completed", value: "37% before termination", icon: "percent" },
       { label: "Quality Issues", value: "82 major defects identified", icon: "alert-circle" },
@@ -488,7 +488,7 @@ const FAILURE_STORIES: TenderStory[] = [
       "Extensive user testing and feedback collection",
       "Simplified interface redesign"
     ],
-    image: "/images/failure-stories/metro-ticketing.jpg",
+    image: "/images/failure-stories/metro-ticketing.svg",
     metrics: [
       { label: "System Crashes", value: "Daily during peak hours", icon: "x-circle" },
       { label: "Transaction Errors", value: "17% of all attempts", icon: "alert-triangle" },
@@ -502,9 +502,21 @@ const TENDER_STORIES: TenderStory[] = [...SUCCESS_STORIES, ...FAILURE_STORIES];
 
 // Define a global cache for loaded images
 const preloadedImages: Record<string, boolean> = {};
+const preloadedSvgs: Record<string, boolean> = {};
+
+// Helper function to get the appropriate image URL (SVG with JPG fallback)
+const getImageUrl = (basePath: string, format: 'svg' | 'jpg' = 'svg'): string => {
+  // If the basePath already ends with the format extension, return it as is
+  if (basePath.endsWith(`.${format}`)) {
+    return basePath;
+  }
+  // Otherwise, append the format extension
+  return `${basePath}.${format}`;
+};
 
 export const TenderStories: React.FC = () => {
   const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>(preloadedImages);
+  const [svgSupported, setSvgSupported] = useState<Record<string, boolean>>({});
   const containerRef = useRef<HTMLDivElement>(null);
   const [storyType, setStoryType] = useState<'success' | 'failure' | 'all'>('all');
   const [activeStory, setActiveStory] = useState<TenderStory | null>(null);
@@ -519,12 +531,26 @@ export const TenderStories: React.FC = () => {
   useEffect(() => {
     // Preload all images to prevent layout shifts
     TENDER_STORIES.forEach(story => {
-      if (!preloadedImages[story.image]) {
-        const img = new Image();
-        img.src = story.image;
-        img.onload = () => {
-          preloadedImages[story.image] = true;
-          setImagesLoaded({...preloadedImages});
+      // Try loading SVG first
+      if (!preloadedSvgs[story.image]) {
+        const svgImg = new Image();
+        svgImg.src = getImageUrl(story.image, 'svg');
+        svgImg.onload = () => {
+          preloadedSvgs[story.image] = true;
+          setSvgSupported(prev => ({...prev, [story.image]: true}));
+          setImagesLoaded(prev => ({...prev, [story.image]: true}));
+        };
+        svgImg.onerror = () => {
+          // SVG not available, try JPG
+          setSvgSupported(prev => ({...prev, [story.image]: false}));
+          if (!preloadedImages[story.image]) {
+            const jpgImg = new Image();
+            jpgImg.src = getImageUrl(story.image, 'jpg');
+            jpgImg.onload = () => {
+              preloadedImages[story.image] = true;
+              setImagesLoaded(prev => ({...prev, [story.image]: true}));
+            };
+          }
         };
       }
     });
@@ -537,7 +563,7 @@ export const TenderStories: React.FC = () => {
   };
   
   return (
-    <section className="py-16 bg-[#0D1629] text-white optimize-paint">
+    <section className="py-16 bg-[#0D1629] text-white">
       <div className="container mx-auto px-4" ref={containerRef}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -553,24 +579,42 @@ export const TenderStories: React.FC = () => {
           
           {/* Filter tabs */}
           <div className="flex justify-center mt-8 space-x-4">
-            <button 
-              className={`px-6 py-2 rounded-full transition-all ${storyType === 'all' ? 'bg-primary text-black' : 'bg-gray-800 text-white'}`}
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-2 rounded-full transition-all duration-300 border-2
+                ${storyType === 'all' 
+                  ? 'bg-primary text-black border-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.5)]' 
+                  : 'bg-gray-800 text-white border-transparent hover:border-[#D4AF37]/50'
+                }`}
               onClick={() => setStoryType('all')}
             >
               All Stories
-            </button>
-            <button 
-              className={`px-6 py-2 rounded-full transition-all ${storyType === 'success' ? 'bg-primary text-black' : 'bg-gray-800 text-white'}`}
+            </motion.button>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-2 rounded-full transition-all duration-300 border-2
+                ${storyType === 'success' 
+                  ? 'bg-primary text-black border-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.5)]' 
+                  : 'bg-gray-800 text-white border-transparent hover:border-[#D4AF37]/50'
+                }`}
               onClick={() => setStoryType('success')}
             >
               Success Stories
-            </button>
-            <button 
-              className={`px-6 py-2 rounded-full transition-all ${storyType === 'failure' ? 'bg-primary text-black' : 'bg-gray-800 text-white'}`}
+            </motion.button>
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-2 rounded-full transition-all duration-300 border-2
+                ${storyType === 'failure' 
+                  ? 'bg-primary text-black border-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.5)]' 
+                  : 'bg-gray-800 text-white border-transparent hover:border-[#D4AF37]/50'
+                }`}
               onClick={() => setStoryType('failure')}
             >
               Failure Stories
-            </button>
+            </motion.button>
           </div>
         </motion.div>
         
@@ -596,130 +640,124 @@ interface StoryCardProps {
 }
 
 const StoryCard: React.FC<StoryCardProps> = ({ story, index, isImageLoaded }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  // Load image when it comes into view if not already loaded
-  useEffect(() => {
-    if (isInView && !isImageLoaded && !preloadedImages[story.image]) {
-      const img = new Image();
-      img.src = story.image;
-      img.loading = 'lazy';
-      img.onload = () => {
-        preloadedImages[story.image] = true;
-      };
-    }
-  }, [isInView, isImageLoaded, story.image]);
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, { once: true, margin: "0px 0px -100px 0px" });
+  const [imageLoaded, setImageLoaded] = useState(isImageLoaded);
+  const [isSvg, setIsSvg] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
   
-  // Animation variants for better performance
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { 
-        duration: 0.5,
-        delay: index * 0.1, // Stagger based on index
-        ease: "easeOut"
-      }
+  const handleImageError = () => {
+    // If SVG fails, try JPG
+    if (isSvg) {
+      setIsSvg(false);
     }
   };
-
+  
+  const imageUrl = isSvg 
+    ? getImageUrl(story.image, 'svg')
+    : getImageUrl(story.image, 'jpg');
+    
   return (
     <motion.div
-      ref={ref}
-      variants={cardVariants}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      className={`bg-[#1A2A44] rounded-lg overflow-hidden shadow-lg border ${
-        story.type === 'success' ? 'border-green-700' : 'border-amber-700'
-      } transition-all will-animate`}
+      ref={cardRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="h-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative w-full h-56">
-        {/* Success/Failure Badge */}
-        <div className={`absolute top-4 right-4 z-10 px-3 py-1 rounded-full text-sm font-medium ${
-          story.type === 'success' ? 'bg-green-600 text-white' : 'bg-red-600 text-white'
-        }`}>
-          {story.type === 'success' ? 'Success' : 'Failure'}
-        </div>
-        
-        {/* Skeleton loader */}
-        <div 
-          className={`absolute inset-0 skeleton-loader ${isImageLoaded ? 'opacity-0' : 'opacity-100'}`}
-          style={{ transition: 'opacity 0.5s' }}
-        />
-        
-        {/* Image with optimized loading */}
-        <img 
-          src={story.image} 
-          alt={story.title}
-          className="w-full h-full object-cover img-optimize use-gpu"
-          style={{ opacity: isImageLoaded ? 1 : 0 }}
-          loading="lazy"
-          decoding="async"
-          fetchPriority={index < 2 ? "high" : "auto"}
-          onLoad={() => {
-            preloadedImages[story.image] = true;
-          }}
-        />
-        
-        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
-          <h3 className="text-xl font-cinzel text-primary">{story.title}</h3>
-          <p className="text-white/80 text-sm">{story.company}</p>
-        </div>
-      </div>
-      
-      <div className="p-6">
-        <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-          <div>
-            <p className="text-white/60">Tender Value</p>
-            <p className="text-white font-medium">{story.value}</p>
+      <Card className={`h-full overflow-hidden transition-all duration-300 
+        ${story.type === 'success' 
+          ? 'border-green-500/30 hover:border-green-500/70' 
+          : 'border-red-500/30 hover:border-red-500/70'
+        }
+        group hover:shadow-[0_0_15px_rgba(212,175,55,0.5)] relative
+        before:absolute before:inset-0 before:border-2 before:border-[#D4AF37]/0 
+        hover:before:border-[#D4AF37]/80 before:transition-all before:duration-300 before:rounded-xl
+      `}>
+        <div className="relative h-48 overflow-hidden">
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-gray-800 animate-pulse"></div>
+          )}
+          <motion.img
+            src={imageUrl}
+            alt={story.title}
+            onLoad={() => setImageLoaded(true)}
+            onError={handleImageError}
+            animate={isHovered ? { scale: 1.05 } : { scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className={`w-full h-full object-cover transition-all duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            } group-hover:saturate-[1.2] group-hover:brightness-110`}
+          />
+          <div className={`absolute top-0 right-0 m-2 px-3 py-1 rounded-full text-xs font-medium 
+            ${story.type === 'success' 
+              ? 'bg-green-500/90 text-white' 
+              : 'bg-red-500/90 text-white'
+            }
+            shadow-lg z-10
+          `}>
+            {story.type === 'success' ? 'Success' : 'Learning'}
           </div>
-          <div>
-            <p className="text-white/60">Timeframe</p>
-            <p className="text-white font-medium">{story.timeframe}</p>
-          </div>
-          <div>
-            <p className="text-white/60">Tender ID</p>
-            <p className="text-white font-medium">{story.tenderId}</p>
-          </div>
-          <div>
-            <p className="text-white/60">Outcome</p>
-            <p className={`font-medium ${story.type === 'success' ? 'text-green-400' : 'text-amber-400'}`}>
-              {story.outcome}
-            </p>
-          </div>
+          
+          {/* Luxury overlay effect */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1A2A44]/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
         </div>
         
-        <div className="mb-6">
-          <h4 className="text-primary font-cinzel mb-2">Challenges</h4>
-          <ul className="list-disc pl-5 space-y-1 text-white/80 text-sm">
-            {story.challenges.map((challenge, i) => (
-              <li key={i}>{challenge}</li>
-            ))}
-          </ul>
-        </div>
-        
-        <div className="mb-6">
-          <h4 className="text-primary font-cinzel mb-2">
-            {story.type === 'success' ? 'Solutions' : 'Attempted Solutions'}
-          </h4>
-          <ul className="list-disc pl-5 space-y-1 text-white/80 text-sm">
-            {story.solutions.map((solution, i) => (
-              <li key={i}>{solution}</li>
-            ))}
-          </ul>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-2 mt-4">
-          {story.metrics.map((metric, i) => (
-            <div key={i} className="bg-[#0D1629]/50 p-3 rounded text-center">
-              <p className="text-primary text-sm">{metric.label}</p>
-              <p className="text-white font-medium">{metric.value}</p>
+        <div className="p-6">
+          <h3 className="text-xl font-cinzel text-primary mb-4 group-hover:text-[#D4AF37] transition-colors duration-300">{story.title}</h3>
+          <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div>
+              <p className="text-white/60">Tender Value</p>
+              <p className="text-white font-medium group-hover:text-[#D4AF37] transition-colors duration-300">{story.value}</p>
             </div>
-          ))}
+            <div>
+              <p className="text-white/60">Timeframe</p>
+              <p className="text-white font-medium">{story.timeframe}</p>
+            </div>
+            <div>
+              <p className="text-white/60">Tender ID</p>
+              <p className="text-white font-medium">{story.tenderId}</p>
+            </div>
+            <div>
+              <p className="text-white/60">Outcome</p>
+              <p className={`font-medium ${story.type === 'success' ? 'text-green-400' : 'text-amber-400'}`}>
+                {story.outcome}
+              </p>
+            </div>
+          </div>
+          
+          <div className="mb-6">
+            <h4 className="text-primary font-cinzel mb-2 group-hover:text-[#D4AF37] transition-colors duration-300">Challenges</h4>
+            <ul className="list-disc pl-5 space-y-1 text-white/80 text-sm">
+              {story.challenges.map((challenge, i) => (
+                <li key={i}>{challenge}</li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="mb-6">
+            <h4 className="text-primary font-cinzel mb-2 group-hover:text-[#D4AF37] transition-colors duration-300">
+              {story.type === 'success' ? 'Solutions' : 'Attempted Solutions'}
+            </h4>
+            <ul className="list-disc pl-5 space-y-1 text-white/80 text-sm">
+              {story.solutions.map((solution, i) => (
+                <li key={i}>{solution}</li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="grid grid-cols-3 gap-2 mt-4">
+            {story.metrics.map((metric, i) => (
+              <div key={i} className="bg-[#0D1629]/50 p-3 rounded text-center group-hover:bg-[#0D1629]/80 transition-colors duration-300 border border-transparent group-hover:border-[#D4AF37]/30">
+                <p className="text-primary text-sm group-hover:text-[#D4AF37] transition-colors duration-300">{metric.label}</p>
+                <p className="text-white font-medium">{metric.value}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </Card>
     </motion.div>
   );
 }; 

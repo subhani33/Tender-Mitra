@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#15803d" rx="30" ry="30" />
+  
+  <!-- Sun -->
+  <circle cx="100" cy="100" r="60" fill="#facc15" />
+  <g transform="translate(100, 100)">
+    <path d="M0 -80 L0 -65 M56.5 -56.5 L46 -46 M80 0 L65 0 M56.5 56.5 L46 46 M0 80 L0 65 M-56.5 56.5 L-46 46 M-80 0 L-65 0 M-56.5 -56.5 L-46 -46" 
+          stroke="#facc15" stroke-width="6" stroke-linecap="round" />
+  </g>
+  
+  <!-- Ground Base -->
+  <rect x="50" y="320" width="410" height="100" fill="#166534" />
+  <path d="M50 320 C150 300, 250 330, 350 310 S450 300, 500 320" fill="none" stroke="#16a34a" stroke-width="3" />
+  
+  <!-- Solar Panel Arrays -->
+  <!-- Row 1 -->
+  <g transform="translate(120, 280)">
+    <rect x="-30" y="-40" width="60" height="40" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" transform="skewX(-20)" />
+    <line x1="-30" y1="-40" x2="-30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <line x1="30" y1="-40" x2="30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <rect x="-25" y="-5" width="50" height="5" fill="#64748b" />
+    <rect x="-20" y="0" width="40" height="40" fill="#64748b" />
+  </g>
+  
+  <g transform="translate(200, 280)">
+    <rect x="-30" y="-40" width="60" height="40" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" transform="skewX(-20)" />
+    <line x1="-30" y1="-40" x2="-30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <line x1="30" y1="-40" x2="30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <rect x="-25" y="-5" width="50" height="5" fill="#64748b" />
+    <rect x="-20" y="0" width="40" height="40" fill="#64748b" />
+  </g>
+  
+  <g transform="translate(280, 280)">
+    <rect x="-30" y="-40" width="60" height="40" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" transform="skewX(-20)" />
+    <line x1="-30" y1="-40" x2="-30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <line x1="30" y1="-40" x2="30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <rect x="-25" y="-5" width="50" height="5" fill="#64748b" />
+    <rect x="-20" y="0" width="40" height="40" fill="#64748b" />
+  </g>
+  
+  <!-- Row 2 -->
+  <g transform="translate(160, 350)">
+    <rect x="-30" y="-40" width="60" height="40" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" transform="skewX(-20)" />
+    <line x1="-30" y1="-40" x2="-30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <line x1="30" y1="-40" x2="30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <rect x="-25" y="-5" width="50" height="5" fill="#64748b" />
+    <rect x="-20" y="0" width="40" height="40" fill="#64748b" />
+  </g>
+  
+  <g transform="translate(240, 350)">
+    <rect x="-30" y="-40" width="60" height="40" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" transform="skewX(-20)" />
+    <line x1="-30" y1="-40" x2="-30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <line x1="30" y1="-40" x2="30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <rect x="-25" y="-5" width="50" height="5" fill="#64748b" />
+    <rect x="-20" y="0" width="40" height="40" fill="#64748b" />
+  </g>
+  
+  <g transform="translate(320, 350)">
+    <rect x="-30" y="-40" width="60" height="40" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1" transform="skewX(-20)" />
+    <line x1="-30" y1="-40" x2="-30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <line x1="30" y1="-40" x2="30" y2="0" stroke="#64748b" stroke-width="3" transform="skewX(-20)" />
+    <rect x="-25" y="-5" width="50" height="5" fill="#64748b" />
+    <rect x="-20" y="0" width="40" height="40" fill="#64748b" />
+  </g>
+  
+  <!-- Power lines and connections -->
+  <g transform="translate(400, 270)">
+    <rect x="-15" y="0" width="30" height="60" fill="#7f1d1d" />
+    <rect x="-25" y="-15" width="50" height="15" fill="#7f1d1d" />
+    <path d="M-20 -15 L-20 -100 M0 -15 L0 -120 M20 -15 L20 -100" fill="none" stroke="#374151" stroke-width="2" />
+    <path d="M-20 -100 L350 -100 M0 -120 L350 -120 M20 -100 L350 -100" fill="none" stroke="#374151" stroke-width="2" />
+  </g>
+  
+  <!-- Wind Turbine -->
+  <g transform="translate(400, 190)">
+    <rect x="-5" y="0" width="10" height="150" fill="#e2e8f0" />
+    <circle cx="0" cy="0" r="10" fill="#e2e8f0" />
+    <path d="M0 0 L-80 30 L-90 20 Z" fill="#e2e8f0" transform="rotate(30 0 0)" />
+    <path d="M0 0 L-80 30 L-90 20 Z" fill="#e2e8f0" transform="rotate(150 0 0)" />
+    <path d="M0 0 L-80 30 L-90 20 Z" fill="#e2e8f0" transform="rotate(270 0 0)" />
+  </g>
+  
+  <!-- Workers/Technicians -->
+  <g transform="translate(180, 300)">
+    <circle cx="0" cy="-15" r="8" fill="#fde68a" />
+    <rect x="-5" y="-7" width="10" height="15" fill="#2563eb" />
+    <path d="M-5 8 L-10 20 M5 8 L10 20" stroke="#2563eb" stroke-width="3" />
+  </g>
+  
+  <g transform="translate(350, 370)">
+    <circle cx="0" cy="-15" r="8" fill="#fde68a" />
+    <rect x="-5" y="-7" width="10" height="15" fill="#2563eb" />
+    <path d="M-5 8 L-10 20 M5 8 L10 20" stroke="#2563eb" stroke-width="3" />
+  </g>
+  
+  <!-- Success marker -->
+  <circle cx="430" cy="100" r="50" fill="#22c55e" />
+  <path d="M410 100 L425 115 L450 85" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Text -->
+  <text x="256" y="450" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">
+    Solar Power Plant Project
+  </text>
+  <text x="256" y="480" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    First phase completed ahead of schedule
+  </text>
+</svg> 

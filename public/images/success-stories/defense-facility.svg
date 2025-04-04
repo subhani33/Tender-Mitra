@@ -1,0 +1,51 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#34568B" rx="10" ry="10"/>
+  
+  <!-- Hangar Building -->
+  <rect x="50" y="150" width="300" height="120" fill="#435A75" stroke="#DDDDDD" stroke-width="2"/>
+  <path d="M50,150 L200,70 L350,150" fill="#435A75" stroke="#DDDDDD" stroke-width="2"/>
+  
+  <!-- Hangar Door -->
+  <rect x="100" y="160" width="200" height="110" fill="#304560" stroke="#DDDDDD" stroke-width="2"/>
+  <line x1="200" y1="160" x2="200" y2="270" stroke="#DDDDDD" stroke-width="2"/>
+  
+  <!-- Aircraft silhouette -->
+  <g transform="translate(120, 190) scale(0.7)">
+    <!-- Fuselage -->
+    <ellipse cx="120" cy="50" rx="90" ry="20" fill="#A0A0A0" stroke="#555555" stroke-width="1"/>
+    <!-- Wings -->
+    <path d="M120,45 L40,70 L50,80 L120,55 L190,80 L200,70 L120,45" fill="#888888" stroke="#555555" stroke-width="1"/>
+    <!-- Tail -->
+    <path d="M190,50 L220,20 L210,18 L180,48" fill="#888888" stroke="#555555" stroke-width="1"/>
+    <!-- Cockpit -->
+    <path d="M50,50 C40,46 40,43 50,40 L70,45 L70,55 L50,50" fill="#333333" stroke="#555555" stroke-width="1"/>
+  </g>
+  
+  <!-- Maintenance Equipment -->
+  <rect x="60" y="240" width="30" height="20" fill="#D35400" stroke="#222222" stroke-width="1"/>
+  <rect x="310" y="240" width="30" height="20" fill="#D35400" stroke="#222222" stroke-width="1"/>
+  <circle cx="65" cy="260" r="5" fill="#333333"/>
+  <circle cx="85" cy="260" r="5" fill="#333333"/>
+  <circle cx="315" cy="260" r="5" fill="#333333"/>
+  <circle cx="335" cy="260" r="5" fill="#333333"/>
+  
+  <!-- Technicians -->
+  <circle cx="250" cy="230" r="7" fill="#3A506B"/>
+  <rect x="247" y="237" width="6" height="15" fill="#3A506B"/>
+  <circle cx="270" cy="240" r="7" fill="#3A506B"/>
+  <rect x="267" y="247" width="6" height="15" fill="#3A506B"/>
+  
+  <!-- Security fence -->
+  <line x1="20" y1="280" x2="380" y2="280" stroke="#666666" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="20" y1="280" x2="20" y2="230" stroke="#666666" stroke-width="2"/>
+  <line x1="380" y1="280" x2="380" y2="230" stroke="#666666" stroke-width="2"/>
+  
+  <!-- Success Indicator -->
+  <circle cx="340" cy="50" r="25" fill="#5cb85c" fill-opacity="0.8"/>
+  <path d="M330,50 L335,55 L350,40" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Title text -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Defense Aircraft Maintenance Facility</text>
+  <text x="200" y="50" font-family="Arial" font-size="12" fill="#DDDDDD" text-anchor="middle">Completed 3 months ahead of schedule</text>
+</svg> 

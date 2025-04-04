@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#7f1d1d" rx="30" ry="30" />
+  
+  <!-- Waste facility -->
+  <g transform="translate(256, 256)">
+    <!-- Main building -->
+    <rect x="-100" y="-60" width="200" height="120" fill="#475569" rx="10" ry="10" />
+    
+    <!-- Smokestacks -->
+    <rect x="-70" y="-100" width="20" height="40" fill="#374151" />
+    <rect x="50" y="-120" width="20" height="60" fill="#374151" />
+    
+    <!-- Dark smoke (indicating problems) -->
+    <path d="M-60 -110 C-80 -140, -40 -160, -60 -190" fill="none" stroke="#1f2937" stroke-width="8" />
+    <path d="M-65 -115 C-85 -155, -30 -170, -50 -200" fill="none" stroke="#1f2937" stroke-width="10" />
+    
+    <path d="M60 -130 C40 -170, 80 -190, 60 -220" fill="none" stroke="#1f2937" stroke-width="8" />
+    <path d="M65 -135 C30 -180, 90 -200, 70 -230" fill="none" stroke="#1f2937" stroke-width="10" />
+    
+    <!-- Storage containers with warning symbols -->
+    <g transform="translate(-160, 20)">
+      <rect x="-20" y="-30" width="40" height="60" fill="#fbbf24" />
+      <path d="M-5 -10 L5 -10 L0 5 Z" fill="#000" />
+      <rect x="-2" y="10" width="4" height="10" fill="#000" />
+    </g>
+    
+    <g transform="translate(160, 30)">
+      <rect x="-20" y="-30" width="40" height="60" fill="#fbbf24" />
+      <path d="M-5 -10 L5 -10 L0 5 Z" fill="#000" />
+      <rect x="-2" y="10" width="4" height="10" fill="#000" />
+    </g>
+    
+    <!-- Waste pile -->
+    <path d="M-180 60 Q -120 20, -80 60 Q -40 20, 0 60 Q 40 20, 80 60 Q 120 20, 180 60" fill="#71717a" />
+    <path d="M-170 60 Q -110 30, -70 60 Q -30 30, 10 60 Q 50 30, 90 60 Q 130 40, 170 60" fill="#52525b" />
+  </g>
+  
+  <!-- Warning signs -->
+  <g transform="translate(400, 120)">
+    <polygon points="0,-30 26,15 -26,15" fill="#facc15" stroke="#000" stroke-width="2" />
+    <text x="0" y="8" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+  
+  <g transform="translate(100, 150)">
+    <circle cx="0" cy="0" r="28" fill="#f87171" stroke="#000" stroke-width="2" />
+    <text x="0" y="8" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">X</text>
+  </g>
+  
+  <!-- Failure marker -->
+  <circle cx="120" cy="90" r="45" fill="#ef4444" />
+  <path d="M95 90 L145 90 M120 65 L120 115" stroke="white" stroke-width="8" transform="rotate(45 120 90)" />
+  
+  <!-- Text -->
+  <text x="256" y="390" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">
+    Municipal Waste Management
+  </text>
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Cancelled due to compliance issues
+  </text>
+</svg> 

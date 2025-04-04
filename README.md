@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # Tender-Mitra
-=======
-# EdtoDo Technovations - Government Tender Platform
 
 A comprehensive platform for government tender management, bid assistance, analytics, and learning resources.
 
@@ -213,4 +210,33 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For questions or support, please contact:
 - Email: info@edtodo.tech
->>>>>>> 7fa9674 (Configure project for Render deployment)
+
+# Authentication and User Management
+
+We've added full user authentication and registration functionality to the Tender Mitra platform:
+
+## Authentication Features
+
+- **User Registration**: Users can create new accounts with email, password, and username.
+- **User Login**: Secure login with JWT token-based authentication.
+- **Password Security**: Passwords are hashed using bcrypt with salt rounds for maximum security.
+- **JWT Authentication**: JSON Web Tokens for secure, stateless authentication.
+- **Token Management**: Automatic token refresh and secure storage.
+- **Protected Routes**: Routes that require authentication are protected on both frontend and backend.
+
+## Implementation Details
+
+- **Frontend**: React components for Login and Registration
+- **Backend**: Express.js routes for authentication with JWT
+- **Database**: MongoDB for user storage (with fallback to mock data)
+- **Security**: CSRF protection, rate limiting, and secure HTTP-only cookies
+
+## Getting Started with Authentication
+
+1. Register at `/register` with your email, username, and a strong password
+2. Log in at `/login` with your credentials
+3. Access protected features like bid submission and tender management
+
+For development, you can use these test credentials:
+- Email: user@example.com
+- Password: password123

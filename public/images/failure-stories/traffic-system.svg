@@ -1,0 +1,122 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#4A148C" rx="10" ry="10"/>
+  
+  <!-- City skyline silhouette -->
+  <path d="M0,150 L15,150 L15,130 L25,130 L25,140 L35,140 L35,120 L50,120 L50,140 L65,140 L65,110 L75,110 L75,150 L90,150 L90,100 L100,100 L100,130 L110,130 L110,90 L125,90 L125,150 L140,150 L140,110 L150,110 L150,130 L165,130 L165,80 L180,80 L180,150 L195,150 L195,120 L210,120 L210,100 L225,100 L225,150 L240,150 L240,90 L255,90 L255,140 L270,140 L270,110 L285,110 L285,130 L300,130 L300,80 L315,80 L315,150 L330,150 L330,120 L345,120 L345,100 L360,100 L360,130 L375,130 L375,150 L400,150 L400,300 L0,300 Z" fill="#311B92"/>
+  
+  <!-- Main road -->
+  <rect x="0" y="170" width="400" height="60" fill="#424242"/>
+  
+  <!-- Road markings -->
+  <path d="M20,200 L60,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,10"/>
+  <path d="M80,200 L120,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,10"/>
+  <path d="M140,200 L180,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,10"/>
+  <path d="M200,200 L240,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,10"/>
+  <path d="M260,200 L300,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,10"/>
+  <path d="M320,200 L360,200" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="10,10"/>
+  
+  <!-- Side roads -->
+  <rect x="100" y="150" width="30" height="20" fill="#424242"/>
+  <rect x="270" y="150" width="30" height="20" fill="#424242"/>
+  <rect x="100" y="230" width="30" height="70" fill="#424242"/>
+  <rect x="270" y="230" width="30" height="70" fill="#424242"/>
+  
+  <!-- Broken traffic lights -->
+  <!-- Intersection 1 -->
+  <rect x="85" y="150" width="5" height="20" fill="#616161"/>
+  <rect x="80" y="150" width="15" height="5" fill="#616161"/>
+  <circle cx="88" cy="155" r="4" fill="#9E9E9E"/> <!-- off -->
+  <circle cx="88" cy="165" r="4" fill="#9E9E9E"/> <!-- off -->
+  
+  <!-- Intersection 2 -->
+  <rect x="140" y="155" width="5" height="15" fill="#616161"/>
+  <rect x="135" y="155" width="15" height="5" fill="#616161"/>
+  <circle cx="143" cy="160" r="4" fill="#9E9E9E"/> <!-- off -->
+  
+  <!-- Intersection 3 -->
+  <rect x="255" y="150" width="5" height="20" fill="#616161"/>
+  <rect x="250" y="150" width="15" height="5" fill="#616161"/>
+  <circle cx="258" cy="155" r="4" fill="#F44336"/> <!-- stuck on red -->
+  <circle cx="258" cy="165" r="4" fill="#9E9E9E"/>
+  
+  <!-- Intersection 4 -->
+  <rect x="310" y="155" width="5" height="15" fill="#616161"/>
+  <rect x="305" y="155" width="15" height="5" fill="#616161"/>
+  <circle cx="313" cy="160" r="4" fill="#4CAF50"/> <!-- stuck on green -->
+  
+  <!-- Traffic congestion -->
+  <!-- Cars backed up at red light -->
+  <rect x="230" y="190" width="20" height="10" fill="#EF5350"/>
+  <rect x="205" y="190" width="20" height="10" fill="#42A5F5"/>
+  <rect x="180" y="190" width="20" height="10" fill="#66BB6A"/>
+  <rect x="155" y="190" width="20" height="10" fill="#FFA726"/>
+  <rect x="130" y="190" width="20" height="10" fill="#BA68C8"/>
+  
+  <!-- Collision at intersection -->
+  <rect x="265" y="185" width="20" height="10" transform="rotate(45, 275, 190)" fill="#EF5350"/>
+  <rect x="285" y="195" width="20" height="10" transform="rotate(-30, 295, 200)" fill="#42A5F5"/>
+  
+  <!-- Cars moving wrong direction (system failure) -->
+  <rect x="330" y="195" width="20" height="10" fill="#FFA726"/>
+  <rect x="360" y="185" width="20" height="10" fill="#66BB6A"/>
+  
+  <!-- Broken traffic sensors -->
+  <circle cx="100" cy="200" r="5" fill="#212121"/>
+  <path d="M97,197 L103,203 M103,197 L97,203" stroke="white" stroke-width="1"/>
+  
+  <circle cx="270" cy="200" r="5" fill="#212121"/>
+  <path d="M267,197 L273,203 M273,197 L267,203" stroke="white" stroke-width="1"/>
+  
+  <!-- Central control system with issues -->
+  <rect x="180" y="100" width="40" height="30" fill="#424242"/>
+  <rect x="185" y="105" width="30" height="20" fill="#212121"/>
+  <!-- Error messages on screen -->
+  <path d="M190,110 L210,110" stroke="#F44336" stroke-width="1"/>
+  <path d="M190,115 L205,115" stroke="#F44336" stroke-width="1"/>
+  <path d="M190,120 L200,120" stroke="#F44336" stroke-width="1"/>
+  <circle cx="215" cy="110" r="3" fill="#F44336"/>
+  
+  <!-- Malfunctioning surveillance cameras -->
+  <path d="M50,160 L60,160 L65,165 L55,165 Z" fill="#757575"/>
+  <circle cx="57" cy="162" r="3" fill="#212121"/>
+  <path d="M59,159 L62,156" stroke="#9E9E9E" stroke-width="1"/>
+  <line x1="53" y1="160" x2="53" y2="170" stroke="#9E9E9E" stroke-width="1"/>
+  
+  <path d="M330,160 L340,160 L345,165 L335,165 Z" fill="#757575"/>
+  <circle cx="337" cy="162" r="3" fill="#212121"/>
+  <path d="M339,159 L342,156" stroke="#9E9E9E" stroke-width="1"/>
+  <line x1="333" y1="160" x2="333" y2="170" stroke="#9E9E9E" stroke-width="1"/>
+  
+  <!-- Broken electronic display -->
+  <rect x="200" y="150" width="30" height="15" fill="#212121"/>
+  <path d="M205,155 L225,155" stroke="#9E9E9E" stroke-width="0.5"/>
+  <path d="M205,160" stroke="#9E9E9E" stroke-width="0.5"/>
+  <path d="M215,160 L225,160" stroke="#9E9E9E" stroke-width="0.5"/>
+  <path d="M205,155 L225,165" stroke="#F44336" stroke-width="1"/>
+  
+  <!-- Angry drivers -->
+  <circle cx="235" cy="185" r="3" fill="#FFD54F"/>
+  <text x="235" y="175" font-family="Arial" font-size="8" fill="white" text-anchor="middle">!</text>
+  
+  <circle cx="155" cy="185" r="3" fill="#FFD54F"/>
+  <text x="155" y="175" font-family="Arial" font-size="8" fill="white" text-anchor="middle">!</text>
+  
+  <circle cx="295" cy="185" r="3" fill="#FFD54F"/>
+  <text x="295" y="175" font-family="Arial" font-size="8" fill="white" text-anchor="middle">?</text>
+  
+  <!-- Repair technician -->
+  <circle cx="100" cy="230" r="5" fill="#FFD54F"/>
+  <rect x="97" cy="235" width="6" height="10" fill="#FFD54F"/>
+  <rect x="95" cy="235" width="10" height="3" fill="#0D47A1"/>
+  <path d="M95,245 L97,255 M105,245 L103,255" stroke="#0D47A1" stroke-width="1"/>
+  <rect x="92" cy="225" width="16" height="2" fill="#FFC107"/>
+  
+  <!-- Failure indicator -->
+  <circle cx="50" cy="50" r="25" fill="#d9534f" fill-opacity="0.8"/>
+  <path d="M40,40 L60,60 M60,40 L40,60" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Title text -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Smart Traffic Management System</text>
+  <text x="200" y="50" font-family="Arial" font-size="12" fill="#DDDDDD" text-anchor="middle">Project failure due to system incompatibilities</text>
+</svg> 

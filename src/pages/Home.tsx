@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // Mock tender data for display
 const featuredTenders = [
@@ -32,6 +33,50 @@ const Home = () => {
 
   return (
     <div className="space-y-12">
+      {/* Hero Section with Government Buildings and Tender Theme */}
+      <section className="relative rounded-xl overflow-hidden mb-12">
+        <div 
+          className="w-full h-80 bg-cover bg-center" 
+          style={{ 
+            backgroundImage: "url('/images/hero/govt-tender-hero.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/30 flex items-center">
+            <div className="container mx-auto px-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="max-w-lg"
+              >
+                <h1 className="text-4xl font-bold text-white mb-4 font-cinzel">
+                  Government Tender Management Platform
+                </h1>
+                <p className="text-white/80 mb-6">
+                  Simplify your journey through the tender process with specialized tools and insights
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link 
+                    to="/register" 
+                    className="px-6 py-3 bg-primary hover:bg-primary/90 text-gray-900 font-medium rounded-md transition-colors"
+                  >
+                    Register Now
+                  </Link>
+                  <Link 
+                    to="/tenders" 
+                    className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-md transition-colors"
+                  >
+                    Explore Tenders
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Welcome Section */}
       <section className="mb-10">
         <h2 className="text-3xl font-bold text-white mb-4 font-cinzel">Welcome to Tender Mitra</h2>

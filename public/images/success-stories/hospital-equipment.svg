@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0e7490" rx="30" ry="30" />
+  
+  <!-- Hospital building -->
+  <rect x="160" y="160" width="200" height="180" fill="#e0f2fe" rx="10" ry="10" />
+  <rect x="230" y="300" width="60" height="40" fill="#e0f2fe" />
+  <rect x="245" y="160" width="30" height="30" fill="#0284c7" />
+  
+  <!-- Windows -->
+  <rect x="180" y="180" width="30" height="30" fill="#0284c7" />
+  <rect x="230" y="180" width="30" height="30" fill="#0284c7" />
+  <rect x="280" y="180" width="30" height="30" fill="#0284c7" />
+  
+  <rect x="180" y="230" width="30" height="30" fill="#0284c7" />
+  <rect x="230" y="230" width="30" height="30" fill="#0284c7" />
+  <rect x="280" y="230" width="30" height="30" fill="#0284c7" />
+  
+  <rect x="180" y="280" width="30" height="30" fill="#0284c7" />
+  <rect x="280" y="280" width="30" height="30" fill="#0284c7" />
+  
+  <!-- Medical Equipment -->
+  <g transform="translate(400, 180)">
+    <!-- MRI Machine -->
+    <rect x="-40" y="-30" width="80" height="60" fill="#94a3b8" rx="5" ry="5" />
+    <rect x="-30" y="-20" width="60" height="40" fill="#f1f5f9" rx="5" ry="5" />
+    <circle cx="0" cy="0" r="15" fill="#0ea5e9" />
+  </g>
+  
+  <g transform="translate(100, 200)">
+    <!-- Hospital Bed -->
+    <rect x="-40" y="-20" width="80" height="40" fill="#f1f5f9" rx="5" ry="5" />
+    <rect x="-35" y="-15" width="70" height="20" fill="#cbd5e1" rx="2" ry="2" />
+    <rect x="-30" y="10" width="10" height="20" fill="#94a3b8" />
+    <rect x="20" y="10" width="10" height="20" fill="#94a3b8" />
+  </g>
+  
+  <!-- Medical Cross Symbol -->
+  <g transform="translate(400, 90)">
+    <circle cx="0" cy="0" r="30" fill="#ef4444" />
+    <rect x="-5" y="-20" width="10" height="40" fill="white" rx="2" ry="2" />
+    <rect x="-20" y="-5" width="40" height="10" fill="white" rx="2" ry="2" />
+  </g>
+  
+  <!-- Success marker -->
+  <circle cx="120" cy="100" r="50" fill="#22c55e" />
+  <path d="M100 100 L115 115 L140 85" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Text -->
+  <text x="256" y="390" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">
+    Hospital Equipment Supply
+  </text>
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Completed with 98% quality rating
+  </text>
+</svg> 

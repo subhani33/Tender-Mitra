@@ -14,6 +14,7 @@ import LoginForm from './components/auth/LoginForm';
 import { Bell, User, ChevronDown, Menu, X } from 'lucide-react';
 import ErrorBoundary from './components/ErrorBoundary';
 import './index.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Lazy load route components for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -23,13 +24,22 @@ const Tenders = lazy(() => import('./pages/Tenders'));
 const TenderDetails = lazy(() => import('./pages/TenderDetails'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Login = lazy(() => import('./pages/Login'));
+const Register = lazy(() => import('./pages/Register'));
+
+// Lazy load components
+const TenderStories = lazy(() => import('./components/TenderStories').then(module => ({ default: module.TenderStories })));
+const GuidelinesLibrary = lazy(() => import('./components/GuidelinesLibrary').then(module => ({ default: module.GuidelinesLibrary })));
+const TenderFAQ = lazy(() => import('./components/TenderFAQ').then(module => ({ default: module.TenderFAQ })));
+const GovtWebsites = lazy(() => import('./components/GovtWebsites').then(module => ({ default: module.GovtWebsites })));
+const RegulatoryRequirements = lazy(() => import('./components/RegulatoryRequirements').then(module => ({ default: module.RegulatoryRequirements })));
 
 // Simple loading component
 const LoadingFallback = () => (
-  <div className="w-full h-40 flex items-center justify-center">
-    <div className="flex flex-col items-center">
-      <div className="w-12 h-12 border-4 border-primary border-solid rounded-full border-t-transparent animate-spin"></div>
-      <p className="mt-4 text-white/70">Loading...</p>
+  <div className="w-full h-64 flex items-center justify-center">
+    <div className="relative">
+      <div className="h-24 w-24 rounded-full border-t-4 border-b-4 border-primary animate-spin"></div>
+      <div className="absolute top-0 left-0 h-24 w-24 rounded-full border-r-4 border-l-4 border-primary/30"></div>
     </div>
   </div>
 );
@@ -322,9 +332,34 @@ function App() {
         <main className="flex-grow container mx-auto px-4 py-8">
           <ErrorBoundary>
             <Suspense fallback={<LoadingFallback />}>
-              <PageTransition>
+              <AnimatePresence mode="wait">
                 <Routes>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/" element={
+                    <PageTransition>
+                      <div>
+                        {/* Main content sections wrapped with individual Suspense */}
+                        <Suspense fallback={<LoadingFallback />}>
+                          <TenderStories />
+                        </Suspense>
+                        
+                        <Suspense fallback={<LoadingFallback />}>
+                          <GuidelinesLibrary />
+                        </Suspense>
+                        
+                        <Suspense fallback={<LoadingFallback />}>
+                          <TenderFAQ />
+                        </Suspense>
+                        
+                        <Suspense fallback={<LoadingFallback />}>
+                          <GovtWebsites />
+                        </Suspense>
+                        
+                        <Suspense fallback={<LoadingFallback />}>
+                          <RegulatoryRequirements />
+                        </Suspense>
+                      </div>
+                    </PageTransition>
+                  } />
                   <Route path="/about" element={<About />} />
                   <Route path="/services" element={<Services />} />
                   <Route 
@@ -357,8 +392,18 @@ function App() {
                     } 
                   />
                   <Route path="/todo" element={<Todo />} />
+                  <Route path="/login" element={
+                    <Suspense fallback={<LoadingFallback />}>
+                      <Login />
+                    </Suspense>
+                  } />
+                  <Route path="/register" element={
+                    <Suspense fallback={<LoadingFallback />}>
+                      <Register />
+                    </Suspense>
+                  } />
                 </Routes>
-              </PageTransition>
+              </AnimatePresence>
             </Suspense>
           </ErrorBoundary>
         </main>

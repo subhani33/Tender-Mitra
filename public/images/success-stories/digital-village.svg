@@ -1,0 +1,94 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#2E7D32" rx="10" ry="10"/>
+  
+  <!-- Sky and hills -->
+  <path d="M0,150 Q100,100 200,140 T400,120 V220 H0 Z" fill="#1B5E20"/>
+  <path d="M0,170 Q70,140 150,160 T300,145 T400,160 V250 H0 Z" fill="#388E3C"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="60" r="30" fill="#FDD835"/>
+  <circle cx="350" cy="60" r="40" fill="#FDD835" fill-opacity="0.3"/>
+  <circle cx="350" cy="60" r="50" fill="#FDD835" fill-opacity="0.1"/>
+  
+  <!-- Village houses -->
+  <!-- House 1 -->
+  <rect x="50" y="190" width="60" height="40" fill="#795548"/>
+  <polygon points="50,190 110,190 80,160" fill="#5D4037"/>
+  <rect x="70" y="210" width="20" height="20" fill="#90CAF9"/>
+  
+  <!-- House 2 -->
+  <rect x="130" y="200" width="50" height="30" fill="#795548"/>
+  <polygon points="130,200 180,200 155,170" fill="#5D4037"/>
+  <rect x="145" y="210" width="20" height="20" fill="#90CAF9"/>
+  
+  <!-- House 3 -->
+  <rect x="210" y="185" width="70" height="45" fill="#795548"/>
+  <polygon points="210,185 280,185 245,145" fill="#5D4037"/>
+  <rect x="230" y="205" width="30" height="25" fill="#90CAF9"/>
+  
+  <!-- Cell Tower with digital signals -->
+  <rect x="320" y="140" width="10" height="90" fill="#424242"/>
+  <polygon points="310,140 340,140 325,120" fill="#757575"/>
+  <path d="M325,115 L325,80" stroke="#424242" stroke-width="3"/>
+  
+  <!-- Signal waves from tower -->
+  <path d="M325,90 Q345,80 365,90" stroke="#64B5F6" stroke-width="2" fill="none"/>
+  <path d="M325,90 Q305,80 285,90" stroke="#64B5F6" stroke-width="2" fill="none"/>
+  <path d="M325,100 Q355,85 385,100" stroke="#64B5F6" stroke-width="2" fill="none"/>
+  <path d="M325,100 Q295,85 265,100" stroke="#64B5F6" stroke-width="2" fill="none"/>
+  <path d="M325,110 Q365,90 405,110" stroke="#64B5F6" stroke-width="2" fill="none"/>
+  <path d="M325,110 Q285,90 245,110" stroke="#64B5F6" stroke-width="2" fill="none"/>
+  
+  <!-- Digital devices in houses -->
+  <!-- House 1 digital device -->
+  <rect x="75" y="215" width="10" height="6" fill="#E0E0E0"/>
+  <circle cx="80" cy="218" r="1" fill="#76FF03"/>
+  <!-- Signal waves from house 1 -->
+  <path d="M85,218 Q90,216 95,218" stroke="#4CAF50" stroke-width="1" fill="none"/>
+  <path d="M85,218 Q95,213 105,218" stroke="#4CAF50" stroke-width="1" fill="none"/>
+  
+  <!-- House 2 digital device -->
+  <rect x="150" y="215" width="10" height="6" fill="#E0E0E0"/>
+  <circle cx="155" cy="218" r="1" fill="#76FF03"/>
+  <!-- Signal waves from house 2 -->
+  <path d="M160,218 Q165,216 170,218" stroke="#4CAF50" stroke-width="1" fill="none"/>
+  <path d="M160,218 Q170,213 180,218" stroke="#4CAF50" stroke-width="1" fill="none"/>
+  
+  <!-- House 3 digital device -->
+  <rect x="240" y="215" width="10" height="6" fill="#E0E0E0"/>
+  <circle cx="245" cy="218" r="1" fill="#76FF03"/>
+  <!-- Signal waves from house 3 -->
+  <path d="M250,218 Q255,216 260,218" stroke="#4CAF50" stroke-width="1" fill="none"/>
+  <path d="M250,218 Q265,210 280,218" stroke="#4CAF50" stroke-width="1" fill="none"/>
+  
+  <!-- People with digital devices -->
+  <!-- Person 1 -->
+  <circle cx="120" y="240" r="5" fill="#FFD54F"/>
+  <rect x="118" y="245" width="4" height="10" fill="#FFD54F"/>
+  <rect x="115" y="242" width="10" height="5" fill="#3F51B5"/>
+  
+  <!-- Person 2 -->
+  <circle cx="190" y="240" r="5" fill="#FFD54F"/>
+  <rect x="188" y="245" width="4" height="10" fill="#FFD54F"/>
+  <rect x="185" y="242" width="10" height="5" fill="#3F51B5"/>
+  
+  <!-- Person 3 -->
+  <circle cx="290" y="235" r="5" fill="#FFD54F"/>
+  <rect x="288" y="240" width="4" height="10" fill="#FFD54F"/>
+  <rect x="285" y="237" width="10" height="5" fill="#3F51B5"/>
+  
+  <!-- Binary data representing digital connection -->
+  <text x="85" y="170" font-family="monospace" font-size="7" fill="#E0E0E0" opacity="0.5">10110</text>
+  <text x="160" y="155" font-family="monospace" font-size="7" fill="#E0E0E0" opacity="0.5">01001</text>
+  <text x="250" y="140" font-family="monospace" font-size="7" fill="#E0E0E0" opacity="0.5">11010</text>
+  <text x="205" y="125" font-family="monospace" font-size="7" fill="#E0E0E0" opacity="0.5">10100</text>
+  
+  <!-- Success Indicator -->
+  <circle cx="50" cy="50" r="25" fill="#5cb85c" fill-opacity="0.8"/>
+  <path d="M40,50 L45,55 L60,40" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Title text -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Digital Village Initiative</text>
+  <text x="200" y="50" font-family="Arial" font-size="12" fill="#DDDDDD" text-anchor="middle">Connected 500 villages to digital infrastructure</text>
+</svg> 

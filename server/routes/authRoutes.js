@@ -48,12 +48,61 @@ const createSendToken = (user, statusCode, req, res) => {
 // Register new user
 router.post('/register', async(req, res) => {
     try {
-        const { email, password, name } = req.body;
+        const { email, password, firstName, lastName, name } = req.body;
 
-        if (!email || !password || !name) {
+        // Check for required fields
+        if (!email || !password) {
             return res.status(400).json({
                 status: 'error',
-                message: 'Please provide name, email and password'
+                message: 'Please provide email and password'
+            });
+        }
+
+        // Parse name if firstName/lastName not provided (backward compatibility)
+        let parsedFirstName = firstName;
+        let parsedLastName = lastName;
+
+        if (!firstName || !lastName) {
+            if (name) {
+                const nameParts = name.split(' ');
+                parsedFirstName = nameParts[0];
+                parsedLastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+            } else {
+                return res.status(400).json({
+                    status: 'error',
+                    message: 'Please provide name or firstName/lastName'
+                });
+            }
+        }
+
+        // Check email format
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({
+                status: 'error',
+                message: 'Please provide a valid email address'
+            });
+        }
+
+        // Check password strength
+        const hasMinLength = password.length >= 8;
+        const hasLetter = /[A-Za-z]/.test(password);
+        const hasNumber = /\d/.test(password);
+        const hasSpecial = /[@$!%*#?&]/.test(password);
+
+        if (!hasMinLength || !hasLetter || !hasNumber || !hasSpecial) {
+            return res.status(400).json({
+                status: 'error',
+                message: 'Password must be at least 8 characters and contain letters, numbers, and special characters'
+            });
+        }
+
+        // In a real implementation, you would check if email already exists in the database
+        // For demonstration, we'll check a mock user with this email
+        if (email === 'test@example.com') {
+            return res.status(409).json({
+                status: 'error',
+                message: 'Email already exists'
             });
         }
 
@@ -72,7 +121,8 @@ router.post('/register', async(req, res) => {
         // For mock implementation we'll create a fake user
         const user = {
             id: `user-${Date.now()}`,
-            name,
+            firstName: parsedFirstName,
+            lastName: parsedLastName,
             email,
             password: hashedPassword,
             role: 'user',
@@ -82,7 +132,7 @@ router.post('/register', async(req, res) => {
             createdAt: new Date().toISOString()
         };
 
-        logger.info(`User registered: ${email}`);
+        logger.info(`User registered: ${email} (${parsedFirstName} ${parsedLastName})`);
 
         // For a real implementation, you would send an email with the verification link
         // For now, we'll skip that step

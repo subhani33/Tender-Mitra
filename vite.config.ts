@@ -7,9 +7,11 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   
   return {
-    plugins: [react()],
+    plugins: [
+      react()
+    ],
     server: {
-      port: 5173,
+      port: 4173,
       host: true,
       open: true,
       proxy: {
@@ -23,13 +25,12 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       sourcemap: true,
-      // This ensures that assets with hash names are properly cached by CDN
       chunkSizeWarningLimit: 1600,
       rollupOptions: {
         output: {
           manualChunks: {
             vendor: ['react', 'react-dom', 'react-router-dom'],
-            animations: ['framer-motion', '@react-three/fiber', '@react-three/drei', 'three'],
+            animations: ['framer-motion'],
           },
         },
       },

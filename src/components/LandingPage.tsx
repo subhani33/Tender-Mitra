@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useMemo } from 'react';
+import React, { useRef, useState, useEffect, useMemo, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { 
   OrbitControls, 
@@ -14,8 +14,18 @@ import { Building2, FileText, Award, TrendingUp, ChevronDown } from 'lucide-reac
 import { useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 
+// Define types for the component props
+interface BuildingProps {
+  position: [number, number, number];
+  scale?: [number, number, number];
+  color?: string;
+  height?: number;
+  delay?: number;
+  meshProps?: Record<string, any>;
+}
+
 // Building component that animates rising from the ground
-const Building = ({ 
+const Building: React.FC<BuildingProps> = ({ 
   position, 
   scale = [1, 1, 1], 
   color = '#2462cf', 
@@ -23,7 +33,7 @@ const Building = ({
   delay = 0,
   meshProps = {}
 }) => {
-  const meshRef = useRef();
+  const meshRef = useRef<THREE.Mesh>(null);
   const [visible, setVisible] = useState(false);
   const [animationComplete, setAnimationComplete] = useState(false);
   const targetScale = useMemo(() => [scale[0], scale[1] * height, scale[2]], [scale, height]);
@@ -98,9 +108,14 @@ const Building = ({
   );
 };
 
+interface TenderDocumentProps {
+  position: [number, number, number];
+  delay?: number;
+}
+
 // Tender document that floats and spins
-const TenderDocument = ({ position, delay = 0 }) => {
-  const meshRef = useRef();
+const TenderDocument: React.FC<TenderDocumentProps> = ({ position, delay = 0 }) => {
+  const meshRef = useRef<THREE.Group>(null);
   const [visible, setVisible] = useState(false);
   
   useEffect(() => {
@@ -143,10 +158,15 @@ const TenderDocument = ({ position, delay = 0 }) => {
   );
 };
 
+interface GavelProps {
+  position: [number, number, number];
+  delay?: number;
+}
+
 // Gavel (auction hammer) component
-const Gavel = ({ position, delay = 0 }) => {
-  const headRef = useRef();
-  const handleRef = useRef();
+const Gavel: React.FC<GavelProps> = ({ position, delay = 0 }) => {
+  const headRef = useRef<THREE.Mesh>(null);
+  const handleRef = useRef<THREE.Mesh>(null);
   const [visible, setVisible] = useState(false);
   const [swinging, setSwinging] = useState(false);
   const [swingDirection, setSwingDirection] = useState(1);
@@ -203,35 +223,67 @@ const Gavel = ({ position, delay = 0 }) => {
   );
 };
 
+// Ground component with error handling for texture loading
+const Ground: React.FC = () => {
+  // Using try-catch to handle texture loading errors
+  let groundMaterial;
+  try {
+    const groundTexture = useTexture('/textures/marble-dark.jpg');
+    groundMaterial = (
+      <meshStandardMaterial 
+        map={groundTexture} 
+        map-repeat={[10, 10]} 
+        color="#0a122e" 
+        metalness={0.2}
+        roughness={0.8}
+      />
+    );
+  } catch (error) {
+    console.error("Failed to load ground texture:", error);
+    // Fallback material if texture fails to load
+    groundMaterial = (
+      <meshStandardMaterial 
+        color="#0a122e" 
+        metalness={0.2}
+        roughness={0.8}
+      />
+    );
+  }
+  
+  return (
+    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]} receiveShadow>
+      <planeGeometry args={[50, 50]} />
+      {groundMaterial}
+    </mesh>
+  );
+};
+
 // City scene with multiple buildings
-const City = () => {
+const City: React.FC = () => {
   // Define building positions and properties
   const buildings = [
-    { position: [0, 0, 0], scale: [1, 1, 1], height: 5, color: '#1a56db', delay: 0 },
-    { position: [2, 0, 1], scale: [0.8, 1, 0.8], height: 3, color: '#7e3af2', delay: 0.2 },
-    { position: [-2, 0, 1], scale: [0.9, 1, 0.9], height: 4, color: '#047481', delay: 0.4 },
-    { position: [1, 0, -2], scale: [0.7, 1, 0.7], height: 3.5, color: '#1e429f', delay: 0.6 },
-    { position: [-1.5, 0, -1.8], scale: [0.8, 1, 0.8], height: 2.8, color: '#4c1d95', delay: 0.8 },
-    { position: [3, 0, -1], scale: [0.6, 1, 0.6], height: 2, color: '#1e429f', delay: 1.0 },
-    { position: [-3, 0, -1], scale: [0.7, 1, 0.7], height: 2.2, color: '#7e3af2', delay: 1.2 },
-    { position: [0, 0, 3], scale: [1.2, 1, 1.2], height: 4.5, color: '#0e7490', delay: 1.4 },
+    { position: [0, 0, 0] as [number, number, number], scale: [1, 1, 1] as [number, number, number], height: 5, color: '#1a56db', delay: 0 },
+    { position: [2, 0, 1] as [number, number, number], scale: [0.8, 1, 0.8] as [number, number, number], height: 3, color: '#7e3af2', delay: 0.2 },
+    { position: [-2, 0, 1] as [number, number, number], scale: [0.9, 1, 0.9] as [number, number, number], height: 4, color: '#047481', delay: 0.4 },
+    { position: [1, 0, -2] as [number, number, number], scale: [0.7, 1, 0.7] as [number, number, number], height: 3.5, color: '#1e429f', delay: 0.6 },
+    { position: [-1.5, 0, -1.8] as [number, number, number], scale: [0.8, 1, 0.8] as [number, number, number], height: 2.8, color: '#4c1d95', delay: 0.8 },
+    { position: [3, 0, -1] as [number, number, number], scale: [0.6, 1, 0.6] as [number, number, number], height: 2, color: '#1e429f', delay: 1.0 },
+    { position: [-3, 0, -1] as [number, number, number], scale: [0.7, 1, 0.7] as [number, number, number], height: 2.2, color: '#7e3af2', delay: 1.2 },
+    { position: [0, 0, 3] as [number, number, number], scale: [1.2, 1, 1.2] as [number, number, number], height: 4.5, color: '#0e7490', delay: 1.4 },
   ];
   
   // Define tender documents
   const tenderDocuments = [
-    { position: [1.5, 3, 1.5], delay: 2.0 },
-    { position: [-1.5, 2.5, -1.5], delay: 2.3 },
-    { position: [0, 4, 0], delay: 2.6 },
+    { position: [1.5, 3, 1.5] as [number, number, number], delay: 2.0 },
+    { position: [-1.5, 2.5, -1.5] as [number, number, number], delay: 2.3 },
+    { position: [0, 4, 0] as [number, number, number], delay: 2.6 },
   ];
   
   // Define gavels
   const gavels = [
-    { position: [2.5, 1.5, -2], delay: 3.0 },
-    { position: [-2.5, 2, 2], delay: 3.3 },
+    { position: [2.5, 1.5, -2] as [number, number, number], delay: 3.0 },
+    { position: [-2.5, 2, 2] as [number, number, number], delay: 3.3 },
   ];
-  
-  // Ground plane
-  const groundTexture = useTexture('/textures/marble-dark.jpg');
   
   return (
     <>
@@ -250,17 +302,8 @@ const City = () => {
         <Gavel key={i} {...gavel} />
       ))}
       
-      {/* Ground */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.01, 0]} receiveShadow>
-        <planeGeometry args={[50, 50]} />
-        <meshStandardMaterial 
-          map={groundTexture} 
-          map-repeat={[10, 10]} 
-          color="#0a122e" 
-          metalness={0.2}
-          roughness={0.8}
-        />
-      </mesh>
+      {/* Ground - now using the separate component with error handling */}
+      <Ground />
       
       {/* Ambient particles */}
       <Sparkles 
@@ -275,8 +318,14 @@ const City = () => {
   );
 };
 
+interface FeatureCardProps {
+  icon: React.FC<{ size?: number }>;
+  title: string;
+  description: string;
+}
+
 // Feature card component
-const FeatureCard = ({ icon: Icon, title, description }) => (
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -293,7 +342,15 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
   </motion.div>
 );
 
-const LandingPage = () => {
+// Loading fallback component
+const LoadingFallback: React.FC = () => (
+  <mesh position={[0, 0, 0]}>
+    <sphereGeometry args={[1, 16, 16]} />
+    <meshStandardMaterial color="#1a56db" wireframe />
+  </mesh>
+);
+
+const LandingPage: React.FC = () => {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   
@@ -326,8 +383,10 @@ const LandingPage = () => {
               shadow-camera-top={10}
               shadow-camera-bottom={-10}
             />
-            <City />
-            <Environment preset="city" />
+            <Suspense fallback={<LoadingFallback />}>
+              <City />
+              <Environment preset="city" />
+            </Suspense>
             <OrbitControls 
               enableZoom={false} 
               enablePan={false}

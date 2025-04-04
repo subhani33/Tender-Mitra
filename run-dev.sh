@@ -12,7 +12,7 @@ echo -e "${GREEN}  Starting EdtoDo Technovations Development Servers  ${NC}"
 echo -e "${GREEN}==================================================${NC}"
 
 echo "Backend API: http://localhost:3000"
-echo "Frontend UI: http://localhost:5173"
+echo "Frontend UI: http://localhost:4173"
 
 # Store the current directory
 CURRENT_DIR=$(pwd)
@@ -32,7 +32,7 @@ if ! curl -s http://localhost:3000/health &>/dev/null; then
 fi
 
 echo -e "${YELLOW}Backend server running at http://localhost:3000${NC}"
-echo -e "${YELLOW}Frontend will start at http://localhost:5173${NC}"
+echo -e "${YELLOW}Frontend will start at http://localhost:4173${NC}"
 
 # Start Vite frontend server
 echo -e "${BLUE}Starting frontend server...${NC}"

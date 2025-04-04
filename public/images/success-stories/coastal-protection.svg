@@ -1,0 +1,98 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0277BD" rx="10" ry="10"/>
+  
+  <!-- Sky gradient -->
+  <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="40%">
+    <stop offset="0%" style="stop-color:#81D4FA;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#0277BD;stop-opacity:1" />
+  </linearGradient>
+  <rect width="400" height="120" fill="url(#skyGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="50" r="30" fill="#FFC107"/>
+  <circle cx="350" cy="50" r="40" fill="#FFC107" fill-opacity="0.3"/>
+  <circle cx="350" cy="50" r="50" fill="#FFC107" fill-opacity="0.1"/>
+  
+  <!-- Ocean -->
+  <rect x="0" y="120" width="400" height="180" fill="#0288D1"/>
+  
+  <!-- Waves in the ocean -->
+  <path d="M0,140 Q20,130 40,140 Q60,150 80,140 Q100,130 120,140 Q140,150 160,140 Q180,130 200,140 Q220,150 240,140 Q260,130 280,140 Q300,150 320,140 Q340,130 360,140 Q380,150 400,140 L400,180 L0,180 Z" fill="#039BE5" opacity="0.6"/>
+  <path d="M0,160 Q30,150 60,160 Q90,170 120,160 Q150,150 180,160 Q210,170 240,160 Q270,150 300,160 Q330,170 360,160 Q390,150 400,160 L400,200 L0,200 Z" fill="#03A9F4" opacity="0.4"/>
+  
+  <!-- Coastal Protection Wall -->
+  <linearGradient id="wallGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#78909C;stop-opacity:1" />
+    <stop offset="50%" style="stop-color:#B0BEC5;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#78909C;stop-opacity:1" />
+  </linearGradient>
+  <path d="M30,180 L370,180 L380,270 L20,270 Z" fill="url(#wallGradient)"/>
+  
+  <!-- Wall structure details -->
+  <line x1="50" y1="180" x2="50" y2="270" stroke="#546E7A" stroke-width="2"/>
+  <line x1="100" y1="180" x2="100" y2="270" stroke="#546E7A" stroke-width="2"/>
+  <line x1="150" y1="180" x2="150" y2="270" stroke="#546E7A" stroke-width="2"/>
+  <line x1="200" y1="180" x2="200" y2="270" stroke="#546E7A" stroke-width="2"/>
+  <line x1="250" y1="180" x2="250" y2="270" stroke="#546E7A" stroke-width="2"/>
+  <line x1="300" y1="180" x2="300" y2="270" stroke="#546E7A" stroke-width="2"/>
+  <line x1="350" y1="180" x2="350" y2="270" stroke="#546E7A" stroke-width="2"/>
+  
+  <line x1="30" y1="210" x2="370" y2="210" stroke="#546E7A" stroke-width="2"/>
+  <line x1="25" y1="240" x2="375" y2="240" stroke="#546E7A" stroke-width="2"/>
+  
+  <!-- Wave breaking against wall -->
+  <path d="M10,200 Q40,170 70,200 Q100,230 130,200 Q160,170 190,200 Q220,230 250,200 Q280,170 310,200 Q340,230 370,200 Q380,190 390,200 L390,220 L10,220 Z" fill="#81D4FA" opacity="0.7"/>
+  
+  <!-- Houses protected behind the wall -->
+  <!-- House 1 -->
+  <rect x="80" y="100" width="40" height="30" fill="#D7CCC8"/>
+  <polygon points="80,100 120,100 100,80" fill="#A1887F"/>
+  <rect x="90" y="110" width="10" height="10" fill="#90CAF9"/>
+  <rect x="105" y="120" width="10" height="10" fill="#90CAF9"/>
+  
+  <!-- House 2 -->
+  <rect x="150" y="110" width="50" height="35" fill="#D7CCC8"/>
+  <polygon points="150,110 200,110 175,85" fill="#A1887F"/>
+  <rect x="165" y="120" width="10" height="10" fill="#90CAF9"/>
+  <rect x="185" y="120" width="10" height="15" fill="#90CAF9"/>
+  
+  <!-- House 3 -->
+  <rect x="230" y="90" width="60" height="45" fill="#D7CCC8"/>
+  <polygon points="230,90 290,90 260,65" fill="#A1887F"/>
+  <rect x="245" y="100" width="15" height="15" fill="#90CAF9"/>
+  <rect x="270" y="110" width="10" height="25" fill="#90CAF9"/>
+  
+  <!-- City/Town buildings in the background -->
+  <rect x="50" y="70" width="15" height="30" fill="#90A4AE"/>
+  <rect x="130" y="60" width="20" height="50" fill="#90A4AE"/>
+  <rect x="210" y="55" width="10" height="35" fill="#90A4AE"/>
+  <rect x="310" y="80" width="25" height="40" fill="#90A4AE"/>
+  
+  <!-- Construction workers/engineers -->
+  <!-- Worker 1 -->
+  <circle cx="70" cy="160" r="5" fill="#FFA726"/>
+  <rect x="68" y="165" width="4" height="10" fill="#FFA726"/>
+  <rect x="65" y="162" width="10" height="5" fill="#1565C0"/>
+  <rect x="65" y="175" width="10" height="5" fill="#1565C0"/>
+  
+  <!-- Worker 2 -->
+  <circle cx="280" cy="165" r="5" fill="#FFA726"/>
+  <rect x="278" y="170" width="4" height="10" fill="#FFA726"/>
+  <rect x="275" y="167" width="10" height="5" fill="#1565C0"/>
+  <rect x="275" y="180" width="10" height="5" fill="#1565C0"/>
+  
+  <!-- Engineer -->
+  <circle cx="180" cy="170" r="5" fill="#FFA726"/>
+  <rect x="178" y="175" width="4" height="10" fill="#FFA726"/>
+  <rect x="175" y="172" width="10" height="5" fill="#1565C0"/>
+  <rect x="173" y="165" width="14" height="3" fill="#FFECB3"/>
+  
+  <!-- Success Indicator -->
+  <circle cx="50" cy="50" r="25" fill="#5cb85c" fill-opacity="0.8"/>
+  <path d="M40,50 L45,55 L60,40" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Title text -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Coastal Protection Wall</text>
+  <text x="200" y="50" font-family="Arial" font-size="12" fill="#DDDDDD" text-anchor="middle">Completed with advanced erosion protection</text>
+</svg> 

@@ -5,9 +5,10 @@ import { Lock, Mail, User, Eye, EyeOff, AlertCircle, CheckCircle2 } from 'lucide
 import AuthService from '../../services/auth';
 
 export default function RegisterForm() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -30,6 +31,18 @@ export default function RegisterForm() {
 
     try {
       // Basic validation
+      if (!firstName || !lastName) {
+        setError('Please provide both first name and last name');
+        setIsLoading(false);
+        return;
+      }
+      
+      if (!email) {
+        setError('Please provide a valid email address');
+        setIsLoading(false);
+        return;
+      }
+      
       const passwordValidation = validatePassword(password);
       if (!passwordValidation.hasMinLength || !passwordValidation.hasLetter || 
           !passwordValidation.hasNumber || !passwordValidation.hasSpecial) {
@@ -38,9 +51,10 @@ export default function RegisterForm() {
         return;
       }
 
-      // Call the auth service
+      // Call the auth service with correct payload structure
       const result = await AuthService.registerUser({
-        name: username,
+        firstName,
+        lastName,
         email,
         password
       });
@@ -49,7 +63,12 @@ export default function RegisterForm() {
         setSuccess('Registration successful! You will be redirected to login.');
         setTimeout(() => navigate('/login'), 3000);
       } else {
-        setError(result.error || 'Registration failed');
+        // Handle specific error messages
+        if (result.error?.includes('already exists')) {
+          setError('An account with this email already exists. Please use a different email or try logging in.');
+        } else {
+          setError(result.error || 'Registration failed. Please try again.');
+        }
       }
     } catch (err: any) {
       setError(err.message || 'Registration failed. Please try again.');
@@ -104,21 +123,40 @@ export default function RegisterForm() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
-                Username
-              </label>
-              <div className="relative">
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-                <input
-                  type="text"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  className="pl-10 w-full p-3 bg-[#0D1629] text-white border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-                  placeholder="Choose a username"
-                  required
-                  minLength={3}
-                />
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  First Name
+                </label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                  <input
+                    type="text"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="pl-10 w-full p-3 bg-[#0D1629] text-white border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                    placeholder="First name"
+                    required
+                    minLength={2}
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Last Name
+                </label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                  <input
+                    type="text"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="pl-10 w-full p-3 bg-[#0D1629] text-white border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                    placeholder="Last name"
+                    required
+                    minLength={2}
+                  />
+                </div>
               </div>
             </div>
 

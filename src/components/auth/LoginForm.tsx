@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Lock, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthService from '../../services/auth';
 
 interface LoginFormProps {
   onLogin: () => void;
@@ -17,6 +19,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, redirectTo }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState<string | null>(null);
+  const navigate = useNavigate();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -58,22 +61,32 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, redirectTo }) => {
     return Object.keys(newErrors).length === 0;
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (validateForm()) {
       setIsLoading(true);
       
-      // In a real app, this would be an API call to authenticate the user
-      setTimeout(() => {
+      try {
+        const result = await AuthService.loginUser({
+          email: formData.email,
+          password: formData.password
+        });
+        
+        if (result.success) {
+          // Call the onLogin callback to update global app state
+          onLogin();
+        
+          // Redirect to the specified page or dashboard
+          navigate(redirectTo || '/dashboard');
+        } else {
+          setLoginError(result.error || 'Login failed. Please try again.');
+        }
+      } catch (error: any) {
+        setLoginError(error.message || 'Login failed. Please try again.');
+      } finally {
         setIsLoading(false);
-        
-        // For demonstration, we'll accept any login with valid format
-        onLogin();
-        
-        // Redirect would be handled by the parent component
-        console.log(`Redirecting to ${redirectTo || 'dashboard'}`);
-      }, 1500);
+      }
     }
   };
   
@@ -191,9 +204,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin, redirectTo }) => {
           <div className="text-center mt-4">
             <p className="text-white/70 text-sm">
               Don't have an account?{' '}
-              <a href="/register" className="text-primary hover:text-primary/80">
+              <Link to="/register" className="text-primary hover:text-primary/80">
                 Register
-              </a>
+              </Link>
             </p>
           </div>
         </form>

@@ -1,0 +1,118 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#8B0000" rx="10" ry="10"/>
+  
+  <!-- Sky gradient -->
+  <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="60%">
+    <stop offset="0%" style="stop-color:#4A4A4A;stop-opacity:1" />
+    <stop offset="100%" style="stop-color:#8B0000;stop-opacity:0.6" />
+  </linearGradient>
+  <rect width="400" height="150" fill="url(#skyGradient)"/>
+  
+  <!-- Ground base -->
+  <rect x="0" y="150" width="400" height="150" fill="#5D4037"/>
+  
+  <!-- Highway segments (partially completed and broken) -->
+  <!-- Main road section -->
+  <rect x="0" y="180" width="400" height="40" fill="#616161"/>
+  
+  <!-- Center divider - broken and uneven -->
+  <path d="M20,200 L40,200 L43,198 L60,202 L80,200 L83,201 L100,199 L120,201 L140,198 L160,200 L180,197 L200,201 L220,200 L240,198 L260,202 L280,200 L300,197 L320,201 L340,199 L360,200 L380,198" stroke="#BDBDBD" stroke-width="2" stroke-dasharray="20,10" fill="none"/>
+  
+  <!-- Lane markings - irregular -->
+  <path d="M20,190 L50,190 L55,188 L80,189 L110,191 L140,190" stroke="white" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+  <path d="M200,190 L230,190 L260,188 L290,191 L320,189 L350,190 L380,188" stroke="white" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+  <path d="M20,210 L50,212 L80,210 L110,208 L140,210" stroke="white" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+  <path d="M200,210 L230,208 L260,210 L290,212 L320,210 L350,209 L380,210" stroke="white" stroke-width="2" stroke-dasharray="10,10" fill="none"/>
+  
+  <!-- Road damage and construction issues -->
+  <path d="M160,170 L240,170 L235,230 L165,230 Z" fill="#424242"/>
+  <path d="M180,175 L220,175 L215,225 L185,225 Z" fill="#616161"/>
+  <line x1="160" y1="200" x2="240" y2="200" stroke="#BDBDBD" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Cracks in the road -->
+  <path d="M100,180 L110,190 L95,210 L115,220" stroke="#424242" stroke-width="3" fill="none"/>
+  <path d="M300,180 L290,200 L310,215" stroke="#424242" stroke-width="3" fill="none"/>
+  <path d="M250,185 L260,205 L270,190 L280,220" stroke="#424242" stroke-width="3" fill="none"/>
+  
+  <!-- Construction barriers -->
+  <rect x="50" y="160" width="5" height="15" fill="#F57F17"/>
+  <rect x="48" y="160" width="9" height="5" fill="#FBC02D"/>
+  <rect x="100" y="160" width="5" height="15" fill="#F57F17"/>
+  <rect x="98" y="160" width="9" height="5" fill="#FBC02D"/>
+  <rect x="250" y="160" width="5" height="15" fill="#F57F17"/>
+  <rect x="248" y="160" width="9" height="5" fill="#FBC02D"/>
+  <rect x="300" y="160" width="5" height="15" fill="#F57F17"/>
+  <rect x="298" y="160" width="9" height="5" fill="#FBC02D"/>
+  
+  <!-- Construction warning tape -->
+  <path d="M50,167 L100,167 L100,169 L50,169 Z" fill="#FBC02D" stroke="black" stroke-width="0.5"/>
+  <path d="M250,167 L300,167 L300,169 L250,169 Z" fill="#FBC02D" stroke="black" stroke-width="0.5"/>
+  
+  <!-- Abandoned construction equipment -->
+  <!-- Excavator -->
+  <rect x="30" y="130" width="30" height="15" fill="#F57C00"/>
+  <rect x="45" y="120" width="10" height="10" fill="#F57C00"/>
+  <path d="M60,130 L70,140 L80,125 L70,115 Z" fill="#F57C00"/>
+  <rect x="30" y="145" width="35" height="5" fill="#BF360C"/>
+  <circle cx="35" cy="150" r="5" fill="#424242"/>
+  <circle cx="60" cy="150" r="5" fill="#424242"/>
+  
+  <!-- Dump truck with issues -->
+  <rect x="320" y="130" width="30" height="20" fill="#5D4037"/>
+  <rect x="315" y="135" width="10" height="15" fill="#5D4037"/>
+  <rect x="335" y="120" width="10" height="10" fill="#5D4037"/>
+  <polygon points="350,135 360,135 355,150" fill="#5D4037"/>
+  <circle cx="325" cy="155" r="5" fill="#424242"/>
+  <circle cx="345" cy="155" r="5" fill="#424242"/>
+  <!-- Truck tilted to indicate problems -->
+  <use transform="rotate(10,335,135)" href="#dump-truck"/>
+  
+  <!-- Angry workers arguing -->
+  <!-- Worker 1 -->
+  <circle cx="150" cy="150" r="7" fill="#FFB74D"/>
+  <rect x="147" y="157" width="6" height="15" fill="#FFB74D"/>
+  <rect x="144" y="152" width="12" height="7" fill="#B71C1C"/>
+  <rect x="144" y="172" width="12" height="5" fill="#1976D2"/>
+  <text x="140" y="140" font-family="Arial" font-size="10" fill="white">!</text>
+  
+  <!-- Worker 2 -->
+  <circle cx="170" cy="150" r="7" fill="#FFB74D"/>
+  <rect x="167" y="157" width="6" height="15" fill="#FFB74D"/>
+  <rect x="164" y="152" width="12" height="7" fill="#1976D2"/>
+  <rect x="164" y="172" width="12" height="5" fill="#1976D2"/>
+  <path d="M175,145 L185,135" stroke="white" stroke-width="1"/>
+  <text x="185" y="135" font-family="Arial" font-size="10" fill="white">?</text>
+  
+  <!-- Project supervisor looking stressed -->
+  <circle cx="270" cy="140" r="7" fill="#FFB74D"/>
+  <rect x="267" y="147" width="6" height="15" fill="#FFB74D"/>
+  <rect x="264" y="142" width="12" height="7" fill="#37474F"/>
+  <path d="M275,135 L290,130" stroke="white" stroke-width="1"/>
+  <path d="M290,130 Q293,123 296,130" stroke="white" stroke-width="1" fill="none"/>
+  <path d="M272,139 L268,139" stroke="#424242" stroke-width="1"/>
+  
+  <!-- Budget document with red marks -->
+  <rect x="380" y="50" width="15" height="20" fill="white"/>
+  <path d="M382,55 L393,55" stroke="#424242" stroke-width="1"/>
+  <path d="M382,60 L393,60" stroke="#424242" stroke-width="1"/>
+  <path d="M382,65 L393,65" stroke="#424242" stroke-width="1"/>
+  <path d="M380,50 L395,70" stroke="#B71C1C" stroke-width="2"/>
+  <path d="M395,50 L380,70" stroke="#B71C1C" stroke-width="2"/>
+  
+  <!-- Timeline document with delays -->
+  <rect x="380" y="80" width="15" height="20" fill="white"/>
+  <path d="M382,85 L393,85" stroke="#424242" stroke-width="1"/>
+  <path d="M382,90 L390,90" stroke="#424242" stroke-width="1"/>
+  <path d="M382,95 L387,95" stroke="#424242" stroke-width="1"/>
+  <path d="M390,85 L395,90" stroke="#B71C1C" stroke-width="1"/>
+  <path d="M385,90 L395,95" stroke="#B71C1C" stroke-width="1"/>
+  
+  <!-- Failure indicator -->
+  <circle cx="50" cy="50" r="25" fill="#d9534f" fill-opacity="0.8"/>
+  <path d="M40,40 L60,60 M60,40 L40,60" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Title text -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Highway Expansion Project</text>
+  <text x="200" y="50" font-family="Arial" font-size="12" fill="#DDDDDD" text-anchor="middle">Abandoned after 60% completion</text>
+</svg> 

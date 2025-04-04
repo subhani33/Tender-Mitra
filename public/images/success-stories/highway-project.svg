@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0f766e" rx="30" ry="30" />
+  
+  <!-- Road -->
+  <g transform="translate(256, 256)">
+    <!-- Main road -->
+    <rect x="-200" y="-40" width="400" height="80" fill="#1e293b" rx="5" ry="5" />
+    
+    <!-- Road markings -->
+    <rect x="-180" y="-2" width="30" height="4" fill="white" />
+    <rect x="-130" y="-2" width="30" height="4" fill="white" />
+    <rect x="-80" y="-2" width="30" height="4" fill="white" />
+    <rect x="-30" y="-2" width="30" height="4" fill="white" />
+    <rect x="20" y="-2" width="30" height="4" fill="white" />
+    <rect x="70" y="-2" width="30" height="4" fill="white" />
+    <rect x="120" y="-2" width="30" height="4" fill="white" />
+    <rect x="170" y="-2" width="30" height="4" fill="white" />
+    
+    <!-- Side stripes -->
+    <rect x="-200" y="-38" width="400" height="6" fill="white" />
+    <rect x="-200" y="32" width="400" height="6" fill="white" />
+    
+    <!-- Bridge elements -->
+    <rect x="-120" y="-70" width="10" height="30" fill="#64748b" />
+    <rect x="110" y="-70" width="10" height="30" fill="#64748b" />
+    <rect x="-120" y="40" width="10" height="30" fill="#64748b" />
+    <rect x="110" y="40" width="10" height="30" fill="#64748b" />
+    
+    <!-- Cable elements -->
+    <path d="M-115 -70 C-70 -130, 70 -130, 115 -70" fill="none" stroke="#64748b" stroke-width="5" />
+    <path d="M-110 -70 C-65 -120, 65 -120, 110 -70" fill="none" stroke="#64748b" stroke-width="5" />
+    
+    <!-- Construction equipment (finished) -->
+    <g transform="translate(-150, 70)">
+      <rect x="-15" y="-10" width="30" height="20" fill="#facc15" />
+      <rect x="-18" y="-15" width="36" height="8" fill="#eab308" />
+      <rect x="-12" y="10" width="8" height="6" fill="#1e293b" />
+      <rect x="4" y="10" width="8" height="6" fill="#1e293b" />
+    </g>
+    
+    <g transform="translate(150, 70)">
+      <rect x="-20" y="-15" width="40" height="25" fill="#f97316" />
+      <circle cx="-10" cy="15" r="8" fill="#1e293b" />
+      <circle cx="10" cy="15" r="8" fill="#1e293b" />
+      <rect x="-15" y="-25" width="30" height="10" fill="#f97316" />
+    </g>
+  </g>
+  
+  <!-- Traffic -->
+  <g transform="translate(200, 236)">
+    <rect x="-15" y="-10" width="30" height="20" fill="#3b82f6" />
+    <rect x="-12" y="10" width="8" height="4" fill="#1e293b" />
+    <rect x="4" y="10" width="8" height="4" fill="#1e293b" />
+    <rect x="-10" y="-5" width="6" height="6" fill="#e2e8f0" /> <!-- window -->
+    <rect x="4" y="-5" width="6" height="6" fill="#e2e8f0" /> <!-- window -->
+  </g>
+  
+  <g transform="translate(320, 276)">
+    <rect x="-15" y="-10" width="30" height="20" fill="#ef4444" />
+    <rect x="-12" y="10" width="8" height="4" fill="#1e293b" />
+    <rect x="4" y="10" width="8" height="4" fill="#1e293b" />
+    <rect x="-10" y="-5" width="6" height="6" fill="#e2e8f0" /> <!-- window -->
+    <rect x="4" y="-5" width="6" height="6" fill="#e2e8f0" /> <!-- window -->
+  </g>
+  
+  <!-- Success indicator -->
+  <circle cx="120" cy="100" r="45" fill="#22c55e" />
+  <path d="M100 100 L110 115 L140 85" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Environment -->
+  <g transform="translate(70, 340)">
+    <path d="M0,0 L-20,-40 L-10,-40 L-25,-70 L-15,-70 L-30,-100 L10,-60 L0,-60 L15,-40 L5,-40 Z" fill="#10b981" />
+  </g>
+  
+  <g transform="translate(400, 350)">
+    <path d="M0,0 L-20,-40 L-10,-40 L-25,-70 L-15,-70 L-30,-100 L10,-60 L0,-60 L15,-40 L5,-40 Z" fill="#10b981" />
+  </g>
+  
+  <!-- Text -->
+  <text x="256" y="390" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" font-weight="bold">
+    Highway Extension Project
+  </text>
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white">
+    Completed 3 months ahead of schedule
+  </text>
+</svg> 

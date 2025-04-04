@@ -9,7 +9,9 @@ interface AuthResult {
 }
 
 interface UserData {
-  name: string;
+  firstName?: string;
+  lastName?: string;
+  name?: string;
   email: string;
   password: string;
 }
@@ -21,7 +23,9 @@ interface Credentials {
 
 interface User {
   id: string;
-  name: string;
+  firstName?: string;
+  lastName?: string;
+  name?: string;
   email: string;
   role?: string;
   createdAt?: string;
@@ -30,7 +34,7 @@ interface User {
 interface AuthService {
   /**
    * Register a new user
-   * @param userData - User registration data (username, email, password)
+   * @param userData - User registration data (firstName, lastName, email, password)
    * @returns Promise with registration result
    */
   registerUser: (userData: UserData) => Promise<AuthResult>;
