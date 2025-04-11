@@ -4,44 +4,44 @@ A comprehensive platform for government tender management, bid assistance, analy
 
 ## Site Building Process
 
-This Tender-Mitra platform was built using modern web development technologies and practices:
+We built the Tender-Mitra platform using modern web development technologies and practices:
 
-1. **Setup & Architecture**: Created a React+TypeScript project using Vite for fast development and optimized builds.
-2. **UI Framework**: Implemented Tailwind CSS for responsive, utility-first styling with a custom gold/navy theme.
-3. **Component Structure**: Developed modular React components for reusability and maintainability.
-4. **3D Visualizations**: Added interactive 3D tender visualizations using Three.js and React Three Fiber.
-5. **Authentication**: Implemented secure JWT-based user authentication system.
-6. **Error Handling**: Added robust error boundaries and fallbacks throughout the application.
-7. **Responsive Design**: Ensured the application works seamlessly across all device sizes.
-8. **Performance Optimization**: Used React's best practices for efficient rendering and code splitting.
+1. Setup & Architecture: Created a React+TypeScript project using Vite for fast development and optimized builds.
+2. UI Framework: Implemented Tailwind CSS for responsive, utility-first styling with a custom gold/navy theme.
+3. Component Structure: Developed modular React components for reusability and maintainability.
+4. 3D Visualizations: Added interactive 3D tender visualizations using Three.js and React Three Fiber.
+5. Authentication: Implemented secure JWT-based user authentication system.
+6. Error Handling: Added robust error boundaries and fallbacks throughout the application.
+7. Responsive Design: Ensured the application works seamlessly across all device sizes.
+8. Performance Optimization: Used React's best practices for efficient rendering and code splitting.
 
 The entire development process followed a component-first approach with continuous integration and testing to ensure high quality and performance.
 
 ## Features
 
-- **Tender Portal**: Browse and search government tenders from various departments and categories
-- **Bid Management**: Create, manage, and track bid submissions
-- **Analytics Dashboard**: Visual representation of tender data and bid performance
-- **Knowledge Base**: Articles and resources for tender processes
-- **Task Management**: Organize and track tender-related tasks
-- **Learning Hub**: Educational resources for bid preparation
+- Tender Portal: Browse and search government tenders from various departments and categories
+- Bid Management: Create, manage, and track bid submissions
+- Analytics Dashboard: Visual representation of tender data and bid performance
+- Knowledge Base: Articles and resources for tender processes
+- Task Management: Organize and track tender-related tasks
+- Learning Hub: Educational resources for bid preparation
 
 ## Tech Stack
 
-- **Frontend**:
-  - React with TypeScript
-  - Tailwind CSS for styling
-  - Framer Motion for animations
-  - Axios for API requests
-  - Socket.io-client for real-time features
+### Frontend
+- React with TypeScript
+- Tailwind CSS for styling
+- Framer Motion for animations
+- Axios for API requests
+- Socket.io-client for real-time features
 
-- **Backend**:
-  - Node.js with Express
-  - MongoDB for database (optional, can run with mock data)
-  - JWT for authentication
-  - Socket.io for real-time updates
-  - Winston for logging
-  - Multer for file uploads
+### Backend
+- Node.js with Express
+- MongoDB for database (optional, can run with mock data)
+- JWT for authentication
+- Socket.io for real-time updates
+- Winston for logging
+- Multer for file uploads
 
 ## Getting Started
 
@@ -138,8 +138,8 @@ The application can run without a MongoDB connection by using mock data services
 ### MongoDB Setup
 
 The application can run in two modes:
-1. **With MongoDB**: Full database functionality with persistent storage
-2. **With Mock Data**: Using in-memory mock data (default if MongoDB connection fails)
+1. With MongoDB: Full database functionality with persistent storage
+2. With Mock Data: Using in-memory mock data (default if MongoDB connection fails)
 
 To set up MongoDB, use the provided setup script:
 ```bash
@@ -154,12 +154,12 @@ This script will:
 
 #### MongoDB Options:
 
-1. **Local MongoDB Installation**:
+1. Local MongoDB Installation:
    - macOS: `brew tap mongodb/brew && brew install mongodb-community && brew services start mongodb-community`
    - Ubuntu/Debian: Follow the instructions in the setup script
    - Other: See [MongoDB installation documentation](https://docs.mongodb.com/manual/installation/)
 
-2. **MongoDB Atlas (Cloud)**:
+2. MongoDB Atlas (Cloud):
    - Create a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
    - Set up a cluster and get your connection string
    - Update your `.env` file with the connection string
@@ -174,11 +174,11 @@ The application will automatically fall back to using mock data, allowing you to
 
 ## Documentation
 
-- **QUICKSTART.md**: Fast setup guide
-- **GUIDE.md**: Detailed instructions and API documentation
-- **PROJECT_SUMMARY.md**: Overview of all components
-- **WELCOME.txt**: Features and quick reference
-- **CODEBASE.md**: Detailed documentation of code structure, component usage, and development guidelines
+- QUICKSTART.md: Fast setup guide
+- GUIDE.md: Detailed instructions and API documentation
+- PROJECT_SUMMARY.md: Overview of all components
+- WELCOME.txt: Features and quick reference
+- CODEBASE.md: Detailed documentation of code structure, component usage, and development guidelines
 
 ## Project Structure
 
@@ -233,19 +233,19 @@ We've added full user authentication and registration functionality to the Tende
 
 ## Authentication Features
 
-- **User Registration**: Users can create new accounts with email, password, and username.
-- **User Login**: Secure login with JWT token-based authentication.
-- **Password Security**: Passwords are hashed using bcrypt with salt rounds for maximum security.
-- **JWT Authentication**: JSON Web Tokens for secure, stateless authentication.
-- **Token Management**: Automatic token refresh and secure storage.
-- **Protected Routes**: Routes that require authentication are protected on both frontend and backend.
+- User Registration: Users can create new accounts with email, password, and username.
+- User Login: Secure login with JWT token-based authentication.
+- Password Security: Passwords are hashed using bcrypt with salt rounds for maximum security.
+- JWT Authentication: JSON Web Tokens for secure, stateless authentication.
+- Token Management: Automatic token refresh and secure storage.
+- Protected Routes: Routes that require authentication are protected on both frontend and backend.
 
 ## Implementation Details
 
-- **Frontend**: React components for Login and Registration
-- **Backend**: Express.js routes for authentication with JWT
-- **Database**: MongoDB for user storage (with fallback to mock data)
-- **Security**: CSRF protection, rate limiting, and secure HTTP-only cookies
+- Frontend: React components for Login and Registration
+- Backend: Express.js routes for authentication with JWT
+- Database: MongoDB for user storage (with fallback to mock data)
+- Security: CSRF protection, rate limiting, and secure HTTP-only cookies
 
 ## Getting Started with Authentication
 
