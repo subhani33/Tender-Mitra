@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { TenderStories } from '../components/TenderStories';
 
 // Mock tender data for display
 const featuredTenders = [
@@ -149,6 +150,14 @@ const Home = () => {
             <span className="block text-3xl font-bold text-primary mb-2">24/7</span>
             <span className="text-white/70">Support</span>
           </div>
+        </div>
+      </section>
+
+      {/* Success & Failure Stories Section */}
+      <section className="py-16 bg-gradient-to-b from-secondary to-secondary/80">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-cinzel text-primary mb-12 text-center">Success & Failure Stories</h2>
+          <TenderStories />
         </div>
       </section>
     </div>

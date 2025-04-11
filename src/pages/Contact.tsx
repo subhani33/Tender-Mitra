@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Card } from '../components/ui/Card';
+import ContactInfo from '../components/ui/ContactInfo';
 
 interface ContactProps {
   onSubmit: () => void;
@@ -13,6 +13,8 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
     phone: '',
     subject: '',
     message: '',
+    organization: '',
+    department: '',
   });
   
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -20,39 +22,45 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData({
+      ...formData,
+      [name]: value
+    });
     
-    // Clear error when user types
+    // Clear error when field is edited
     if (errors[name]) {
-      setErrors((prev) => ({
-        ...prev,
-        [name]: '',
-      }));
+      setErrors({
+        ...errors,
+        [name]: ''
+      });
     }
   };
   
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     
+    // Validate name
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
     
+    // Validate email
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = 'Invalid email format';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email is invalid';
     }
     
+    // Validate subject
     if (!formData.subject.trim()) {
       newErrors.subject = 'Subject is required';
     }
     
+    // Validate message
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
+    } else if (formData.message.length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
     }
     
     setErrors(newErrors);
@@ -65,198 +73,129 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // In a real app, this would be an API call
+      // Simulate form submission
       setTimeout(() => {
         setIsSubmitting(false);
-        onSubmit();
-        
-        // Reset form
         setFormData({
           name: '',
           email: '',
           phone: '',
           subject: '',
           message: '',
+          organization: '',
+          department: '',
         });
-      }, 1000);
+        onSubmit();
+      }, 1500);
     }
   };
   
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="space-y-8"
-    >
-      <div>
-        <h1 className="text-3xl font-bold text-white">Contact Us</h1>
-        <p className="text-white/70 mt-2">
-          Have questions about our services? Reach out to our team and we'll get back to you as soon as possible.
-        </p>
-      </div>
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-cinzel text-primary mb-8 text-center">Contact Us</h1>
       
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
         {/* Contact Information */}
-        <div className="lg:col-span-1 space-y-6">
-          <div className="bg-secondary-dark rounded-lg p-6 border border-gray-800">
-            <h2 className="text-xl font-semibold text-white mb-4">Contact Information</h2>
+        <div className="lg:w-1/3">
+          <Card className="bg-secondary/40 backdrop-blur-sm p-6 sticky top-24">
+            <h2 className="text-xl font-cinzel text-primary mb-6">Get in Touch</h2>
             
-            <ul className="space-y-6">
-              <li className="flex items-start">
-                <Mail className="text-primary mt-1 mr-4" size={20} />
-                <div>
-                  <p className="text-white/50 text-sm">Email</p>
-                  <a href="mailto:info@tendermitra.gov.in" className="text-white hover:text-primary transition-colors">
-                    info@tendermitra.gov.in
-                  </a>
-                </div>
-              </li>
-              
-              <li className="flex items-start">
-                <Phone className="text-primary mt-1 mr-4" size={20} />
-                <div>
-                  <p className="text-white/50 text-sm">Phone</p>
-                  <a href="tel:+911123456789" className="text-white hover:text-primary transition-colors">
-                    +91 11 2345 6789
-                  </a>
-                </div>
-              </li>
-              
-              <li className="flex items-start">
-                <MapPin className="text-primary mt-1 mr-4" size={20} />
-                <div>
-                  <p className="text-white/50 text-sm">Address</p>
-                  <p className="text-white">
-                    Department of Tender Management<br />
-                    Ministry of Commerce<br />
-                    North Block, New Delhi - 110001<br />
-                    India
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-secondary-dark rounded-lg p-6 border border-gray-800">
-            <h2 className="text-xl font-semibold text-white mb-4">Office Hours</h2>
+            <p className="text-white/70 mb-8">
+              Have questions about government tenders or need assistance with the bidding process? 
+              Our team is here to help you navigate the complexities of tender participation.
+            </p>
             
-            <ul className="space-y-3">
-              <li className="flex justify-between">
-                <span className="text-white/70">Monday - Friday</span>
-                <span className="text-white">9:00 AM - 5:30 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span className="text-white/70">Saturday</span>
-                <span className="text-white">9:00 AM - 1:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span className="text-white/70">Sunday</span>
-                <span className="text-white">Closed</span>
-              </li>
-            </ul>
-          </div>
+            <ContactInfo variant="default" />
+            
+            <div className="mt-8 p-4 bg-primary/10 rounded-lg border border-primary/30">
+              <h3 className="text-primary font-medium mb-2">Office Hours</h3>
+              <p className="text-white/70">Monday - Friday: 9:00 AM - 6:00 PM</p>
+              <p className="text-white/70">Saturday: 10:00 AM - 2:00 PM</p>
+              <p className="text-white/70">Sunday: Closed</p>
+            </div>
+          </Card>
         </div>
         
         {/* Contact Form */}
-        <div className="lg:col-span-2">
-          <div className="bg-secondary-dark rounded-lg p-6 border border-gray-800">
-            <h2 className="text-xl font-semibold text-white mb-6">Send us a Message</h2>
+        <div className="lg:w-2/3">
+          <Card className="bg-white/5 backdrop-blur-sm p-6">
+            <h2 className="text-xl font-cinzel text-primary mb-6">Send us a Message</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-white/70 mb-1 text-sm">
-                    Name <span className="text-red-500">*</span>
-                  </label>
+                  <label className="block text-white mb-2" htmlFor="name">Full Name*</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full bg-secondary border ${
-                      errors.name ? 'border-red-500' : 'border-gray-700'
-                    } rounded-md py-2 px-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50 focus:border-transparent`}
-                    placeholder="Your name"
+                    className={`w-full px-4 py-2 bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/20'} rounded-md text-white focus:outline-none focus:border-primary`}
                   />
                   {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-white/70 mb-1 text-sm">
-                    Email <span className="text-red-500">*</span>
-                  </label>
+                  <label className="block text-white mb-2" htmlFor="email">Email Address*</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full bg-secondary border ${
-                      errors.email ? 'border-red-500' : 'border-gray-700'
-                    } rounded-md py-2 px-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50 focus:border-transparent`}
-                    placeholder="Your email"
+                    className={`w-full px-4 py-2 bg-white/5 border ${errors.email ? 'border-red-500' : 'border-white/20'} rounded-md text-white focus:outline-none focus:border-primary`}
                   />
                   {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
                 <div>
-                  <label htmlFor="phone" className="block text-white/70 mb-1 text-sm">
-                    Phone (Optional)
-                  </label>
+                  <label className="block text-white mb-2" htmlFor="phone">Phone Number</label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-secondary border border-gray-700 rounded-md py-2 px-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50 focus:border-transparent"
-                    placeholder="Your phone number"
+                    className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-md text-white focus:outline-none focus:border-primary"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-white/70 mb-1 text-sm">
-                    Subject <span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
+                  <label className="block text-white mb-2" htmlFor="organization">Organization</label>
+                  <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    value={formData.organization}
                     onChange={handleChange}
-                    className={`w-full bg-secondary border ${
-                      errors.subject ? 'border-red-500' : 'border-gray-700'
-                    } rounded-md py-2 px-3 text-white focus:ring-2 focus:ring-primary/50 focus:border-transparent`}
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Technical Support">Technical Support</option>
-                    <option value="Tender Submission">Tender Submission</option>
-                    <option value="Bid Clarification">Bid Clarification</option>
-                    <option value="Account Issues">Account Issues</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
+                    className="w-full px-4 py-2 bg-white/5 border border-white/20 rounded-md text-white focus:outline-none focus:border-primary"
+                  />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-white/70 mb-1 text-sm">
-                  Message <span className="text-red-500">*</span>
-                </label>
+                <label className="block text-white mb-2" htmlFor="subject">Subject*</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-2 bg-white/5 border ${errors.subject ? 'border-red-500' : 'border-white/20'} rounded-md text-white focus:outline-none focus:border-primary`}
+                />
+                {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
+              </div>
+              
+              <div>
+                <label className="block text-white mb-2" htmlFor="message">Your Message*</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={6}
-                  className={`w-full bg-secondary border ${
-                    errors.message ? 'border-red-500' : 'border-gray-700'
-                  } rounded-md py-2 px-3 text-white placeholder-gray-400 focus:ring-2 focus:ring-primary/50 focus:border-transparent`}
-                  placeholder="Your message"
+                  className={`w-full px-4 py-2 bg-white/5 border ${errors.message ? 'border-red-500' : 'border-white/20'} rounded-md text-white focus:outline-none focus:border-primary`}
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
@@ -265,38 +204,18 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-primary hover:bg-primary/90 text-gray-900 font-medium py-2 px-6 rounded-md flex items-center space-x-2 transition-colors"
+                  className="px-6 py-2 bg-primary text-secondary font-medium rounded-md hover:bg-primary/90 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send size={18} />
-                      <span>Send Message</span>
-                    </>
-                  )}
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>
-          </div>
+          </Card>
         </div>
       </div>
-      
-      {/* Map */}
-      <div className="bg-secondary-dark rounded-lg p-6 border border-gray-800">
-        <h2 className="text-xl font-semibold text-white mb-4">Our Location</h2>
-        <div className="rounded-lg overflow-hidden h-64 bg-secondary">
-          {/* Placeholder for map - In a real app, this would be a Google Maps integration */}
-          <div className="w-full h-full flex items-center justify-center bg-secondary">
-            <p className="text-white/70">Map integration would be placed here</p>
-          </div>
-        </div>
-      </div>
-    </motion.div>
+    </div>
   );
 };
 
 export default Contact;
+

@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1A2035" />
+  
+  <!-- Grid Pattern (Digital City) -->
+  <g opacity="0.3">
+    <!-- Horizontal Lines -->
+    <line x1="0" y1="50" x2="800" y2="50" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="250" x2="800" y2="250" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="350" x2="800" y2="350" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="450" x2="800" y2="450" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="500" x2="800" y2="500" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="0" y1="550" x2="800" y2="550" stroke="#4FC3F7" stroke-width="1" />
+    
+    <!-- Vertical Lines -->
+    <line x1="50" y1="0" x2="50" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="100" y1="0" x2="100" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="150" y1="0" x2="150" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="200" y1="0" x2="200" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="250" y1="0" x2="250" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="300" y1="0" x2="300" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="350" y1="0" x2="350" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="400" y1="0" x2="400" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="450" y1="0" x2="450" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="500" y1="0" x2="500" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="550" y1="0" x2="550" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="650" y1="0" x2="650" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="700" y1="0" x2="700" y2="600" stroke="#4FC3F7" stroke-width="1" />
+    <line x1="750" y1="0" x2="750" y2="600" stroke="#4FC3F7" stroke-width="1" />
+  </g>
+  
+  <!-- Ground/Road -->
+  <rect x="0" y="450" width="800" height="150" fill="#263238" />
+  
+  <!-- Buildings -->
+  <g>
+    <!-- Building 1 (Glitching Smart Building) -->
+    <g transform="translate(100, 200)">
+      <rect x="0" y="0" width="100" height="250" fill="#455A64" />
+      
+      <!-- Windows (with some glitched/error windows) -->
+      <g>
+        <rect x="10" y="20" width="15" height="15" fill="#29B6F6" />
+        <rect x="10" y="45" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="10" y="70" width="15" height="15" fill="#29B6F6" />
+        <rect x="10" y="95" width="15" height="15" fill="#29B6F6" />
+        <rect x="10" y="120" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="10" y="145" width="15" height="15" fill="#29B6F6" />
+        <rect x="10" y="170" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="10" y="195" width="15" height="15" fill="#29B6F6" />
+        <rect x="10" y="220" width="15" height="15" fill="#29B6F6" />
+        
+        <rect x="43" y="20" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="43" y="45" width="15" height="15" fill="#29B6F6" />
+        <rect x="43" y="70" width="15" height="15" fill="#29B6F6" />
+        <rect x="43" y="95" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="43" y="120" width="15" height="15" fill="#29B6F6" />
+        <rect x="43" y="145" width="15" height="15" fill="#29B6F6" />
+        <rect x="43" y="170" width="15" height="15" fill="#29B6F6" />
+        <rect x="43" y="195" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="43" y="220" width="15" height="15" fill="#29B6F6" />
+        
+        <rect x="75" y="20" width="15" height="15" fill="#29B6F6" />
+        <rect x="75" y="45" width="15" height="15" fill="#29B6F6" />
+        <rect x="75" y="70" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="75" y="95" width="15" height="15" fill="#29B6F6" />
+        <rect x="75" y="120" width="15" height="15" fill="#29B6F6" />
+        <rect x="75" y="145" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+        <rect x="75" y="170" width="15" height="15" fill="#29B6F6" />
+        <rect x="75" y="195" width="15" height="15" fill="#29B6F6" />
+        <rect x="75" y="220" width="15" height="15" fill="#F44336" /> <!-- Error window -->
+      </g>
+      
+      <!-- Error Sparks -->
+      <circle cx="10" cy="45" r="3" fill="#FFEB3B" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="43" cy="95" r="3" fill="#FFEB3B" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="0.7s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="75" cy="145" r="3" fill="#FFEB3B" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Building 2 (Smart Tower) -->
+    <g transform="translate(250, 150)">
+      <rect x="0" y="0" width="80" height="300" fill="#37474F" />
+      <rect x="30" y="-50" width="20" height="50" fill="#546E7A" />
+      
+      <!-- Smart Antenna with error -->
+      <rect x="35" y="-70" width="10" height="20" fill="#F44336" />
+      <circle cx="40" cy="-80" r="10" fill="#F44336">
+        <animate attributeName="fill" values="#F44336;#FF1744;#F44336" dur="2s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Windows -->
+      <g>
+        <rect x="15" y="20" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="40" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="60" width="50" height="10" fill="#F44336" /> <!-- Error window -->
+        <rect x="15" y="80" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="100" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="120" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="140" width="50" height="10" fill="#F44336" /> <!-- Error window -->
+        <rect x="15" y="160" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="180" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="200" width="50" height="10" fill="#F44336" /> <!-- Error window -->
+        <rect x="15" y="220" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="240" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="260" width="50" height="10" fill="#29B6F6" />
+        <rect x="15" y="280" width="50" height="10" fill="#F44336" /> <!-- Error window -->
+      </g>
+    </g>
+    
+    <!-- Building 3 (Data Center) -->
+    <g transform="translate(380, 250)">
+      <rect x="0" y="0" width="120" height="200" fill="#263238" />
+      
+      <!-- Server Racks indicated by lights -->
+      <g>
+        <rect x="10" y="20" width="5" height="5" fill="#4CAF50" />
+        <rect x="10" y="35" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="10" y="50" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="10" y="65" width="5" height="5" fill="#4CAF50" />
+        <rect x="10" y="80" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="10" y="95" width="5" height="5" fill="#4CAF50" />
+        <rect x="10" y="110" width="5" height="5" fill="#4CAF50" />
+        <rect x="10" y="125" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="10" y="140" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="10" y="155" width="5" height="5" fill="#4CAF50" />
+        <rect x="10" y="170" width="5" height="5" fill="#4CAF50" />
+        
+        <rect x="30" y="20" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="30" y="35" width="5" height="5" fill="#4CAF50" />
+        <rect x="30" y="50" width="5" height="5" fill="#4CAF50" />
+        <rect x="30" y="65" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="30" y="80" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="30" y="95" width="5" height="5" fill="#4CAF50" />
+        <rect x="30" y="110" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="30" y="125" width="5" height="5" fill="#4CAF50" />
+        <rect x="30" y="140" width="5" height="5" fill="#4CAF50" />
+        <rect x="30" y="155" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="30" y="170" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        
+        <rect x="90" y="20" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="90" y="35" width="5" height="5" fill="#4CAF50" />
+        <rect x="90" y="50" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="90" y="65" width="5" height="5" fill="#4CAF50" />
+        <rect x="90" y="80" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="90" y="95" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="90" y="110" width="5" height="5" fill="#4CAF50" />
+        <rect x="90" y="125" width="5" height="5" fill="#4CAF50" />
+        <rect x="90" y="140" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+        <rect x="90" y="155" width="5" height="5" fill="#4CAF50" />
+        <rect x="90" y="170" width="5" height="5" fill="#F44336" /> <!-- Error light -->
+      </g>
+      
+      <!-- Data Center Windows -->
+      <rect x="50" y="40" width="30" height="40" fill="#29B6F6" opacity="0.5" />
+      <rect x="50" y="100" width="30" height="40" fill="#F44336" opacity="0.5" />
+      
+      <!-- Data Center Entrance -->
+      <rect x="40" y="170" width="40" height="30" fill="#455A64" />
+    </g>
+    
+    <!-- Building 4 (Smart Government Building) -->
+    <g transform="translate(550, 180)">
+      <rect x="0" y="0" width="150" height="270" fill="#37474F" />
+      
+      <!-- Dome -->
+      <path d="M0,50 Q75,-30 150,50" fill="#455A64" />
+      
+      <!-- Steps -->
+      <rect x="30" y="250" width="90" height="10" fill="#546E7A" />
+      <rect x="40" y="260" width="70" height="10" fill="#546E7A" />
+      
+      <!-- Columns -->
+      <rect x="30" y="80" width="10" height="170" fill="#546E7A" />
+      <rect x="60" y="80" width="10" height="170" fill="#546E7A" />
+      <rect x="90" y="80" width="10" height="170" fill="#546E7A" />
+      <rect x="120" y="80" width="10" height="170" fill="#546E7A" />
+      
+      <!-- Security Error Symbol -->
+      <g transform="translate(75, 120)">
+        <circle cx="0" cy="0" r="25" fill="none" stroke="#F44336" stroke-width="3" />
+        <path d="M-15,-15 L15,15 M-15,15 L15,-15" stroke="#F44336" stroke-width="3" />
+      </g>
+      
+      <!-- Digital Display with error message -->
+      <rect x="50" y="180" width="50" height="20" fill="#E53935" />
+      <text x="75" y="195" font-family="Arial" font-size="8" text-anchor="middle" fill="#FFFFFF">ERROR</text>
+    </g>
+  </g>
+  
+  <!-- Digital Infrastructure Elements -->
+  
+  <!-- Smart Streetlights (some with errors) -->
+  <g>
+    <g transform="translate(150, 420)">
+      <rect x="0" y="0" width="5" height="30" fill="#78909C" />
+      <circle cx="2.5" cy="-5" r="5" fill="#F44336">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <g transform="translate(250, 420)">
+      <rect x="0" y="0" width="5" height="30" fill="#78909C" />
+      <circle cx="2.5" cy="-5" r="5" fill="#4FC3F7" />
+    </g>
+    
+    <g transform="translate(350, 420)">
+      <rect x="0" y="0" width="5" height="30" fill="#78909C" />
+      <circle cx="2.5" cy="-5" r="5" fill="#F44336">
+        <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <g transform="translate(450, 420)">
+      <rect x="0" y="0" width="5" height="30" fill="#78909C" />
+      <circle cx="2.5" cy="-5" r="5" fill="#4FC3F7" />
+    </g>
+    
+    <g transform="translate(550, 420)">
+      <rect x="0" y="0" width="5" height="30" fill="#78909C" />
+      <circle cx="2.5" cy="-5" r="5" fill="#F44336">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <g transform="translate(650, 420)">
+      <rect x="0" y="0" width="5" height="30" fill="#78909C" />
+      <circle cx="2.5" cy="-5" r="5" fill="#4FC3F7" />
+    </g>
+  </g>
+  
+  <!-- Smart Traffic Light with Error -->
+  <g transform="translate(500, 400)">
+    <rect x="0" y="0" width="10" height="50" fill="#546E7A" />
+    <rect x="-5" y="-60" width="20" height="60" fill="#263238" />
+    <circle cx="5" cy="-50" r="6" fill="#F44336">
+      <animate attributeName="fill" values="#F44336;#D32F2F;#F44336" dur="0.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="5" cy="-35" r="6" fill="#FFC107" opacity="0.3" />
+    <circle cx="5" cy="-20" r="6" fill="#4CAF50" opacity="0.3" />
+  </g>
+  
+  <!-- Vehicle with Error -->
+  <g transform="translate(350, 470)">
+    <rect x="0" y="0" width="40" height="15" rx="5" fill="#546E7A" />
+    <rect x="5" y="-8" width="30" height="10" rx="3" fill="#29B6F6" opacity="0.7" />
+    <circle cx="10" cy="15" r="5" fill="#212121" />
+    <circle cx="30" cy="15" r="5" fill="#212121" />
+    <rect x="15" y="2" width="10" height="5" fill="#F44336">
+      <animate attributeName="opacity" values="1;0.3;1" dur="0.7s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Error Symbols -->
+  <g transform="translate(300, 350)">
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#F44336" stroke-width="2" />
+    <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#F44336" stroke-width="2" />
+  </g>
+  
+  <g transform="translate(600, 300)">
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#F44336" stroke-width="2" />
+    <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#F44336" stroke-width="2" />
+  </g>
+  
+  <g transform="translate(200, 150)">
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#F44336" stroke-width="2" />
+    <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#F44336" stroke-width="2" />
+  </g>
+  
+  <!-- Binary Data Stream with Error (Cyber Attack Visualization) -->
+  <g>
+    <text x="150" y="100" font-family="monospace" font-size="10" fill="#4FC3F7">10110101</text>
+    <text x="210" y="100" font-family="monospace" font-size="10" fill="#F44336">ERROR</text>
+    <text x="250" y="100" font-family="monospace" font-size="10" fill="#4FC3F7">01011010</text>
+    <text x="150" y="120" font-family="monospace" font-size="10" fill="#4FC3F7">00110111</text>
+    <text x="210" y="120" font-family="monospace" font-size="10" fill="#F44336">BREACH!</text>
+    <text x="260" y="120" font-family="monospace" font-size="10" fill="#4FC3F7">11100010</text>
+    
+    <text x="400" y="80" font-family="monospace" font-size="10" fill="#4FC3F7">11100111</text>
+    <text x="460" y="80" font-family="monospace" font-size="10" fill="#F44336">ATTACK</text>
+    <text x="500" y="80" font-family="monospace" font-size="10" fill="#4FC3F7">10001101</text>
+    <text x="400" y="100" font-family="monospace" font-size="10" fill="#4FC3F7">01110110</text>
+    <text x="460" y="100" font-family="monospace" font-size="10" fill="#F44336">DETECTED</text>
+    <text x="510" y="100" font-family="monospace" font-size="10" fill="#4FC3F7">11101010</text>
+  </g>
+  
+  <!-- Digital Warning Sign -->
+  <g transform="translate(700, 150)">
+    <rect x="-50" y="0" width="100" height="40" rx="5" fill="#B71C1C" />
+    <text x="0" y="20" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">SYSTEM</text>
+    <text x="0" y="35" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#FFFFFF">FAILURE</text>
+  </g>
+  
+  <!-- WiFi Symbols with Errors -->
+  <g transform="translate(50, 100)">
+    <path d="M0,15 Q10,0 20,15" stroke="#F44336" stroke-width="1" fill="none" />
+    <path d="M5,15 Q10,5 15,15" stroke="#F44336" stroke-width="1" fill="none" />
+    <text x="10" y="25" font-family="Arial" font-size="8" text-anchor="middle" fill="#F44336">X</text>
+  </g>
+  
+  <g transform="translate(620, 100)">
+    <path d="M0,15 Q10,0 20,15" stroke="#F44336" stroke-width="1" fill="none" />
+    <path d="M5,15 Q10,5 15,15" stroke="#F44336" stroke-width="1" fill="none" />
+    <text x="10" y="25" font-family="Arial" font-size="8" text-anchor="middle" fill="#F44336">X</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#F44336">Smart City Development Initiative</text>
+  <text x="400" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="#F44336">Cybersecurity Failure</text>
+</svg> 

@@ -146,7 +146,7 @@ const SUCCESS_STORIES: TenderStory[] = [
       "Advanced filtration systems for contaminated water sources",
       "Comprehensive local training and employment program"
     ],
-    image: "/images/success-stories/water-supply.svg",
+    image: "/images/success-stories/rural-water-supply.svg",
     metrics: [
       { label: "Coverage", value: "5,257 households", icon: "home" },
       { label: "Water Quality", value: "100% WHO standards", icon: "droplet" },
@@ -248,13 +248,91 @@ const SUCCESS_STORIES: TenderStory[] = [
     solutions: [
       "Weather-adaptive construction schedules",
       "Nature-based solutions including mangrove restoration",
-      "Specialized amphibious construction equipment"
+      "Advanced coastal engineering techniques"
     ],
     image: "/images/success-stories/coastal-protection.svg",
     metrics: [
-      { label: "Coast Protected", value: "120 km", icon: "map" },
-      { label: "Communities Secured", value: "42 villages", icon: "home" },
-      { label: "Habitats Restored", value: "850 hectares", icon: "flower" }
+      { label: "Protected Area", value: "120 km coastline", icon: "map" },
+      { label: "Storm Resilience", value: "Category 4 rated", icon: "cloud-lightning" },
+      { label: "Marine Life", value: "32% increase", icon: "fish" }
+    ]
+  },
+  {
+    id: "10",
+    title: "Regional Airport Modernization",
+    company: "Aviation Infrastructure Partners",
+    tenderId: "AIR-2023-4520",
+    value: "₹420 Crore",
+    timeframe: "2023-2025",
+    outcome: "Transformed regional airport to handle international flights",
+    type: 'success',
+    challenges: [
+      "Maintaining operational status during construction",
+      "Limited land availability for expansion",
+      "Meeting international aviation standards"
+    ],
+    solutions: [
+      "Phased construction approach with minimal disruption",
+      "Vertical integration of facilities to maximize space",
+      "International aviation experts collaboration"
+    ],
+    image: "/images/success-stories/regional-airport-modernization.svg",
+    metrics: [
+      { label: "Passenger Capacity", value: "3.2M annually", icon: "users" },
+      { label: "Flight Operations", value: "+85% increase", icon: "plane" },
+      { label: "Economic Impact", value: "₹520Cr regional GDP", icon: "trending-up" }
+    ]
+  },
+  {
+    id: "11",
+    title: "District Court Complex",
+    company: "Civic Infrastructure Development",
+    tenderId: "JUS-2022-8731",
+    value: "₹210 Crore",
+    timeframe: "2022-2024",
+    outcome: "Built modern judicial complex with digital infrastructure",
+    type: 'success',
+    challenges: [
+      "Highly specific security requirements",
+      "Integration of heritage elements with modern design",
+      "Incorporation of advanced digital court systems"
+    ],
+    solutions: [
+      "Specialized security consultants for design phase",
+      "Heritage preservation experts on the project team",
+      "Cutting-edge digital courtroom technology integration"
+    ],
+    image: "/images/success-stories/district-court-complex.svg",
+    metrics: [
+      { label: "Courtrooms", value: "32 digital-enabled", icon: "layout" },
+      { label: "Case Capacity", value: "+140% increase", icon: "folder" },
+      { label: "Processing Time", value: "62% reduction", icon: "clock" }
+    ]
+  },
+  {
+    id: "12",
+    title: "Urban Metro Ticketing System",
+    company: "Transit Technology Solutions",
+    tenderId: "TRN-2023-3921",
+    value: "₹156 Crore",
+    timeframe: "2023-2024",
+    outcome: "Implemented seamless digital ticketing across metro network",
+    type: 'success',
+    challenges: [
+      "Integration with multiple legacy systems",
+      "High volume transaction processing requirements",
+      "Strict data privacy and security regulations"
+    ],
+    solutions: [
+      "Custom middleware for legacy system integration",
+      "Scalable cloud architecture with local redundancy",
+      "End-to-end encryption and comprehensive security audit"
+    ],
+    image: "/images/success-stories/urban-metro-ticketing.svg",
+    metrics: [
+      { label: "Transaction Speed", value: "0.3 seconds avg", icon: "zap" },
+      { label: "User Adoption", value: "92% in first month", icon: "users" },
+      { label: "Revenue Leakage", value: "Reduced by 27%", icon: "trending-down" }
     ]
   }
 ];
@@ -419,80 +497,80 @@ const FAILURE_STORIES: TenderStory[] = [
   },
   {
     id: "f7",
-    title: "Regional Airport Modernization",
-    company: "Aviation Infrastructure Ltd.",
-    tenderId: "RA-2020-9876",
-    value: "₹560 Crore",
+    title: "Port Modernization Project",
+    company: "Maritime Infrastructure Development Ltd.",
+    tenderId: "PM-2020-7755",
+    value: "₹680 Crore",
     timeframe: "2020-2022",
-    outcome: "Project significantly scaled down after funding shortfall",
+    outcome: "Project halted at 40% completion due to environmental concerns",
     type: 'failure',
     challenges: [
-      "International regulatory changes requiring design modifications",
-      "Geotechnical issues discovered during runway extension",
-      "Unexpected withdrawal of international funding partner"
+      "Unexpected environmental impact assessment findings",
+      "Marine ecosystem damage concerns raised by experts",
+      "Shifting regulatory compliance requirements during construction"
     ],
     solutions: [
-      "Scaled down project scope to focus on terminal only",
-      "Alternative financing attempts through PPP model",
-      "Phased implementation approach proposal"
+      "Revised design with reduced environmental footprint",
+      "Extensive marine ecosystem protection measures proposed",
+      "Advanced pollution control systems installation attempts"
     ],
-    image: "/images/failure-stories/airport-project.svg",
+    image: "/images/failure-stories/port-modernization.svg",
     metrics: [
-      { label: "Scope Reduction", value: "65% of original plans", icon: "scissors" },
-      { label: "Funding Gap", value: "₹230 Crore", icon: "dollar-sign" },
-      { label: "Capacity Increase", value: "Only 15% of projected", icon: "users" }
+      { label: "Completion Rate", value: "40% before stoppage", icon: "percent" },
+      { label: "Environmental Issues", value: "17 critical concerns", icon: "alert-triangle" },
+      { label: "Economic Impact", value: "₹220Cr losses", icon: "trending-down" }
     ]
   },
   {
     id: "f8",
-    title: "District Court Complex",
-    company: "Government Infrastructure Corp",
-    tenderId: "DC-2021-2233",
-    value: "₹280 Crore",
+    title: "Smart City Development Initiative",
+    company: "Urban Innovation Technologies",
+    tenderId: "SC-2021-4422",
+    value: "₹310 Crore",
     timeframe: "2021-2023",
-    outcome: "Project retendered after contractor bankruptcy",
+    outcome: "Project abandoned after critical technology integration failures",
     type: 'failure',
     challenges: [
-      "Multiple design changes from judiciary stakeholders",
-      "Contractor financial instability not detected in vetting",
-      "Construction quality issues requiring extensive rework"
+      "Complex integration of disparate urban systems",
+      "Cybersecurity vulnerabilities discovered in core infrastructure",
+      "Public data privacy concerns escalated by media coverage"
     ],
     solutions: [
-      "Attempted financial restructuring with contractor",
-      "Quality inspection and remediation program",
-      "Revised project management framework"
+      "Attempted comprehensive security audit and remediation",
+      "Data anonymization and encryption enhancements",
+      "System architecture redesign proposals"
     ],
-    image: "/images/failure-stories/court-complex.svg",
+    image: "/images/failure-stories/smart-city-development.svg",
     metrics: [
-      { label: "Work Completed", value: "37% before termination", icon: "percent" },
-      { label: "Quality Issues", value: "82 major defects identified", icon: "alert-circle" },
-      { label: "Schedule Delay", value: "28 months and increasing", icon: "calendar" }
+      { label: "Security Flaws", value: "52 critical issues", icon: "shield-off" },
+      { label: "System Failures", value: "76% of test scenarios", icon: "x-circle" },
+      { label: "Public Trust", value: "Declined by 65%", icon: "trending-down" }
     ]
   },
   {
     id: "f9",
-    title: "Urban Metro Ticketing System",
-    company: "MetroDigi Solutions",
-    tenderId: "MTS-2022-4455",
-    value: "₹95 Crore",
+    title: "National Highway Construction",
+    company: "Infrastructure Development Corporation",
+    tenderId: "NH-2022-3311",
+    value: "₹420 Crore",
     timeframe: "2022-2023",
-    outcome: "System reverted to previous solution after implementation failure",
+    outcome: "Project terminated after massive cost overruns and quality issues",
     type: 'failure',
     challenges: [
-      "Integration failures with existing metro infrastructure",
-      "Severe performance issues during peak hours",
-      "User interface issues leading to passenger confusion"
+      "Geological surveys proved inadequate for terrain complexity",
+      "Material quality inconsistencies from multiple suppliers",
+      "Severe weather events damaged construction in progress"
     ],
     solutions: [
-      "Multiple system updates and patches",
-      "Extensive user testing and feedback collection",
-      "Simplified interface redesign"
+      "Attempted comprehensive geological reassessment",
+      "Stricter quality control systems implementation",
+      "Weather-resistant construction methodologies"
     ],
-    image: "/images/failure-stories/metro-ticketing.svg",
+    image: "/images/failure-stories/national-highway-construction.svg",
     metrics: [
-      { label: "System Crashes", value: "Daily during peak hours", icon: "x-circle" },
-      { label: "Transaction Errors", value: "17% of all attempts", icon: "alert-triangle" },
-      { label: "Customer Complaints", value: "Thousands registered", icon: "message-square" }
+      { label: "Cost Overrun", value: "78% above budget", icon: "dollar-sign" },
+      { label: "Quality Issues", value: "135 critical defects", icon: "alert-triangle" },
+      { label: "Schedule Delay", value: "16 months before termination", icon: "clock" }
     ]
   }
 ];

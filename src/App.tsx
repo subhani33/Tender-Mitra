@@ -9,12 +9,14 @@ import TaskManagement from './components/tasks/TaskManagement';
 import LearningHub from './components/learning/LearningHub';
 import Notification from './components/ui/Notification';
 import CityAnimation from './components/animations/CityAnimation';
-import GovtLogo from './components/ui/GovtLogo';
+import TenderMitraLogo from './components/ui/GovtLogo';
 import LoginForm from './components/auth/LoginForm';
+import Footer from './components/Footer';
 import { Bell, User, ChevronDown, Menu, X } from 'lucide-react';
 import ErrorBoundary from './components/ErrorBoundary';
 import './index.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import ContactInfo from './components/common/ContactInfo';
 
 // Lazy load route components for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -26,6 +28,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Login = lazy(() => import('./pages/Login'));
 const Register = lazy(() => import('./pages/Register'));
+const Guidelines = lazy(() => import('./pages/Guidelines'));
 
 // Lazy load components
 const TenderStories = lazy(() => import('./components/TenderStories').then(module => ({ default: module.TenderStories })));
@@ -62,7 +65,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <GovtLogo />
+            <TenderMitraLogo />
           </Link>
           
           <div className="hidden md:block">
@@ -156,6 +159,7 @@ function App() {
     { path: '/', label: 'Home' },
     { path: '/tenders', label: 'Tenders' },
     { path: '/services', label: 'Services' },
+    { path: '/guidelines', label: 'Guidelines' },
     { path: '/about', label: 'About Us' },
     { path: '/contact', label: 'Contact' },
     { path: '/dashboard', label: 'Dashboard' },
@@ -196,13 +200,15 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-secondary flex flex-col">
+        {/* Top Contact Bar - REMOVED */}
+        
         {/* Header/Navigation */}
         <header className="bg-secondary shadow-md relative z-20">
           <div className="container mx-auto px-4 py-3">
             <div className="flex items-center justify-between">
               {/* Logo area */}
               <div className="flex items-center">
-                <GovtLogo className="h-12 w-auto mr-4" />
+                <TenderMitraLogo className="h-12 w-auto mr-4" />
                 <div>
                   <h1 className="text-2xl font-bold text-primary font-cinzel">Tender Mitra</h1>
                   <p className="text-xs text-white/70">EdtoDo Technovations</p>
@@ -334,41 +340,14 @@ function App() {
             <Suspense fallback={<LoadingFallback />}>
               <AnimatePresence mode="wait">
                 <Routes>
-                  <Route path="/" element={
-                    <PageTransition>
-                      <div>
-                        {/* Main content sections wrapped with individual Suspense */}
-                        <Suspense fallback={<LoadingFallback />}>
-                          <TenderStories />
-                        </Suspense>
-                        
-                        <Suspense fallback={<LoadingFallback />}>
-                          <GuidelinesLibrary />
-                        </Suspense>
-                        
-                        <Suspense fallback={<LoadingFallback />}>
-                          <TenderFAQ />
-                        </Suspense>
-                        
-                        <Suspense fallback={<LoadingFallback />}>
-                          <GovtWebsites />
-                        </Suspense>
-                        
-                        <Suspense fallback={<LoadingFallback />}>
-                          <RegulatoryRequirements />
-                        </Suspense>
-                      </div>
-                    </PageTransition>
-                  } />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
+                  <Route path="/" element={<Home />} />
                   <Route 
                     path="/tenders" 
                     element={
                       <Tenders 
-                        onSubmit={handleTenderSubmit}
-                        isAuthenticated={isAuthenticated}
-                        onLoginRequired={() => showNotification("Please login to access all tender features")} 
+                        onSubmit={handleTenderSubmit} 
+                        isAuthenticated={isAuthenticated} 
+                        onLoginRequired={() => setNotification('Please login to continue')} 
                       />
                     } 
                   />
@@ -376,172 +355,48 @@ function App() {
                     path="/tenders/:id" 
                     element={
                       <TenderDetails 
-                        onBidSubmit={handleBidSubmit}
-                        isAuthenticated={isAuthenticated}
-                        onLoginRequired={() => showNotification("Please login to submit bids")}
+                        onBidSubmit={handleBidSubmit} 
+                        isAuthenticated={isAuthenticated} 
+                        onLoginRequired={() => setNotification('Please login to continue')} 
                       />
                     } 
                   />
-                  <Route path="/contact" element={<Contact onSubmit={() => showNotification("Thank you for your message. We'll get back to you soon!")} />} />
-                  <Route 
-                    path="/dashboard" 
-                    element={
-                      isAuthenticated ? 
-                      <Dashboard /> : 
-                      <LoginForm onLogin={handleLogin} redirectTo="/dashboard" />
-                    } 
-                  />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/contact" element={<Contact onSubmit={() => setNotification('Your message has been sent!')} />} />
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/guidelines" element={<Guidelines />} />
                   <Route path="/todo" element={<Todo />} />
-                  <Route path="/login" element={
-                    <Suspense fallback={<LoadingFallback />}>
-                      <Login />
-                    </Suspense>
-                  } />
-                  <Route path="/register" element={
-                    <Suspense fallback={<LoadingFallback />}>
-                      <Register />
-                    </Suspense>
-                  } />
+                  
+                  {/* Authentication routes */}
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  
+                  {/* Knowledge routes */}
+                  <Route path="/knowledge" element={<KnowledgeBase />} />
+                  <Route path="/tender-stories" element={<TenderStories />} />
+                  <Route path="/faq" element={<TenderFAQ />} />
+                  <Route path="/govt-websites" element={<GovtWebsites />} />
+                  <Route path="/regulatory" element={<RegulatoryRequirements />} />
+                  
+                  {/* Dashboard features */}
+                  <Route path="/analytics" element={<AnalyticsDashboard />} />
+                  <Route path="/bids" element={<BidManagement />} />
+                  <Route path="/learning" element={<LearningHub />} />
+                  <Route path="/tasks" element={<TaskManagement onNotify={showNotification} />} />
                 </Routes>
               </AnimatePresence>
             </Suspense>
           </ErrorBoundary>
         </main>
 
-        {/* Footer */}
-        <footer className="bg-secondary border-t border-gray-800 py-8">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-primary mb-4 font-cinzel">Tender Mitra</h3>
-                <p className="text-white/70 mb-4">
-                  A comprehensive platform for managing government tenders, bids, and procurement processes.
-                </p>
-                <div className="flex space-x-4">
-                  {/* Social media links would go here */}
-                  <button 
-                    className="text-white/70 hover:text-primary transition-colors"
-                    onClick={() => showNotification("Visit our social media for latest updates")}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                  </button>
-                  <button 
-                    className="text-white/70 hover:text-primary transition-colors"
-                    onClick={() => showNotification("Follow us on Twitter for tender updates")}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                  </button>
-                  <button 
-                    className="text-white/70 hover:text-primary transition-colors"
-                    onClick={() => showNotification("Connect with us on LinkedIn")}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                  </button>
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  {navLinks.map((link) => (
-                    <li key={link.path}>
-                      <Link to={link.path} className="text-white/70 hover:text-primary transition-colors">
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-white font-semibold mb-4">Resources</h4>
-                <ul className="space-y-2">
-                  <li>
-                    <button 
-                      className="text-white/70 hover:text-primary transition-colors"
-                      onClick={() => showNotification("Help Center will be available soon")}
-                    >
-                      Help Center
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                      className="text-white/70 hover:text-primary transition-colors"
-                      onClick={() => showNotification("FAQ section will be available soon")}
-                    >
-                      FAQ
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                      className="text-white/70 hover:text-primary transition-colors"
-                      onClick={() => showNotification("Blog section will be available soon")}
-                    >
-                      Blog
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-white font-semibold mb-4">Contact</h4>
-                <address className="not-italic text-white/70 space-y-2">
-                  <p>EdtoDo Technovations</p>
-                  <p>New Delhi, India</p>
-                  <p>
-                    <a 
-                      href="mailto:info@edtodo.tech" 
-                      className="hover:text-primary transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        showNotification("Email link clicked. Your email client would open");
-                      }}
-                    >
-                      Email: info@edtodo.tech
-                    </a>
-                  </p>
-                  <p>
-                    <a 
-                      href="tel:+911122334455" 
-                      className="hover:text-primary transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        showNotification("Phone link clicked. Your phone app would open");
-                      }}
-                    >
-                      Phone: +91 11 2233 4455
-                    </a>
-                  </p>
-                </address>
-              </div>
-            </div>
-            
-            <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-white/50 text-sm">
-                &copy; {new Date().getFullYear()} EdtoDo Technovations. All rights reserved.
-              </p>
-              <div className="mt-4 md:mt-0 space-x-6 text-sm">
-                <button 
-                  className="text-white/50 hover:text-primary transition-colors"
-                  onClick={() => showNotification("Privacy Policy page will be available soon")}
-                >
-                  Privacy Policy
-                </button>
-                <button 
-                  className="text-white/50 hover:text-primary transition-colors"
-                  onClick={() => showNotification("Terms of Service page will be available soon")}
-                >
-                  Terms of Service
-                </button>
-              </div>
-            </div>
-          </div>
-        </footer>
-
-        {/* Notifications */}
+        {/* Notification component */}
         {notification && (
           <Notification message={notification} onClose={closeNotification} />
         )}
+        
+        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="https://msme.gov.in/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+    
+  <title>Page Not Found | Ministry of Micro, Small &amp; Medium Enterprises</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+<meta name="keywords" content="Page Not Found, MSME, micro, small, medium, enterprises, technology, upgradation, marketing, promotion, udyog, aadhar, databank, grievances monitoring system, skill">
+<meta name="description" content="Ministry of Micro, Small & Medium Enterprises (M/o MSME) envision a vibrant MSME sector by promoting growth and development of the MSME Sector, including Khadi, Village and Coir Industries, in cooperation with concerned Ministries/Departments, State Governments and other Stakeholders, through providing support to existing enterprises and encouraging creation of new enterprises">
+<meta name="title" content="Ministry of Micro, Small & Medium Enterprises">
+<meta name="lang" content="en">
+    <meta name="viewport" content="width=device-width">
+    <!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
+
+  <style>
+@import url("https://msme.gov.in/modules/system/system.base.css?spkncz");
+</style>
+<style>
+@import url("https://msme.gov.in/sites/all/modules/contributed/calendar/css/calendar_multiday.css?spkncz");
+@import url("https://msme.gov.in/modules/comment/comment.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/contributed/date/date_api/date.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/contributed/date/date_popup/themes/datepicker.1.7.css?spkncz");
+@import url("https://msme.gov.in/modules/field/theme/field.css?spkncz");
+@import url("https://msme.gov.in/modules/node/node.css?spkncz");
+@import url("https://msme.gov.in/modules/user/user.css?spkncz");
+@import url("https://msme.gov.in/modules/forum/forum.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/contributed/views/css/views.css?spkncz");
+</style>
+<style>
+@import url("https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/css/base.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/css/font.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/css/flexslider.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/css/base-responsive.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/css/font-awesome.min.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/cmf_tell_friends/css/cmf_tell_friends.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/content_statistic/css/content_statistic.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/contributed/ctools/css/ctools.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/goisearch/css/custom_result.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/customs/google_search/css/result.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/contributed/lightbox2/css/lightbox.css?spkncz");
+@import url("https://msme.gov.in/sites/all/modules/contributed/panels/css/panels.css?spkncz");
+</style>
+<style>
+@import url("https://msme.gov.in/sites/all/themes/msme/css/styles.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/site2.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/msme.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/msme_font.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/msme_reset.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/msme_responsive.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/msme_slider.css?spkncz");
+@import url("https://msme.gov.in/sites/all/themes/msme/css/msme_dropdown.css?spkncz");
+</style>
+<style media="print">
+@import url("https://msme.gov.in/sites/all/themes/msme/css/print.css?spkncz");
+</style>
+  <script src="https://msme.gov.in/sites/all/modules/contributed/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.2"></script>
+<script src="https://msme.gov.in/misc/jquery-extend-3.4.0.js?v=1.8.2"></script>
+<script src="https://msme.gov.in/misc/jquery.once.js?v=1.2"></script>
+<script src="https://msme.gov.in/misc/drupal.js?spkncz"></script>
+<script>
+		var _paq = _paq || [];
+		_paq.push(["trackPageView"]);
+		_paq.push(["enableLinkTracking"]);
+		(function() {
+			var u="https://analytics.wrc.nic.in/cmfanalytics/";
+			_paq.push(["setTrackerUrl", u+"analytics"]);
+			var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+			g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"js/piwik.js"; s.parentNode.insertBefore(g,s);
+		}
+	)();</script>
+<script>var base_url ="https://msme.gov.in"; var themePath = "sites/all/themes/msme"; var modulePath = "sites/all/modules/customs/cmf_content";</script>
+<script src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/js/font-size.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/js/framework.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/js/swithcer.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/modules/customs/cmf_tell_friends/js/cmf_tell_friends.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/modules/customs/goisearch/js/custom_result_jsversion.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/modules/customs/goisearch/js/auto_jsversion.js?spkncz"></script>
+<script>
+		jQuery(document).ready(function(){
+			var searchStr = "";
+			if(searchStr != ""){
+				fetchResult();
+			}
+		});	
+		var currentKey = 0;
+		settings = new Array();
+		settings["searchServer"] = "http://goisearch.gov.in";
+		settings["textBoxId"] = "q";
+		settings["callBackFunction"] = "callBack";
+		loadSuggestionControls(settings);
+
+		function callBack() {
+			settings["q"] = document.getElementById("search_key").value;
+			settings["count"] = "10";
+			settings["site"] = "msme.gov.in";
+			loadResultControls(settings);
+		}
+
+		settings = new Array();
+		settings["searchServer"] = "http://goisearch.gov.in";
+		settings["textBoxId"] = "search_key";
+		settings["site"] = "msme.gov.in";
+		settings["q"] = "";
+		loadResultControls(settings);
+
+		function modifySettings(key1) {
+			if (document.getElementById("search_key").value != null) {
+				settings[key1] = document.getElementById("search_key").value;
+				settings["count"] = "10";
+				settings["site"] = "msme.gov.in";
+				loadResultControls(settings);
+			}
+			hideAutoComplete();
+		}
+
+		function fetchResult() {
+			var str = window.document.URL.toString();
+			str=escape(str);
+			var q = str.indexOf("?search_key=") + 12;
+			settings["q"] = str.slice(q);
+			settings["count"] = "10";
+			settings["site"] = "msme.gov.in";
+			loadResultControls(settings);
+		}
+
+		function escape(string) {
+				return ("" + string).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/"/g, "&#x27;").replace(/\//g, "&#x2F;").replace(/\+/g," ");
+		};
+		</script>
+<script src="https://msme.gov.in/sites/all/modules/customs/guidelines/js/script.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/modules/contributed/lightbox2/js/lightbox.js?1744346066"></script>
+<script src="https://msme.gov.in/sites/all/libraries/WebSpeech/WebSpeech.js?spkncz"></script>
+<script>jQuery(function() { soundManager.url = "/sites/all/libraries/WebSpeech/soundmanager2";
+      WebSpeech.server = "http://wa.eguidedog.net/cgi-bin/ekho.pl";
+      WebSpeech.setVoice("en");
+    });</script>
+<script>
+      function sideSpr(elem) {
+        if (typeof WebSpeech === 'undefined') {
+          return;
+        }
+
+        var value = elem.innerHTML;
+        if (value === 'Read Content') {
+          WebSpeech.speakHtml('middle-content');
+          elem.innerHTML = 'Pause';
+          WebSpeech.onfinish = function () {
+            document.getElementById('sideSprButton').innerHTML = 'Read Content';
+          }
+        }
+        else if (value === 'Pause') {
+          WebSpeech.pauseHtml();
+          elem.innerHTML = 'Resume';
+        }
+        else if (value === 'Resume') {
+          WebSpeech.resumeHtml();
+          elem.innerHTML = 'Pause';
+        }
+      }
+
+      function sideStop() {
+        if (typeof WebSpeech !== 'undefined') {
+          WebSpeech.stopHtml();
+          document.getElementById('sideSprButton').innerHTML = 'Read Content';
+       }
+      }</script>
+<script src="https://msme.gov.in/sites/all/themes/msme/js/jquery.cycle.all.js?spkncz"></script>
+<script src="https://msme.gov.in/sites/all/themes/msme/js/tickerme.js?spkncz"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"msme","theme_token":"f4e1QlyrwTTkP6cW1pV5kUEhpgc49sk9yfS1vd-ZoiY","js":{"sites\/all\/themes\/msme\/js\/jquery.newsTicker.js":1,"0":1,"sites\/all\/modules\/contributed\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"1":1,"2":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/js\/font-size.js":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/js\/framework.js":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/js\/swithcer.js":1,"sites\/all\/modules\/customs\/cmf_tell_friends\/js\/cmf_tell_friends.js":1,"sites\/all\/modules\/customs\/goisearch\/js\/custom_result_jsversion.js":1,"sites\/all\/modules\/customs\/goisearch\/js\/auto_jsversion.js":1,"3":1,"sites\/all\/modules\/customs\/guidelines\/js\/script.js":1,"sites\/all\/modules\/contributed\/lightbox2\/js\/lightbox.js":1,"sites\/all\/libraries\/WebSpeech\/WebSpeech.js":1,"4":1,"5":1,"sites\/all\/themes\/msme\/js\/jquery.cycle.all.js":1,"sites\/all\/themes\/msme\/js\/tickerme.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contributed\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contributed\/date\/date_api\/date.css":1,"sites\/all\/modules\/contributed\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/contributed\/views\/css\/views.css":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/css\/base.css":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/css\/font.css":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/css\/flexslider.css":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/css\/base-responsive.css":1,"sites\/all\/modules\/customs\/cmf_content\/assets\/css\/font-awesome.min.css":1,"sites\/all\/modules\/customs\/cmf_tell_friends\/css\/cmf_tell_friends.css":1,"sites\/all\/modules\/customs\/content_statistic\/css\/content_statistic.css":1,"sites\/all\/modules\/contributed\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/customs\/goisearch\/css\/custom_result.css":1,"http:\/\/goisas.nic.in\/content\/scripts\/jquery.1.8.7\/themes\/base\/jquery.ui.all.css":1,"sites\/all\/modules\/customs\/goisearch\/css\/add-css.css":1,"sites\/all\/modules\/customs\/google_search\/css\/result.css":1,"sites\/all\/modules\/contributed\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/contributed\/panels\/css\/panels.css":1,"sites\/all\/themes\/msme\/system.menus.css":1,"sites\/all\/themes\/msme\/system.messages.css":1,"sites\/all\/themes\/msme\/system.theme.css":1,"sites\/all\/themes\/msme\/css\/styles.css":1,"sites\/all\/themes\/msme\/css\/site2.css":1,"sites\/all\/themes\/msme\/css\/msme.css":1,"sites\/all\/themes\/msme\/css\/msme_font.css":1,"sites\/all\/themes\/msme\/css\/msme_reset.css":1,"sites\/all\/themes\/msme\/css\/msme_responsive.css":1,"sites\/all\/themes\/msme\/css\/msme_slider.css":1,"sites\/all\/themes\/msme\/css\/msme_dropdown.css":1,"sites\/all\/themes\/msme\/css\/print.css":1}},"encrypt_submissions":{"baseUrl":"https:\/\/msme.gov.in"},"lightbox2":{"rtl":"0","file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/contributed\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":true,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":false,"disable_resize":false,"disable_zoom":false,"force_show_nav":false,"show_caption":true,"loop_items":false,"node_link_text":"View Image Details","node_link_target":false,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":false}});</script>
+ 
+  <script src="https://msme.gov.in/sites/all/themes/msme/js/default.js"></script>
+  <script src="https://msme.gov.in/sites/all/themes/msme/js/custom.js"></script> 
+  <script src="https://msme.gov.in/sites/all/themes/msme/js/jquery.min.js"></script> 
+  <script src="https://msme.gov.in/sites/all/themes/msme/js/jquery.cycle.all.js"></script> 
+  
+  <!--[if IE 8]>
+ <link rel="stylesheet"  href="https://msme.gov.in/sites/all/themes/msme/css/ie8.css">
+<![endif]-->
+<!--[if IE 10]>
+ <link rel="stylesheet"  href="https://msme.gov.in/sites/all/themes/msme/css/ie10.css">
+<![endif]-->  
+<noscript>
+  <link href="https://msme.gov.in/sites/all/themes/msme/css/no-js.css"  rel="stylesheet">
+</noscript>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W0HRHQ2ZE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W0HRHQ2ZE9');
+</script>
+
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-sites page-sites-default page-sites-default-files page-sites-default-files-msme-order-2012pdf i18n-en section-sites" >
+ 
+    <div id="main-div" style="font-size: 100%;"> 
+<header>
+<div class="header_top_nav">
+</div> <!-- class="wrapper" -->
+<div class="top-section-st">
+          <div class="region region-header-top">
+    <div id="block-cmf-content-header-region-block" class="block block-cmf-content first last odd">
+
+      
+  <noscript class="no_scr">"JavaScript is a standard programming language that is included to provide interactive features, Kindly enable Javascript in your browser. For details visit help page"
+     </noscript><div class="wrapper common-wrapper">
+  <div class="container common-container four_content ">
+      <div class="common-left clearfix">
+          <ul>
+              <li class="gov-india"><span class="responsive_go_hindi"  lang="hi"><a target="_blank" href="https://india.gov.in" title="भारत सरकार ( बाहरी वेबसाइट जो एक नई विंडो में खुलती है)">भारत सरकार</a></span><span class="li_eng responsive_go_eng">                                   </span></li><li class="ministry"><span class="li_eng responsive_minis_eng"><a target="_blank" href="https://india.gov.in" title="GOVERNMENT OF INDIA,External Link that opens in a new window">GOVERNMENT OF INDIA</a></span></li></ul>
+
+        </div>
+        <div class="common-right clearfix">
+          <ul id="header-nav">
+              <li class="ico-skip cf"><a href="#skipCont" title="">Skip to main content</a>
+		      </li> <li class="ico-site-search cf"><a href="javascript:void(0);" id="toggleSearch" title="Site Search">
+			
+			<img class="top" src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/ico-site-search.png" alt="Site Search" /></a>
+			 
+						 <div class="search-drop goi-search"><div class="find">
+			<form name="searchForm" action="https://msme.gov.in/goisearch">
+				<label for="search_key" class="notdisplay">Search</label>
+				<input type="text" name="search_key" id="search_key" onkeyup="autoComplete()" autocomplete="off" required />
+				<input type="submit" value="Search" class="bttn-search"/>
+			</form>
+			<div id="auto_suggesion"></div>
+			</div></div>
+			</li><li class="ico-accessibility cf"><a href="javascript:void(0);" id="toggleAccessibility" title="Accessibility Dropdown">
+				
+				<img class="top" src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/ico-accessibility.png" alt="Accessibility Dropdown" />
+				
+				</a>
+                  <ul>
+                     <li> <a onclick="set_font_size('increase')" title="Increase font size" href="javascript:void(0);">A<sup>+</sup>
+					  </a> </li>
+                        <li> <a onclick="set_font_size()" title="Reset font size" href="javascript:void(0);">A<sup>&nbsp;</sup></a> </li>
+                        <li> <a onclick="set_font_size('decrease')" title="Decrease font size" href="javascript:void(0);">A<sup>-</sup></a> </li>
+        <li> <a href="javascript:void(0);" class="high-contrast dark" title="High Contrast">A</a> </li>
+       <li> <a href="javascript:void(0);" class="high-contrast light" title="Normal Contrast" style="display: none;">A</a> </li>
+                     
+                    </ul>
+                </li>
+                 <li class="ico-social cf"><a href="javascript:void(0);" id="toggleSocial" title="Social Medias">
+				<img class="top" src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/ico-social.png" alt="Social Medias" /></a>
+                <ul> <li><a target="_blank" title="External Link that opens in a new window" href="http://www.facebook.com/minmsme"><img alt="Facebook Page" src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/ico-facebook.png"></a></li><li><a target="_blank" title="External Link that opens in a new window" href="https://twitter.com/minmsme?original_referer=http%3A%2F%2Fmsme.gov.in%2FWeb%2FPortal%2FSocialMedia.aspx&profile_id=2595957175&tw"><img alt="Twitter Page" src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/ico-twitter.png"></a></li></ul>
+                </li> <li class="ico-sitemap cf"><a href="https://msme.gov.in/site-map" title="Sitemap">
+					 
+					  <img class="top" src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/ico-sitemap.png" alt="Sitemap" /></a></li> <li class="hindi cmf_lan"><a href="javascript:;" title="Select Language">Language</a><ul><li><a target="_blank" href="https://msme.gov.in/hi/sites/default/files/MSME-Order-2012.pdf" lang="hi" class="alink" title="Click here for हिन्दी version.">हिन्दी</a></li></ul></li> </ul>
+        </div>
+    </div>
+</div>
+</div>
+  </div>
+     </div>
+<!--Top-Header Section end-->
+
+<div class="main_header">
+<div class="wrapper">
+<div class="logo">
+				       <a style=" text-decoration:none;" href="/" title="Home" rel="home" class="header__logo" id="logo">
+        <img class="national_emblem" src="https://msme.gov.in/sites/all/themes/msme/images/emblem-dark.png" alt="national emblem" >
+	  
+	  
+	 <span  lang="hi">सूक्ष्म , लघु और मध्यम उद्यम मंत्रालय </span><div >Ministry of <strong>Micro, small & Medium Enterprises </strong></div>
+	 <!--    <div style="margin-top:10px" lang="hi">सूक्ष्म , लघु और मध्यम उद्यम मंत्रालय </div><div class="maintitle">Ministry of </br> <b style="font-size:22px; font-weight:700"> Micro, small & Medium Enterprises </b></div>-->
+
+      </a>
+		</div>
+
+
+<div class="header-right clearfix">
+<!--
+            <div class="right-content clearfix">
+                <div class="float-element">
+                  <a target="_blank" href="http://gandhi.gov.in/"  title="150th birth anniversary of Mahatma Gandhi">
+                      <img src="https://msme.gov.in/sites/default/files/gandhilog.png" style=" width:144px;" alt="MSME"></a>
+				   <a target="_blank" href="https://swachhbharat.mygov.in/" title="Swachh Bharat, External link that will open in a new window" class="swach-bharat-img sw-logo">
+                       <img src="https://msme.gov.in/sites/default/files/swach-bharat.png" alt="swach bharat"></a>
+                </div>
+-->
+ <div class="right-content clearfix">
+                <div class="float-element">
+	     <a class="sw-logo" target="_blank" href="https://msme.gov.in"  title="IYC Logo">
+                      <img src="https://msme.gov.in/sites/default/files/IYCLogo.png"  alt="MSME"></a>
+             <a class="sw-logo" target="_blank" href="https://merimaatimeradesh.gov.in/"  title="Meri Maati Mera Desh">
+                      <img src="https://msme.gov.in/sites/default/files/Azadikaamrit.jpg" alt="MSME">
+                      </a>
+                   <a target="_blank" href="https://swachhbharat.mygov.in/" title="Swachh Bharat, External Link that opens in a new window" class="swach-bharat-img sw-logo">
+          <img src="https://msme.gov.in/sites/default/files/swach-bharat.png" alt="swach bharat"></a>
+
+          <a class="sw-logo" target="_blank" href="https://pmvishwakarma.gov.in"  title="PM Vishwakarma">
+                      <img src="https://msme.gov.in/sites/default/files/PMVishwakarmaLogo1.png" alt="MSME">
+                      </a>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+</div>
+
+
+<div class="nav">
+<div class="wrapper">
+<a class="toggle_menu" href="javascript:void(0)">
+<div class="rmm-toggled-controls"><div class="rmm-toggled-title">Menu</div><div class="rmm-button"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div></div>
+</a>
+</div>
+</div>
+</div>
+</header>
+</div>
+<!--
+<section class="banner-wrapper inner-banner">
+  <img src="https://msme.gov.in/sites/all/themes/msme/images/bannerol.jpg" alt="Inner Banner">
+  </section>
+-->
+<!--Header & navigation end-->
+<!-- innermain -->
+<div id="main">
+<!--bradcum start-->
+<div class="bradcum">
+<div class="wrapper">
+   <div class="region region-highlighted">
+    <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb bradcum first last odd">
+
+      
+  <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> &gt;&gt; </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-1">Sites</span><span class="easy-breadcrumb_segment-separator"> &gt;&gt; </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-2">Default</span><span class="easy-breadcrumb_segment-separator"> &gt;&gt; </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-3">Files</span><span class="easy-breadcrumb_segment-separator"> &gt;&gt; </span><a href="/sites/default/files/MSME-Order-2012.pdf" class="easy-breadcrumb_segment easy-breadcrumb_segment-title active">Page Not Found</a></div>
+</div>
+  </div>
+</div>
+</div>
+<!--bradcum end-->
+<div class="wrapper">
+<!--Inner page left start-->
+<div class="innerleft">
+<!--panel 1 start-->
+<div class="main-link">
+ 
+
+</div>
+<!--Panel 1 end-->
+
+<div class="border-pattern"></div>	
+
+<!--Speeches Start-->
+<!--Speeches Start-->
+<script type="text/javascript">( function( $ ) {
+$( document ).ready(function() {
+$('#cssmenu > ul > li > a').click(function() {
+  $('#cssmenu li').removeClass('active');
+  $(this).closest('li').addClass('active'); 
+  var checkElement = $(this).next();
+  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+    $(this).closest('li').removeClass('active');
+    checkElement.slideUp('normal');
+  }
+  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+    $('#cssmenu ul ul:visible').slideUp('normal');
+    checkElement.slideDown('normal');
+  }
+  if($(this).closest('li').find('ul').children().length == 0) {
+    return true;
+  } else {
+    return false; 
+  }  
+});
+});
+} )( jQuery );
+</script>
+
+<script type="text/javascript">
+$("#accordion > h3").click(function(){
+
+ if(false == $(this).next().is(':visible')) {
+  $('#accordion > ul').slideUp(300);
+ }
+ $(this).next().slideToggle(300);
+});
+
+$('#accordion > ul:eq(0)').show();
+
+</script>
+<!--Speeches Close-->
+<!--Speeches Close-->
+
+</div>
+<!--Inner page left end-->
+
+<!-- Help region -->
+ <div class="help_region">
+                             <div class="region region-help">
+    <div id="block-webspeech-webspeech-block" class="block block-webspeech first last odd">
+
+      
+  <button id='sideSprButton' onclick='sideSpr(this);'>Read Content</button>
+    <button id='sideStopButton' onclick='sideStop()'>Stop</button>
+</div>
+  </div>
+       
+ </div> 
+ <!-- end of help -->
+
+<!--Inner page right start-->
+<div class="innerright">
+
+ <!-- Content -->
+ <div id="middle-content" class="column" role="main">
+      <a id="skipCont"></a>
+                    <h1 class="page__title title" id="page-title">Page Not Found</h1>
+             <div class="border-pattern"></div>
+                                           The requested page could not be found.      </div>
+ <!-- end content -->
+ 
+
+
+</div>
+<!--Inner page right end--> 
+<div class="border-pattern"></div>
+</div><!--Main wrapper End-->
+</div><!--Main Section End-->
+<!--Organisation start-->
+
+
+<div class="footer-banner-section">
+<div class="wrapper">
+ <div class="banner_logo">
+              
+ </div>   
+ </div>
+</div>
+<!--Organisation Close-->
+  <div class="region region-cmf-footer">
+    <div id="block-cmf-content-footer-region-block" class="block block-cmf-content first last odd">
+
+      
+  <div class="wrapper footer-wrapper">
+	<div class="footer-top-wrapper">
+    	<div class="container footer-top-container"></div>
+    </div>
+    <div class="footer-bottom-wrapper">
+    	<div class="container footer-bottom-container">
+        	<div class="footer-content clearfix ">
+			 <div class="logo-cmf">
+            	<a href="http://cmf.gov.in/" target="_blank"><img src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/cmf-logo.png" alt="Built on Common Minimum Framework"></a>
+            </div> <div class="copyright-content">
+            	Website Content Owned and Managed by  <strong>Ministry of Micro, Small & Medium Enterprises, Government of India</strong>
+            <span>Designed, Developed and Hosted by  <a href="http://www.nic.in/" title="NIC, External Link that opens in a new window" target="_blank"><strong>National Informatics Centre( NIC )</strong></a> </span> <span class="lastupdated">Last Updated: <strong>04 Apr 2025</strong></span>
+            </div><div class="gtranslate skiptranslate">
+             	<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://msme.gov.in" target="_blank"><img src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/vss.jpg" alt="W3C Css validator"></a>
+             	
+             		<a href="https://validator.w3.org/nu/?doc=https://msme.gov.in" target="_blank"><img src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/html-c.png" alt="W3C Html validator"></a></div></div>
+        </div>
+    </div><div class="stqc-logo"><a target="_blank" title="STQC Certificate" href="https://msme.gov.in/sites/default/files/Website%20Quality%20Certificate.PDF"><img src="https://msme.gov.in/sites/all/modules/customs/cmf_content/assets/images/cqw_logo.png" alt="STQC Certificate" /></a></div></div>
+</div>
+  </div>
+       
+        <script>
+        $( document ).ready(function() {
+    $( ".ico-accessibility" ).click(function() {
+    	
+    	$('.high-contrast').attr('display','block');
+  
+});
+});
+        </script>
+
+
+
+
+
+  <script src="https://msme.gov.in/sites/all/themes/msme/js/jquery.newsTicker.js?spkncz"></script>
+<script>$(document).ready(function () {
+  $('.newsslider').newsTicker({
+    row_height: 65,
+    max_rows: 5,
+    speed: 600,
+    direction: 'up',
+    duration: 4000,
+    autostart: 1,
+    pauseOnHover: 0,
+    prevButton:  $('#prev-button'),
+    nextButton:  $('#next-button')
+});
+});</script>
+</body>
+</html>

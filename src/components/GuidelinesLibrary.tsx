@@ -11,63 +11,123 @@ interface GuidelineDocument {
   ministry: string;
   size: string;
   pages: number;
+  lastUpdated?: string;
+  category: string;
+  tags: string[];
 }
 
 const GUIDELINE_DOCUMENTS: GuidelineDocument[] = [
   {
-    id: "gfr",
-    title: "General Financial Rules",
-    description: "Comprehensive rules and procedures for financial management and procurement in government departments.",
-    pdfUrl: "/documents/general-financial-rules.pdf",
-    thumbnailUrl: "/images/guidelines/gfr-thumb.jpg",
-    publishedDate: "2017-03-07",
-    ministry: "Ministry of Finance",
-    size: "2.3 MB",
-    pages: 236
+    id: 'gfr2017',
+    title: 'General Financial Rules 2017',
+    description: 'Comprehensive guidelines issued by the Ministry of Finance for financial management and procurement procedures in government organizations.',
+    thumbnailUrl: '/images/guidelines/gfr2017-thumb.jpg',
+    pdfUrl: '/pdfs/GFR_2017_Complete.pdf',
+    ministry: 'Ministry of Finance',
+    publishedDate: '2017-03-07',
+    lastUpdated: '2023-08-15',
+    pages: 294,
+    size: '4.2 MB',
+    category: 'financial',
+    tags: ['finance', 'procurement', 'rules']
   },
   {
-    id: "mpg",
-    title: "Manual for Procurement of Goods",
-    description: "Detailed procedures and guidelines for procurement of goods by government agencies.",
-    pdfUrl: "/documents/manual-procurement-goods.pdf",
-    thumbnailUrl: "/images/guidelines/mpg-thumb.jpg",
-    publishedDate: "2017-04-05",
-    ministry: "Ministry of Finance",
-    size: "3.1 MB",
-    pages: 188
+    id: 'manual-procurement',
+    title: 'Manual for Procurement of Goods 2017',
+    description: 'Official procurement manual providing detailed processes and procedures for the procurement of goods by government departments and organizations.',
+    thumbnailUrl: '/images/guidelines/procurement-manual-thumb.jpg',
+    pdfUrl: '/pdfs/Manual_Procurement_Goods_2017.pdf',
+    ministry: 'Ministry of Finance',
+    publishedDate: '2017-04-28',
+    lastUpdated: '2022-11-30',
+    pages: 152,
+    size: '3.8 MB',
+    category: 'procurement',
+    tags: ['procurement', 'goods', 'tender']
   },
   {
-    id: "mpw",
-    title: "Manual for Procurement of Works",
-    description: "Guidelines for procurement of works including civil, electrical, and mechanical engineering projects.",
-    pdfUrl: "/documents/manual-procurement-works.pdf",
-    thumbnailUrl: "/images/guidelines/mpw-thumb.jpg",
-    publishedDate: "2019-10-29",
-    ministry: "Ministry of Finance",
-    size: "4.2 MB",
-    pages: 224
+    id: 'cppp-bidders-manual',
+    title: 'Central Public Procurement Portal - Bidders Manual',
+    description: 'Step-by-step guide for bidders on how to use the Central Public Procurement Portal (CPPP) for e-procurement and bid submission.',
+    thumbnailUrl: '/images/guidelines/cppp-thumb.jpg',
+    pdfUrl: '/pdfs/CPPP_Bidders_Manual.pdf',
+    ministry: 'Ministry of Electronics & Information Technology',
+    publishedDate: '2021-06-12',
+    lastUpdated: '2023-05-20',
+    pages: 78,
+    size: '5.1 MB',
+    category: 'e-procurement',
+    tags: ['cppp', 'portal', 'e-procurement']
   },
   {
-    id: "cvc",
-    title: "Central Vigilance Commission Guidelines",
-    description: "Guidelines for prevention of corruption and ensuring transparency in procurement processes.",
-    pdfUrl: "/documents/cvc-guidelines.pdf",
-    thumbnailUrl: "/images/guidelines/cvc-thumb.jpg",
-    publishedDate: "2021-06-18",
-    ministry: "Central Vigilance Commission",
-    size: "1.8 MB",
-    pages: 112
+    id: 'gem-user-manual',
+    title: 'GeM Portal User Manual',
+    description: 'Official user manual for the Government e-Marketplace (GeM) providing comprehensive guidance on registration, bidding, and tender management.',
+    thumbnailUrl: '/images/guidelines/gem-thumb.jpg',
+    pdfUrl: '/pdfs/GeM_Portal_User_Manual.pdf',
+    ministry: 'Ministry of Commerce and Industry',
+    publishedDate: '2022-04-15',
+    lastUpdated: '2023-12-05',
+    pages: 112,
+    size: '7.3 MB',
+    category: 'e-procurement',
+    tags: ['gem', 'e-marketplace', 'bidding']
   },
   {
-    id: "mcs",
-    title: "Manual for Procurement of Consultancy Services",
-    description: "Procedures for selection and engagement of consultants for government projects and services.",
-    pdfUrl: "/documents/manual-consultancy-services.pdf",
-    thumbnailUrl: "/images/guidelines/mcs-thumb.jpg",
-    publishedDate: "2017-04-18",
-    ministry: "Ministry of Finance",
-    size: "2.7 MB",
-    pages: 156
+    id: 'public-procurement-act',
+    title: 'Public Procurement Act 2012',
+    description: 'Legislative framework establishing the rules and procedures governing public procurement in India, ensuring transparency and fairness.',
+    thumbnailUrl: '/images/guidelines/ppa-thumb.jpg',
+    pdfUrl: '/pdfs/Public_Procurement_Act_2012.pdf',
+    ministry: 'Ministry of Law and Justice',
+    publishedDate: '2012-05-21',
+    lastUpdated: '2021-03-10',
+    pages: 64,
+    size: '2.4 MB',
+    category: 'legislation',
+    tags: ['legislation', 'legal', 'policy']
+  },
+  {
+    id: 'mse-policy',
+    title: 'MSE Procurement Policy',
+    description: 'Policy document detailing special provisions and benefits for Micro and Small Enterprises (MSEs) in government procurement processes.',
+    thumbnailUrl: '/images/guidelines/mse-thumb.jpg',
+    pdfUrl: '/pdfs/MSE_Procurement_Policy.pdf',
+    ministry: 'Ministry of Micro, Small and Medium Enterprises',
+    publishedDate: '2018-11-09',
+    lastUpdated: '2023-02-28',
+    pages: 42,
+    size: '1.8 MB',
+    category: 'policy',
+    tags: ['mse', 'small business', 'benefits']
+  },
+  {
+    id: 'make-in-india',
+    title: 'Public Procurement (Preference to Make in India) Order',
+    description: 'Policy directive to promote manufacturing and production of goods and services in India to encourage "Make in India" initiative.',
+    thumbnailUrl: '/images/guidelines/make-in-india-thumb.jpg',
+    pdfUrl: '/pdfs/Make_In_India_Procurement_Order.pdf',
+    ministry: 'Department for Promotion of Industry and Internal Trade',
+    publishedDate: '2017-06-15',
+    lastUpdated: '2022-09-16',
+    pages: 28,
+    size: '1.5 MB',
+    category: 'policy',
+    tags: ['make in india', 'local suppliers', 'preference']
+  },
+  {
+    id: 'cvc-guidelines',
+    title: 'CVC Guidelines on Tender Process',
+    description: 'Guidelines issued by the Central Vigilance Commission to ensure integrity, fairness, and transparency in the tender processes of public organizations.',
+    thumbnailUrl: '/images/guidelines/cvc-thumb.jpg',
+    pdfUrl: '/pdfs/CVC_Tender_Guidelines.pdf',
+    ministry: 'Central Vigilance Commission',
+    publishedDate: '2021-08-03',
+    lastUpdated: '2023-07-22',
+    pages: 56,
+    size: '2.3 MB',
+    category: 'compliance',
+    tags: ['vigilance', 'integrity', 'transparency']
   }
 ];
 
@@ -254,28 +314,33 @@ interface DocumentPreviewModalProps {
 
 const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({ document, onClose }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
       onClick={onClose}
     >
       <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
         transition={{ type: 'spring', damping: 25 }}
         className="bg-[#1A2A44] border-2 border-[#D4AF37]/40 rounded-lg shadow-[0_0_30px_rgba(212,175,55,0.3)] p-6 max-w-4xl w-full max-h-[90vh] overflow-auto"
-        onClick={e => e.stopPropagation()}
+        onClick={(e: React.MouseEvent) => e.stopPropagation()}
       >
         <div className="flex justify-between items-start mb-6">
           <h3 className="text-2xl font-cinzel text-primary">{document.title}</h3>
-          <button 
+          
+          <button
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-[#D4AF37]/20 hover:bg-[#D4AF37]/30 text-primary transition-colors"
+            className="text-white/60 hover:text-white transition-colors"
+            aria-label="Close"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -367,7 +432,7 @@ const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({ document, o
               <div 
                 key={relatedDoc.id} 
                 className="p-3 bg-[#1A2A44]/60 rounded border border-[#D4AF37]/20 hover:border-[#D4AF37]/40 cursor-pointer transition-colors"
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent) => {
                   e.stopPropagation();
                   // You could set the selected document to this related document
                   // setSelectedDocument(relatedDoc);
@@ -380,6 +445,6 @@ const DocumentPreviewModal: React.FC<DocumentPreviewModalProps> = ({ document, o
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }; 

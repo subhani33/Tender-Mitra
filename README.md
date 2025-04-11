@@ -2,6 +2,21 @@
 
 A comprehensive platform for government tender management, bid assistance, analytics, and learning resources.
 
+## Site Building Process
+
+This Tender-Mitra platform was built using modern web development technologies and practices:
+
+1. **Setup & Architecture**: Created a React+TypeScript project using Vite for fast development and optimized builds.
+2. **UI Framework**: Implemented Tailwind CSS for responsive, utility-first styling with a custom gold/navy theme.
+3. **Component Structure**: Developed modular React components for reusability and maintainability.
+4. **3D Visualizations**: Added interactive 3D tender visualizations using Three.js and React Three Fiber.
+5. **Authentication**: Implemented secure JWT-based user authentication system.
+6. **Error Handling**: Added robust error boundaries and fallbacks throughout the application.
+7. **Responsive Design**: Ensured the application works seamlessly across all device sizes.
+8. **Performance Optimization**: Used React's best practices for efficient rendering and code splitting.
+
+The entire development process followed a component-first approach with continuous integration and testing to ensure high quality and performance.
+
 ## Features
 
 - **Tender Portal**: Browse and search government tenders from various departments and categories
@@ -163,6 +178,7 @@ The application will automatically fall back to using mock data, allowing you to
 - **GUIDE.md**: Detailed instructions and API documentation
 - **PROJECT_SUMMARY.md**: Overview of all components
 - **WELCOME.txt**: Features and quick reference
+- **CODEBASE.md**: Detailed documentation of code structure, component usage, and development guidelines
 
 ## Project Structure
 

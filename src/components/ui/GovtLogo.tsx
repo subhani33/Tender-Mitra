@@ -1,27 +1,11 @@
 import React from 'react';
 
-interface GovtLogoProps {
+interface TenderMitraLogoProps {
   className?: string;
   onClick?: () => void;
 }
 
-const GovtLogo: React.FC<GovtLogoProps> = ({ className = '', onClick }) => {
-  // Generate spokes for the Dharma Chakra
-  const spokes = [];
-  for (let i = 0; i < 24; i++) {
-    spokes.push(
-      <line
-        key={i}
-        x1="100"
-        y1="100"
-        x2={100 + 18 * Math.cos((i * 15 * Math.PI) / 180)}
-        y2={100 + 18 * Math.sin((i * 15 * Math.PI) / 180)}
-        stroke="#D4A017"
-        strokeWidth="1"
-      />
-    );
-  }
-
+const TenderMitraLogo: React.FC<TenderMitraLogoProps> = ({ className = '', onClick }) => {
   return (
     <div 
       className={`relative flex items-center ${className}`}
@@ -31,100 +15,78 @@ const GovtLogo: React.FC<GovtLogoProps> = ({ className = '', onClick }) => {
       onKeyDown={onClick ? (e) => e.key === 'Enter' && onClick() : undefined}
     >
       <div className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-2 shadow-gold">
-        {/* Government of India Emblem - Lion Capital of Ashoka */}
+        {/* Enhanced Tender Mitra Logo */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 200 200"
-          className="w-16 h-16"
-          aria-label="Government of India Emblem"
+          viewBox="0 0 200 100"
+          className="w-auto h-16"
+          aria-label="Tender Mitra Logo"
         >
-          {/* Base golden color */}
+          {/* Define enhanced gradients for the logo */}
           <defs>
+            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#1E2A44" />
+              <stop offset="50%" stopColor="#2A4C8A" />
+              <stop offset="100%" stopColor="#4A90E2" />
+            </linearGradient>
             <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#D4A017" />
-              <stop offset="50%" stopColor="#FEDB72" />
+              <stop offset="50%" stopColor="#F0D98B" />
               <stop offset="100%" stopColor="#D4A017" />
             </linearGradient>
+            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="3" stdDeviation="2" floodColor="#000" floodOpacity="0.3" />
+            </filter>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="2" result="blur" />
+              <feFlood floodColor="#D4A017" floodOpacity="0.3" result="glow" />
+              <feComposite in="glow" in2="blur" operator="in" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
           </defs>
           
-          {/* Circular abacus */}
-          <circle cx="100" cy="100" r="60" fill="url(#goldGradient)" />
+          {/* Background Shape with enhanced styling */}
+          <rect x="10" y="10" width="180" height="80" rx="12" fill="url(#blueGradient)" filter="url(#shadow)" />
           
-          {/* Three lions visible from front */}
-          <g fill="url(#goldGradient)" stroke="#89740A" strokeWidth="0.5">
-            {/* Left Lion */}
-            <path d="M60,65 C55,60 52,52 55,47 C58,42 65,40 70,42 C75,44 78,50 76,54 C74,58 68,60 65,58 C62,56 64,52 68,53 C72,54 70,49 66,47 C62,45 58,50 60,55 C62,60 66,63 70,62" />
-            
-            {/* Center Lion */}
-            <path d="M100,60 C95,55 92,47 95,42 C98,37 105,35 110,37 C115,39 118,45 116,49 C114,53 108,55 105,53 C102,51 104,47 108,48 C112,49 110,44 106,42 C102,40 98,45 100,50 C102,55 106,58 110,57" />
-            
-            {/* Right Lion */}
-            <path d="M140,65 C145,60 148,52 145,47 C142,42 135,40 130,42 C125,44 122,50 124,54 C126,58 132,60 135,58 C138,56 136,52 132,53 C128,54 130,49 134,47 C138,45 142,50 140,55 C138,60 134,63 130,62" />
+          {/* Decorative border */}
+          <rect x="15" y="15" width="170" height="70" rx="8" fill="none" stroke="url(#goldGradient)" strokeWidth="1" strokeDasharray="2,1" opacity="0.6" />
+          
+          {/* Enhanced TM Monogram */}
+          <g filter="url(#glow)">
+            <path d="M40,30 H90 V40 H75 V70 H55 V40 H40 Z" fill="url(#goldGradient)" />
+            <path d="M100,30 H130 L140,70 H125 L123,63 H107 L105,70 H90 Z M110,50 H120 L115,35 Z" fill="url(#goldGradient)" />
           </g>
           
-          {/* Abacus with four animals */}
-          <g stroke="#89740A" strokeWidth="0.5" fill="url(#goldGradient)">
-            {/* Lion (North) */}
-            <path d="M100,45 C97,42 95,39 98,36 C101,33 105,34 107,36 C109,38 109,41 107,43"/>
-            
-            {/* Elephant (East) */}
-            <path d="M135,100 C140,97 144,98 146,101 C148,104 146,108 142,110 C138,112 134,111 132,108"/>
-            
-            {/* Horse (South) */}
-            <path d="M100,155 C103,158 105,161 102,164 C99,167 95,166 93,164 C91,162 91,159 93,157"/>
-            
-            {/* Bull (West) */}
-            <path d="M65,100 C60,97 56,98 54,101 C52,104 54,108 58,110 C62,112 66,111 68,108"/>
+          {/* Enhanced Gavel Icon */}
+          <g transform="translate(150, 40) scale(0.8)" filter="url(#glow)">
+            <rect x="-5" y="10" width="20" height="5" rx="2" fill="url(#goldGradient)" />
+            <rect x="-15" y="15" width="10" height="15" rx="2" fill="url(#goldGradient)" />
+            <rect x="0" y="-15" width="5" height="25" rx="1" fill="url(#goldGradient)" transform="rotate(45)" />
           </g>
           
-          {/* Capital base */}
-          <rect x="65" y="135" width="70" height="12" fill="url(#goldGradient)" stroke="#89740A" strokeWidth="0.5" />
-          
-          {/* Dharma Chakra (24-spoked wheel) */}
-          <circle cx="100" cy="100" r="20" fill="none" stroke="#89740A" strokeWidth="1" />
-          <circle cx="100" cy="100" r="18" fill="#FFF" />
-          <circle cx="100" cy="100" r="3" fill="#D4A017" />
-          
-          {/* 24 spokes for the Dharma Chakra */}
-          {spokes}
-          
-          {/* Satyameva Jayate in Devanagari */}
-          <g transform="translate(0, 160)">
-            <text
-              x="100"
-              y="10"
-              textAnchor="middle"
-              fill="#000000"
-              fontSize="11"
-              fontFamily="Arial, sans-serif"
-              fontWeight="bold"
-            >
-              सत्यमेव जयते
-            </text>
+          {/* Enhanced Document Icon */}
+          <g transform="translate(30, 55) scale(0.6)">
+            <path d="M0,0 H30 V40 H0 Z" fill="#fff" fillOpacity="0.9" filter="url(#shadow)" />
+            <path d="M5,8 H25 M5,16 H25 M5,24 H25 M5,32 H15" stroke="#1E2A44" strokeWidth="2" />
+            <path d="M32,-3 L42,7 V43 H12 V-3 Z" fill="#fff" fillOpacity="0.5" transform="translate(-5,0)" />
+            <path d="M32,-3 L42,7 H32 Z" fill="#ddd" fillOpacity="0.8" transform="translate(-5,0)" />
           </g>
+          
+          {/* Decorative elements */}
+          <circle cx="20" cy="20" r="3" fill="url(#goldGradient)" opacity="0.8" />
+          <circle cx="180" cy="20" r="3" fill="url(#goldGradient)" opacity="0.8" />
+          <circle cx="20" cy="80" r="3" fill="url(#goldGradient)" opacity="0.8" />
+          <circle cx="180" cy="80" r="3" fill="url(#goldGradient)" opacity="0.8" />
+          
+          {/* Tender label */}
+          <text x="100" y="85" textAnchor="middle" fill="url(#goldGradient)" fontSize="10" fontFamily="Arial, sans-serif" fontWeight="bold">TENDER MITRA</text>
         </svg>
-
-        {/* Tricolor bar and text */}
-        <div className="ml-2 flex flex-col">
-          {/* Tricolor vertical bar */}
-          <div className="flex h-full">
-            <div className="w-1 h-16 flex flex-col">
-              <div className="flex-1 bg-[#FF9933]"></div> {/* Saffron */}
-              <div className="flex-1 bg-white"></div> {/* White */}
-              <div className="flex-1 bg-[#138808]"></div> {/* Green */}
-            </div>
-            
-            {/* Text */}
-            <div className="ml-2 flex flex-col justify-center">
-              <span className="text-lg font-bold text-primary">भारत सरकार</span>
-              <span className="text-lg font-bold text-primary">GOVERNMENT</span>
-              <span className="text-lg font-bold text-primary">OF INDIA</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export default GovtLogo; 
+export default TenderMitraLogo; 

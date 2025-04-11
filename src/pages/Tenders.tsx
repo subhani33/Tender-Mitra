@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, Filter, AlertCircle, Download, Upload, MapPin, Building, Calendar } from 'lucide-react';
+import { Search, Filter, AlertCircle, Download, Upload, MapPin, Building, Calendar, DollarSign, SortDesc, ChevronDown, ChevronUp } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
+import IndiaStatesTenderList from '../components/common/IndiaStatesTenderList';
 
 // Interface for the component props
 interface TendersProps {
@@ -163,731 +164,270 @@ const originalMockTenders: Tender[] = [
   }
 ];
 
-// Make sure to have at least 12-17 tenders for each state by adding additional mock tenders
-// Adding more mock tenders for various states
-const additionalMockTenders: Tender[] = [
-  // More Andhra Pradesh tenders (adding 10 more)
+// Updated tenders for May 2025
+const mayTenders: Tender[] = [
   {
-    id: 'ap-1',
-    title: 'Amaravati Capital Region Smart Roads Development',
-    organization: 'Andhra Pradesh Capital Region Development Authority',
-    submissionDeadline: '2024-09-18',
-    estimatedValue: '₹ 120,00,00,000',
+    id: 'may-2025-1',
+    title: 'Road Construction Project',
+    organization: 'Ministry of Road Transport and Highways',
+    submissionDeadline: '2025-05-15',
+    estimatedValue: '₹ 75,00,00,000',
     category: 'Infrastructure',
     status: 'open',
-    location: 'Amaravati',
-    value: 1200000000,
-    description: 'Development of 45 km of smart roads with integrated utility corridors in Amaravati Capital Region',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-1.pdf'
+    location: 'Chennai',
+    value: 750000000,
+    description: 'Construction of 45km highway connecting Chennai suburbs with enhanced safety features and smart traffic management systems.',
+    state: 'Tamil Nadu',
+    documentUrl: '/documents/road-construction-project.pdf'
   },
   {
-    id: 'ap-2',
-    title: 'Visakhapatnam Port Modernization',
-    organization: 'Visakhapatnam Port Trust',
-    submissionDeadline: '2024-11-05',
-    estimatedValue: '₹ 85,00,00,000',
-    category: 'Ports',
-    status: 'open',
-    location: 'Visakhapatnam',
-    value: 850000000,
-    description: 'Modernization of container handling facilities at Visakhapatnam Port',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-2.pdf'
-  },
-  {
-    id: 'ap-3',
-    title: 'Integrated Coastal Zone Management Project',
-    organization: 'Environment, Forests & Science and Technology Department',
-    submissionDeadline: '2024-08-20',
-    estimatedValue: '₹ 65,00,00,000',
-    category: 'Environment',
-    status: 'open',
-    location: 'Coastal Regions',
-    value: 650000000,
-    description: 'Implementation of coastal zone protection and management systems across Andhra Pradesh coastline',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-3.pdf'
-  },
-  {
-    id: 'ap-4',
-    title: 'Advanced Cancer Treatment Center Equipment',
-    organization: 'Health Medical & Family Welfare Department',
-    submissionDeadline: '2024-09-30',
-    estimatedValue: '₹ 110,00,00,000',
+    id: 'may-2025-2',
+    title: 'Hospital Equipment Supply',
+    organization: 'Ministry of Health and Family Welfare',
+    submissionDeadline: '2025-05-20',
+    estimatedValue: '₹ 35,00,00,000',
     category: 'Healthcare',
     status: 'open',
-    location: 'Guntur',
-    value: 1100000000,
-    description: 'Supply and installation of advanced cancer diagnosis and treatment equipment for new oncology center',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-4.pdf'
+    location: 'Mumbai',
+    value: 350000000,
+    description: 'Supply of advanced diagnostic and surgical equipment to 15 government hospitals across Maharashtra.',
+    state: 'Maharashtra',
+    documentUrl: '/documents/hospital-equipment-supply.pdf'
   },
   {
-    id: 'ap-5',
-    title: 'Smart Classrooms for Government Schools',
-    organization: 'School Education Department',
-    submissionDeadline: '2024-12-10',
-    estimatedValue: '₹ 45,00,00,000',
-    category: 'Education',
-    status: 'upcoming',
-    location: 'Multiple Districts',
-    value: 450000000,
-    description: 'Installation of digital smart classrooms in 1500 government schools across Andhra Pradesh',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-5.pdf'
-  },
-  {
-    id: 'ap-6',
-    title: 'Rural Road Connectivity Project',
-    organization: 'Panchayati Raj & Rural Development Department',
-    submissionDeadline: '2025-01-15',
-    estimatedValue: '₹ 320,00,00,000',
-    category: 'Infrastructure',
-    status: 'upcoming',
-    location: 'Rural Areas',
-    value: 3200000000,
-    description: 'Construction and upgrade of rural road network connecting 500+ villages to main highways',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-6.pdf'
-  },
-  {
-    id: 'ap-7',
-    title: 'Drinking Water Supply Scheme',
-    organization: 'Rural Water Supply Department',
-    submissionDeadline: '2024-10-22',
-    estimatedValue: '₹ 78,00,00,000',
-    category: 'Water Management',
+    id: 'may-2025-3',
+    title: 'Water Supply Infrastructure',
+    organization: 'Ministry of Jal Shakti',
+    submissionDeadline: '2025-05-25',
+    estimatedValue: '₹ 120,00,00,000',
+    category: 'Utilities',
     status: 'open',
-    location: 'Anantapur',
-    value: 780000000,
-    description: 'Implementation of comprehensive drinking water supply scheme for drought-prone regions',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-7.pdf'
+    location: 'Jaipur',
+    value: 1200000000,
+    description: 'Development of integrated water supply network for Jaipur and surrounding areas with water treatment facilities.',
+    state: 'Rajasthan',
+    documentUrl: '/documents/water-supply-infrastructure.pdf'
   },
   {
-    id: 'ap-8',
-    title: 'Tirupati Smart City Phase II',
-    organization: 'Municipal Administration & Urban Development',
-    submissionDeadline: '2025-02-28',
-    estimatedValue: '₹ 175,00,00,000',
-    category: 'Smart City',
-    status: 'upcoming',
-    location: 'Tirupati',
-    value: 1750000000,
-    description: 'Implementation of smart city initiatives including smart lighting, traffic management and waste management systems',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-8.pdf'
-  },
-  {
-    id: 'ap-9',
-    title: 'Floodwater Management System',
-    organization: 'Water Resources Department',
-    submissionDeadline: '2024-11-30',
-    estimatedValue: '₹ 92,00,00,000',
-    category: 'Water Management',
-    status: 'open',
-    location: 'Godavari Basin',
-    value: 920000000,
-    description: 'Development of comprehensive floodwater management and early warning systems for Godavari river basin',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-9.pdf'
-  },
-  {
-    id: 'ap-10',
-    title: 'Renewable Energy Projects',
-    organization: 'Energy Department',
-    submissionDeadline: '2025-03-15',
-    estimatedValue: '₹ 220,00,00,000',
-    category: 'Energy',
-    status: 'upcoming',
-    location: 'Multiple Locations',
-    value: 2200000000,
-    description: 'Development of solar and wind energy projects with total capacity of 500 MW across multiple locations',
-    state: 'Andhra Pradesh',
-    documentUrl: '/documents/tender-ap-10.pdf'
-  },
-  // Additional tenders for Karnataka (adding 10 more)
-  {
-    id: 'ka-1',
-    title: 'Mangalore Smart City Water Supply Improvement',
-    organization: 'Mangalore Smart City Limited',
-    submissionDeadline: '2024-09-22',
-    estimatedValue: '₹ 65,00,00,000',
-    category: 'Water Supply',
-    status: 'open',
-    location: 'Mangalore',
-    value: 650000000,
-    description: 'Improvement of water supply system with SCADA integration in Mangalore city',
-    state: 'Karnataka',
-    documentUrl: '/documents/tender-ka-1.pdf'
-  },
-  {
-    id: 'ka-2',
-    title: 'Mysore Heritage Buildings Restoration',
-    organization: 'Karnataka Tourism Department',
-    submissionDeadline: '2024-11-15',
+    id: 'may-2025-4',
+    title: 'Smart City Surveillance System',
+    organization: 'Ministry of Housing and Urban Affairs',
+    submissionDeadline: '2025-05-10',
     estimatedValue: '₹ 28,00,00,000',
-    category: 'Heritage',
-    status: 'upcoming',
-    location: 'Mysore',
-    value: 280000000,
-    description: 'Restoration and conservation of heritage buildings in Mysore city',
-    state: 'Karnataka',
-    documentUrl: '/documents/tender-ka-2.pdf'
-  },
-  // Add more tenders for Karnataka
-
-  // Additional tenders for Uttar Pradesh (ensuring at least 12 tenders)
-  {
-    id: 'up-1',
-    title: 'Kanpur Metro Rail Project Phase 2',
-    organization: 'Uttar Pradesh Metro Rail Corporation',
-    submissionDeadline: '2024-12-10',
-    estimatedValue: '₹ 170,00,00,000',
-    category: 'Transportation',
-    status: 'upcoming',
-    location: 'Kanpur',
-    value: 1700000000,
-    description: 'Construction of Phase 2 of Kanpur Metro Rail Project covering 32 km',
-    state: 'Uttar Pradesh',
-    documentUrl: '/documents/tender-up-1.pdf'
-  },
-  {
-    id: 'up-2',
-    title: 'Varanasi Riverfront Development',
-    organization: 'National Mission for Clean Ganga, UP',
-    submissionDeadline: '2024-08-28',
-    estimatedValue: '₹ 95,00,00,000',
-    category: 'Urban Development',
+    category: 'Smart City',
     status: 'open',
-    location: 'Varanasi',
-    value: 950000000,
-    description: 'Development of Varanasi riverfront including ghats renovation and river cleaning',
-    state: 'Uttar Pradesh',
-    documentUrl: '/documents/tender-up-2.pdf'
+    location: 'Bhubaneswar',
+    value: 280000000,
+    description: 'Implementation of AI-powered surveillance system with facial recognition for enhanced urban security.',
+    state: 'Odisha',
+    documentUrl: '/documents/smart-city-surveillance.pdf'
   },
-  // Add more tenders for Uttar Pradesh
-
-  // Add similar blocks for other states to ensure each has 12-17 tenders
-  
-  // Gujarat tenders
   {
-    id: 'gj-1',
-    title: 'Ahmedabad Metro Phase 2 Construction',
-    organization: 'Gujarat Metro Rail Corporation',
-    submissionDeadline: '2024-12-15',
-    estimatedValue: '₹ 175,00,00,000',
-    category: 'Transportation',
+    id: 'may-2025-5',
+    title: 'Solar Power Plant Installation',
+    organization: 'Ministry of New and Renewable Energy',
+    submissionDeadline: '2025-05-30',
+    estimatedValue: '₹ 65,00,00,000',
+    category: 'Energy',
     status: 'upcoming',
     location: 'Ahmedabad',
-    value: 1750000000,
-    description: 'Construction of Phase 2 of Ahmedabad Metro Rail covering 28.2 km with 23 stations',
+    value: 650000000,
+    description: 'Installation of 100MW solar power plant with grid connectivity and distribution infrastructure.',
     state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-1.pdf'
+    documentUrl: '/documents/solar-power-installation.pdf'
+  }
+];
+
+// Add more tenders for additional states
+const additionalStateTenders: Tender[] = [
+  // Tamil Nadu
+  {
+    id: 'tn-2025-1',
+    title: 'Chennai Port Modernization Project',
+    organization: 'Tamil Nadu Maritime Board',
+    submissionDeadline: '2025-06-15',
+    estimatedValue: '₹ 180,00,00,000',
+    category: 'Ports & Shipping',
+    status: 'upcoming',
+    location: 'Chennai',
+    value: 1800000000,
+    description: 'Comprehensive modernization of Chennai Port with upgraded container terminals, automation systems, and environmental safeguards.',
+    state: 'Tamil Nadu',
+    documentUrl: '/documents/tn-port-project.pdf'
   },
   {
-    id: 'gj-2',
-    title: 'Surat Smart City Integrated Command Center',
-    organization: 'Surat Smart City Development Limited',
-    submissionDeadline: '2024-10-10',
-    estimatedValue: '₹ 65,00,00,000',
+    id: 'tn-2025-2',
+    title: 'Smart Traffic Management System',
+    organization: 'Tamil Nadu Highways Department',
+    submissionDeadline: '2025-05-18',
+    estimatedValue: '₹ 45,00,00,000',
     category: 'Smart City',
     status: 'open',
-    location: 'Surat',
-    value: 650000000,
-    description: 'Establishment of integrated command and control center for Surat Smart City',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-2.pdf'
-  },
-  {
-    id: 'gj-3',
-    title: 'Vadodara Smart Roads Development',
-    organization: 'Vadodara Municipal Corporation',
-    submissionDeadline: '2024-09-20',
-    estimatedValue: '₹ 48,00,00,000',
-    category: 'Infrastructure',
-    status: 'open',
-    location: 'Vadodara',
-    value: 480000000,
-    description: 'Development of smart roads with integrated utility ducts and smart traffic management',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-3.pdf'
-  },
-  {
-    id: 'gj-4',
-    title: 'Rajkot Water Supply System Upgrade',
-    organization: 'Gujarat Water Supply and Sewerage Board',
-    submissionDeadline: '2024-08-30',
-    estimatedValue: '₹ 55,00,00,000',
-    category: 'Water Supply',
-    status: 'open',
-    location: 'Rajkot',
-    value: 550000000,
-    description: 'Upgrade of water supply system with 24x7 supply and smart metering in Rajkot city',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-4.pdf'
-  },
-  {
-    id: 'gj-5',
-    title: 'Bhavnagar Solar Power Plant',
-    organization: 'Gujarat Energy Development Agency',
-    submissionDeadline: '2024-10-25',
-    estimatedValue: '₹ 85,00,00,000',
-    category: 'Energy',
-    status: 'open',
-    location: 'Bhavnagar',
-    value: 850000000,
-    description: 'Establishment of 70 MW solar power plant in Bhavnagar district',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-5.pdf'
-  },
-  {
-    id: 'gj-6',
-    title: 'Jamnagar Coastal Highway Construction',
-    organization: 'Gujarat State Road Development Corporation',
-    submissionDeadline: '2024-11-30',
-    estimatedValue: '₹ 125,00,00,000',
-    category: 'Infrastructure',
-    status: 'upcoming',
-    location: 'Jamnagar',
-    value: 1250000000,
-    description: 'Construction of 45 km coastal highway connecting Jamnagar to Dwarka',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-6.pdf'
-  },
-  {
-    id: 'gj-7',
-    title: 'Gandhinagar Smart City Digital Infrastructure',
-    organization: 'Gandhinagar Smart City Development Corporation',
-    submissionDeadline: '2024-09-15',
-    estimatedValue: '₹ 38,00,00,000',
-    category: 'IT Infrastructure',
-    status: 'open',
-    location: 'Gandhinagar',
-    value: 380000000,
-    description: 'Implementation of digital infrastructure including public Wi-Fi and digital kiosks',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-7.pdf'
-  },
-  {
-    id: 'gj-8',
-    title: 'Kutch Renewable Energy Park Development',
-    organization: 'Gujarat Power Corporation Limited',
-    submissionDeadline: '2024-12-10',
-    estimatedValue: '₹ 220,00,00,000',
-    category: 'Energy',
-    status: 'upcoming',
-    location: 'Kutch',
-    value: 2200000000,
-    description: 'Development of renewable energy park with solar and wind capacity in Kutch district',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-8.pdf'
-  },
-  {
-    id: 'gj-9',
-    title: 'Anand Agricultural University Infrastructure',
-    organization: 'Gujarat State Agricultural Development Corporation',
-    submissionDeadline: '2024-09-28',
-    estimatedValue: '₹ 32,00,00,000',
-    category: 'Education',
-    status: 'open',
-    location: 'Anand',
-    value: 320000000,
-    description: 'Development of research infrastructure for Anand Agricultural University',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-9.pdf'
-  },
-  {
-    id: 'gj-10',
-    title: 'Porbandar Fishing Harbor Modernization',
-    organization: 'Gujarat Maritime Board',
-    submissionDeadline: '2024-10-15',
-    estimatedValue: '₹ 45,00,00,000',
-    category: 'Ports',
-    status: 'open',
-    location: 'Porbandar',
+    location: 'Coimbatore',
     value: 450000000,
-    description: 'Modernization of fishing harbor with upgraded facilities and cold storage',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-10.pdf'
-  },
-  {
-    id: 'gj-11',
-    title: 'Bharuch Industrial Area Development',
-    organization: 'Gujarat Industrial Development Corporation',
-    submissionDeadline: '2024-11-15',
-    estimatedValue: '₹ 78,00,00,000',
-    category: 'Industrial Development',
-    status: 'upcoming',
-    location: 'Bharuch',
-    value: 780000000,
-    description: 'Development of industrial area with common facilities and environmental safeguards',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-11.pdf'
-  },
-  {
-    id: 'gj-12',
-    title: 'Dwarka Tourism Infrastructure Development',
-    organization: 'Gujarat Tourism Development Corporation',
-    submissionDeadline: '2024-10-20',
-    estimatedValue: '₹ 52,00,00,000',
-    category: 'Tourism',
-    status: 'open',
-    location: 'Dwarka',
-    value: 520000000,
-    description: 'Development of tourism infrastructure including waterfront promenade and tourist facilities',
-    state: 'Gujarat',
-    documentUrl: '/documents/tender-gj-12.pdf'
+    description: 'Implementation of AI-powered traffic management system for Coimbatore city with real-time monitoring and analytics.',
+    state: 'Tamil Nadu',
+    documentUrl: '/documents/tn-traffic-system.pdf'
   },
   
-  // Kerala tenders
+  // Kerala
   {
-    id: 'kl-1',
-    title: 'Kochi Metro Rail Extension',
-    organization: 'Kochi Metro Rail Limited',
-    submissionDeadline: '2024-11-30',
-    estimatedValue: '₹ 145,00,00,000',
+    id: 'kl-2025-1',
+    title: 'Coastal Highway Development',
+    organization: 'Kerala State Highway Authority',
+    submissionDeadline: '2025-07-10',
+    estimatedValue: '₹ 210,00,00,000',
+    category: 'Infrastructure',
+    status: 'upcoming',
+    location: 'Multiple Districts',
+    value: 2100000000,
+    description: 'Construction of 120 km coastal highway connecting major tourist destinations with eco-friendly design principles.',
+    state: 'Kerala',
+    documentUrl: '/documents/kl-coastal-highway.pdf'
+  },
+  {
+    id: 'kl-2025-2',
+    title: 'Medical College Equipment Supply',
+    organization: 'Kerala Health Services',
+    submissionDeadline: '2025-05-28',
+    estimatedValue: '₹ 68,00,00,000',
+    category: 'Healthcare',
+    status: 'open',
+    location: 'Trivandrum',
+    value: 680000000,
+    description: 'Supply and installation of advanced medical equipment for teaching and specialty care at Government Medical College.',
+    state: 'Kerala',
+    documentUrl: '/documents/kl-medical-equipment.pdf'
+  },
+  
+  // West Bengal
+  {
+    id: 'wb-2025-1',
+    title: 'Kolkata Metro Extension',
+    organization: 'West Bengal Transport Corporation',
+    submissionDeadline: '2025-08-20',
+    estimatedValue: '₹ 320,00,00,000',
     category: 'Transportation',
     status: 'upcoming',
-    location: 'Kochi',
-    value: 1450000000,
-    description: 'Extension of Kochi Metro Rail to Kakkanad covering 11.2 km with 11 stations',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-1.pdf'
+    location: 'Kolkata',
+    value: 3200000000,
+    description: 'Extension of Kolkata Metro line to southern suburbs including construction of 8 new stations.',
+    state: 'West Bengal',
+    documentUrl: '/documents/wb-metro-extension.pdf'
   },
   {
-    id: 'kl-2',
-    title: 'Thiruvananthapuram Smart City Roads Development',
-    organization: 'Thiruvananthapuram Smart City Limited',
-    submissionDeadline: '2024-09-25',
-    estimatedValue: '₹ 58,00,00,000',
-    category: 'Infrastructure',
-    status: 'open',
-    location: 'Thiruvananthapuram',
-    value: 580000000,
-    description: 'Development of smart roads with underground utilities and smart traffic management',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-2.pdf'
-  },
-  {
-    id: 'kl-3',
-    title: 'Kozhikode Water Supply Project',
-    organization: 'Kerala Water Authority',
-    submissionDeadline: '2024-10-15',
-    estimatedValue: '₹ 68,00,00,000',
-    category: 'Water Supply',
-    status: 'open',
-    location: 'Kozhikode',
-    value: 680000000,
-    description: 'Implementation of comprehensive water supply scheme for Kozhikode city',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-3.pdf'
-  },
-  {
-    id: 'kl-4',
-    title: 'Kollam Port Development',
-    organization: 'Kerala Maritime Board',
-    submissionDeadline: '2024-11-15',
-    estimatedValue: '₹ 95,00,00,000',
-    category: 'Ports',
-    status: 'upcoming',
-    location: 'Kollam',
-    value: 950000000,
-    description: 'Development of Kollam Port with cargo handling facilities and passenger terminal',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-4.pdf'
-  },
-  {
-    id: 'kl-5',
-    title: 'Thrissur Smart City Integrated Command Center',
-    organization: 'Thrissur Municipal Corporation',
-    submissionDeadline: '2024-09-20',
-    estimatedValue: '₹ 42,00,00,000',
-    category: 'Smart City',
-    status: 'open',
-    location: 'Thrissur',
-    value: 420000000,
-    description: 'Establishment of integrated command and control center for smart city operations',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-5.pdf'
-  },
-  {
-    id: 'kl-6',
-    title: 'Alappuzha Tourism Infrastructure Development',
-    organization: 'Kerala Tourism Development Corporation',
-    submissionDeadline: '2024-10-10',
-    estimatedValue: '₹ 38,00,00,000',
+    id: 'wb-2025-2',
+    title: 'Sundarbans Eco-Tourism Development',
+    organization: 'West Bengal Tourism Department',
+    submissionDeadline: '2025-06-05',
+    estimatedValue: '₹ 45,00,00,000',
     category: 'Tourism',
     status: 'open',
-    location: 'Alappuzha',
-    value: 380000000,
-    description: 'Development of tourism infrastructure along backwaters with eco-friendly facilities',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-6.pdf'
+    location: 'Sundarbans',
+    value: 450000000,
+    description: 'Development of eco-friendly tourism infrastructure in Sundarbans with minimal environmental impact.',
+    state: 'West Bengal',
+    documentUrl: '/documents/wb-eco-tourism.pdf'
   },
+  
+  // Bihar
   {
-    id: 'kl-7',
-    title: 'Kannur International Airport Cargo Complex',
-    organization: 'Kannur International Airport Limited',
-    submissionDeadline: '2024-11-10',
-    estimatedValue: '₹ 65,00,00,000',
-    category: 'Aviation',
-    status: 'upcoming',
-    location: 'Kannur',
-    value: 650000000,
-    description: 'Construction of cargo complex at Kannur International Airport',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-7.pdf'
-  },
-  {
-    id: 'kl-8',
-    title: 'Palakkad Solar Power Project',
-    organization: 'Kerala State Electricity Board',
-    submissionDeadline: '2024-09-30',
-    estimatedValue: '₹ 48,00,00,000',
-    category: 'Energy',
-    status: 'open',
-    location: 'Palakkad',
-    value: 480000000,
-    description: 'Implementation of 30 MW solar power project in Palakkad district',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-8.pdf'
-  },
-  {
-    id: 'kl-9',
-    title: 'Kottayam Medical College Expansion',
-    organization: 'Kerala Health and Family Welfare Department',
-    submissionDeadline: '2024-08-25',
-    estimatedValue: '₹ 85,00,00,000',
-    category: 'Healthcare',
-    status: 'open',
-    location: 'Kottayam',
-    value: 850000000,
-    description: 'Expansion of Kottayam Medical College with new super-specialty departments',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-9.pdf'
-  },
-  {
-    id: 'kl-10',
-    title: 'Kasaragod IT Park Development',
-    organization: 'Kerala State Information Technology Infrastructure Limited',
-    submissionDeadline: '2024-10-30',
-    estimatedValue: '₹ 55,00,00,000',
-    category: 'IT Infrastructure',
-    status: 'open',
-    location: 'Kasaragod',
-    value: 550000000,
-    description: 'Development of IT park with modern facilities in Kasaragod district',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-10.pdf'
-  },
-  {
-    id: 'kl-11',
-    title: 'Idukki Dam Rehabilitation Project',
-    organization: 'Kerala State Electricity Board',
-    submissionDeadline: '2024-11-25',
-    estimatedValue: '₹ 72,00,00,000',
-    category: 'Water Resources',
-    status: 'upcoming',
-    location: 'Idukki',
-    value: 720000000,
-    description: 'Rehabilitation and strengthening works for Idukki Dam',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-11.pdf'
-  },
-  {
-    id: 'kl-12',
-    title: 'Pathanamthitta Waste Management System',
-    organization: 'Kerala Suchitwa Mission',
-    submissionDeadline: '2024-09-15',
-    estimatedValue: '₹ 28,00,00,000',
-    category: 'Waste Management',
-    status: 'open',
-    location: 'Pathanamthitta',
-    value: 280000000,
-    description: 'Implementation of integrated solid waste management system in Pathanamthitta district',
-    state: 'Kerala',
-    documentUrl: '/documents/tender-kl-12.pdf'
-  },
-
-  // Delhi tenders
-  {
-    id: 'dl-1',
-    title: 'Delhi Metro Phase 4 Construction',
-    organization: 'Delhi Metro Rail Corporation',
-    submissionDeadline: '2024-12-20',
-    estimatedValue: '₹ 235,00,00,000',
-    category: 'Transportation',
-    status: 'upcoming',
-    location: 'Delhi',
-    value: 2350000000,
-    description: 'Construction of Phase 4 of Delhi Metro covering 61.7 km',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-1.pdf'
-  },
-  {
-    id: 'dl-2',
-    title: 'Delhi Smart City Integrated Traffic Management System',
-    organization: 'Delhi Smart City Limited',
-    submissionDeadline: '2024-09-30',
-    estimatedValue: '₹ 75,00,00,000',
-    category: 'Smart City',
-    status: 'open',
-    location: 'Delhi',
-    value: 750000000,
-    description: 'Implementation of city-wide integrated traffic management system with AI capabilities',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-2.pdf'
-  },
-  {
-    id: 'dl-3',
-    title: 'Delhi Water Supply Network Rehabilitation',
-    organization: 'Delhi Jal Board',
-    submissionDeadline: '2024-10-15',
-    estimatedValue: '₹ 95,00,00,000',
-    category: 'Water Supply',
-    status: 'open',
-    location: 'Delhi',
-    value: 950000000,
-    description: 'Rehabilitation of water supply network in South and West Delhi',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-3.pdf'
-  },
-  {
-    id: 'dl-4',
-    title: 'Delhi Electric Bus Fleet Procurement',
-    organization: 'Delhi Transport Corporation',
-    submissionDeadline: '2024-11-10',
-    estimatedValue: '₹ 185,00,00,000',
-    category: 'Transportation',
-    status: 'upcoming',
-    location: 'Delhi',
-    value: 1850000000,
-    description: 'Procurement of 1000 electric buses for public transportation in Delhi',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-4.pdf'
-  },
-  {
-    id: 'dl-5',
-    title: 'Delhi Government Hospital Modernization',
-    organization: 'Delhi Health Services',
-    submissionDeadline: '2024-09-20',
-    estimatedValue: '₹ 68,00,00,000',
-    category: 'Healthcare',
-    status: 'open',
-    location: 'Delhi',
-    value: 680000000,
-    description: 'Modernization of government hospitals with advanced medical equipment and facilities',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-5.pdf'
-  },
-  {
-    id: 'dl-6',
-    title: 'Delhi Solar Rooftop Implementation',
-    organization: 'Delhi Renewable Energy Development Agency',
-    submissionDeadline: '2024-10-25',
-    estimatedValue: '₹ 48,00,00,000',
-    category: 'Energy',
-    status: 'open',
-    location: 'Delhi',
-    value: 480000000,
-    description: 'Implementation of solar rooftop systems on government buildings in Delhi',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-6.pdf'
-  },
-  {
-    id: 'dl-7',
-    title: 'Delhi Smart Waste Management System',
-    organization: 'Delhi Municipal Corporation',
-    submissionDeadline: '2024-09-15',
-    estimatedValue: '₹ 55,00,00,000',
-    category: 'Waste Management',
-    status: 'open',
-    location: 'Delhi',
-    value: 550000000,
-    description: 'Implementation of smart waste management system with IoT-enabled bins and route optimization',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-7.pdf'
-  },
-  {
-    id: 'dl-8',
-    title: 'Delhi Convention Center Development',
-    organization: 'Delhi Development Authority',
-    submissionDeadline: '2024-12-05',
-    estimatedValue: '₹ 125,00,00,000',
+    id: 'br-2025-1',
+    title: 'Ganga River Bridge Construction',
+    organization: 'Bihar Bridge Construction Corporation',
+    submissionDeadline: '2025-07-15',
+    estimatedValue: '₹ 240,00,00,000',
     category: 'Infrastructure',
     status: 'upcoming',
-    location: 'Delhi',
-    value: 1250000000,
-    description: 'Development of world-class convention center in Dwarka, Delhi',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-8.pdf'
+    location: 'Patna',
+    value: 2400000000,
+    description: 'Construction of 6-lane bridge across Ganga River with approach roads and flood protection measures.',
+    state: 'Bihar',
+    documentUrl: '/documents/br-bridge-construction.pdf'
   },
   {
-    id: 'dl-9',
-    title: 'Delhi CCTV Surveillance System Expansion',
-    organization: 'Delhi Police',
-    submissionDeadline: '2024-08-30',
-    estimatedValue: '₹ 62,00,00,000',
-    category: 'Security',
-    status: 'open',
-    location: 'Delhi',
-    value: 620000000,
-    description: 'Expansion of CCTV surveillance system with facial recognition capabilities',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-9.pdf'
-  },
-  {
-    id: 'dl-10',
-    title: 'Delhi Smart Grid Implementation',
-    organization: 'Delhi Electricity Regulatory Commission',
-    submissionDeadline: '2024-11-20',
+    id: 'br-2025-2',
+    title: 'Healthcare Facilities Upgrade',
+    organization: 'Bihar Health Department',
+    submissionDeadline: '2025-05-12',
     estimatedValue: '₹ 85,00,00,000',
-    category: 'Energy',
-    status: 'upcoming',
-    location: 'Delhi',
+    category: 'Healthcare',
+    status: 'open',
+    location: 'Multiple Districts',
     value: 850000000,
-    description: 'Implementation of smart grid technology for power distribution in Delhi',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-10.pdf'
+    description: 'Upgrade of 15 district hospitals with advanced medical equipment and expanded capacity.',
+    state: 'Bihar',
+    documentUrl: '/documents/br-healthcare-upgrade.pdf'
+  },
+  
+  // Punjab
+  {
+    id: 'pb-2025-1',
+    title: 'Smart Agricultural System',
+    organization: 'Punjab Agricultural Department',
+    submissionDeadline: '2025-06-18',
+    estimatedValue: '₹ 75,00,00,000',
+    category: 'Agriculture',
+    status: 'open',
+    location: 'Ludhiana',
+    value: 750000000,
+    description: 'Implementation of IoT-based agricultural monitoring and management systems for efficient farming.',
+    state: 'Punjab',
+    documentUrl: '/documents/pb-smart-agriculture.pdf'
   },
   {
-    id: 'dl-11',
-    title: 'Delhi River Yamuna Cleaning Project',
-    organization: 'Delhi Jal Board',
-    submissionDeadline: '2024-10-10',
-    estimatedValue: '₹ 120,00,00,000',
-    category: 'Environment',
-    status: 'open',
-    location: 'Delhi',
-    value: 1200000000,
-    description: 'Implementation of comprehensive cleaning and rejuvenation project for River Yamuna',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-11.pdf'
+    id: 'pb-2025-2',
+    title: 'Industrial Zone Development',
+    organization: 'Punjab Industrial Development Corporation',
+    submissionDeadline: '2025-08-10',
+    estimatedValue: '₹ 280,00,00,000',
+    category: 'Industrial',
+    status: 'upcoming',
+    location: 'Amritsar',
+    value: 2800000000,
+    description: 'Development of integrated industrial zone with common effluent treatment plant and logistics hub.',
+    state: 'Punjab',
+    documentUrl: '/documents/pb-industrial-zone.pdf'
+  },
+  
+  // Assam
+  {
+    id: 'as-2025-1',
+    title: 'Brahmaputra River Management',
+    organization: 'Assam Water Resources Department',
+    submissionDeadline: '2025-07-25',
+    estimatedValue: '₹ 160,00,00,000',
+    category: 'Water Resources',
+    status: 'upcoming',
+    location: 'Multiple Districts',
+    value: 1600000000,
+    description: 'Comprehensive river management including flood protection, erosion control, and navigation improvement.',
+    state: 'Assam',
+    documentUrl: '/documents/as-river-management.pdf'
   },
   {
-    id: 'dl-12',
-    title: 'Delhi Public Wi-Fi Network Implementation',
-    organization: 'Delhi IT Department',
-    submissionDeadline: '2024-09-25',
-    estimatedValue: '₹ 38,00,00,000',
-    category: 'IT Infrastructure',
+    id: 'as-2025-2',
+    title: 'Tea Industry Modernization',
+    organization: 'Assam Tea Development Corporation',
+    submissionDeadline: '2025-05-30',
+    estimatedValue: '₹ 55,00,00,000',
+    category: 'Agriculture',
     status: 'open',
-    location: 'Delhi',
-    value: 380000000,
-    description: 'Implementation of public Wi-Fi network at 11,000 hotspots across Delhi',
-    state: 'Delhi',
-    documentUrl: '/documents/tender-dl-12.pdf'
+    location: 'Dibrugarh',
+    value: 550000000,
+    description: 'Modernization of tea processing facilities with energy-efficient equipment and quality control systems.',
+    state: 'Assam',
+    documentUrl: '/documents/as-tea-modernization.pdf'
   }
 ];
 
 // Combine all mock tenders
-const mockTenders: Tender[] = [...originalMockTenders, ...additionalMockTenders];
+// const mockTenders: Tender[] = [...mayTenders, ...additionalStateTenders, ...originalMockTenders.filter(t => !mayTenders.some(mt => mt.category === t.category))];
 
 // Tenders component
 const Tenders: React.FC<TendersProps> = ({ onSubmit, isAuthenticated, onLoginRequired }) => {
-  const [tenders, setTenders] = useState<Tender[]>(mockTenders);
+  // Initialize with May 2025 tenders
+  const [tenders, setTenders] = useState<Tender[]>([...mayTenders, ...additionalStateTenders, ...originalMockTenders.filter(t => !mayTenders.some(mt => mt.category === t.category))]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
@@ -1094,101 +634,105 @@ const Tenders: React.FC<TendersProps> = ({ onSubmit, isAuthenticated, onLoginReq
             )}
             
             {/* Tenders List */}
-            {filteredTenders.length === 0 ? (
-              <div className="bg-secondary-dark rounded-lg p-6 text-center">
-                <AlertCircle className="mx-auto mb-4 text-yellow-500" size={48} />
-                <h3 className="text-xl font-bold text-white mb-2">No tenders found</h3>
-                <p className="text-gray-400">
-                  {selectedState 
-                    ? `No tenders found for ${selectedState} with the current filters.`
-                    : 'No tenders match your current search criteria.'}
-                </p>
-                <button
-                  className="mt-4 px-4 py-2 bg-primary text-black font-medium rounded-md"
-                  onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('All');
-                    setSelectedStatus('All');
-                    setSelectedState(null);
-                  }}
-                >
-                  Clear all filters
-                </button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredTenders.map((tender) => (
-                  <motion.div
-                    key={tender.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="bg-secondary-dark rounded-lg overflow-hidden shadow-lg border border-gray-800 hover:border-primary transition-all"
-                  >
-                    <div className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          tender.status === 'open' ? 'bg-green-600/20 text-green-400' : 
-                          tender.status === 'upcoming' ? 'bg-blue-600/20 text-blue-400' : 
-                          'bg-gray-600/20 text-gray-400'
-                        }`}>
-                          {tender.status.charAt(0).toUpperCase() + tender.status.slice(1)}
-                        </span>
-                        <span className="text-sm text-gray-400">{getCategoryIcon(tender.category)} {tender.category}</span>
-                      </div>
-                      
-                      <h3 className="text-white font-medium text-lg mb-1">{tender.title}</h3>
-                      <p className="text-gray-400 text-sm mb-3">{tender.organization}</p>
-                      
-                      <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
-                        <div>
-                          <p className="text-gray-500">Value</p>
-                          <p className="text-primary font-medium">{tender.estimatedValue}</p>
+            <div>
+              {filteredTenders.length === 0 ? (
+                <div className="bg-secondary-dark rounded-lg p-8 text-center">
+                  <p className="text-xl text-white font-medium mb-4">No tenders found matching your criteria</p>
+                  <p className="text-gray-400">Try adjusting your filters or search term</p>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {filteredTenders.map((tender) => (
+                    <motion.div
+                      key={tender.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="bg-secondary-dark rounded-lg overflow-hidden shadow-lg border border-gray-800 hover:border-primary transition-all"
+                    >
+                      <div className="p-4">
+                        <div className="flex justify-between items-start mb-2">
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            tender.status === 'open' ? 'bg-green-600/20 text-green-400' : 
+                            tender.status === 'upcoming' ? 'bg-blue-600/20 text-blue-400' : 
+                            'bg-gray-600/20 text-gray-400'
+                          }`}>
+                            {tender.status.charAt(0).toUpperCase() + tender.status.slice(1)}
+                          </span>
+                          <span className="text-sm text-gray-400">{getCategoryIcon(tender.category)} {tender.category}</span>
                         </div>
-                        <div>
-                          <p className="text-gray-500">Deadline</p>
-                          <p>{formatDeadline(tender.submissionDeadline)}</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">Location</p>
-                          <p className="text-white">{tender.location}</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">State</p>
-                          <p className="text-white">{tender.state}</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex justify-between items-center mt-4">
-                        <a 
-                          href={tender.documentUrl}
-                          className="flex items-center text-sm text-primary hover:underline"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Download size={16} className="mr-1" /> Tender Document
-                        </a>
                         
-                        <button
-                          onClick={() => {
-                            if (isAuthenticated) {
-                              // Route to bid submission page
-                              onSubmit();
-                            } else {
-                              // Prompt user to log in
-                              onLoginRequired();
-                            }
-                          }}
-                          className="px-3 py-1.5 bg-primary text-black rounded-md text-sm font-medium hover:bg-primary/90 transition-colors flex items-center"
-                        >
-                          <Upload size={16} className="mr-1" /> Submit Bid
-                        </button>
+                        <h3 className="text-white font-medium text-lg mb-1">{tender.title}</h3>
+                        <p className="text-gray-400 text-sm mb-3">{tender.organization}</p>
+                        
+                        <div className="grid grid-cols-2 gap-2 mb-4 text-sm">
+                          <div>
+                            <p className="text-gray-500">Value</p>
+                            <p className="text-primary font-medium">{tender.estimatedValue}</p>
+                          </div>
+                          <div>
+                            <p className="text-gray-500">Deadline</p>
+                            <p>{formatDeadline(tender.submissionDeadline)}</p>
+                          </div>
+                          <div>
+                            <p className="text-gray-500">Location</p>
+                            <p className="text-white">{tender.location}</p>
+                          </div>
+                          <div>
+                            <p className="text-gray-500">State</p>
+                            <p className="text-white">{tender.state}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex justify-between items-center mt-4">
+                          <a 
+                            href={tender.documentUrl}
+                            className="flex items-center text-sm text-primary hover:underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Download size={16} className="mr-1" /> Tender Document
+                          </a>
+                          
+                          <button
+                            onClick={() => {
+                              if (isAuthenticated) {
+                                // Route to bid submission page
+                                onSubmit();
+                              } else {
+                                // Prompt user to log in
+                                onLoginRequired();
+                              }
+                            }}
+                            className="px-3 py-1.5 bg-primary text-black rounded-md text-sm font-medium hover:bg-primary/90 transition-colors flex items-center"
+                          >
+                            <Upload size={16} className="mr-1" /> Submit Bid
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* State-wise Tender Listings */}
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-white mb-6">Browse Tenders by State</h2>
+              <p className="text-gray-400 mb-8">Explore government tenders from all states and union territories across India</p>
+              
+              <IndiaStatesTenderList 
+                limit={100}
+                filterByState={selectedState}
+                onTenderClick={(tender) => {
+                  // Here you would typically navigate to the tender details
+                  // For now, just show a notification or log
+                  console.log('Selected tender:', tender);
+                  // You could also update the selected state filter:
+                  setSelectedState(tender.state);
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
