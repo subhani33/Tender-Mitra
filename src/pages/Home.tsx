@@ -2,28 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TenderStories } from '../components/TenderStories';
+import { GovtWebsites } from '../components/GovtWebsites';
+import { TenderFAQ } from '../components/TenderFAQ';
 
 // Mock tender data for display
-const featuredTenders = [
+const futureTenders = [
   {
     id: 'T001',
     title: 'Railway Infrastructure Development',
     department: 'Ministry of Railways',
-    deadline: '2025-07-15',
+    deadline: '2025-12-15',
     value: '₹ 120 Crores'
   },
   {
     id: 'T002',
     title: 'Smart City IoT Solution',
     department: 'Urban Development Authority',
-    deadline: '2025-08-10',
+    deadline: '2026-02-10',
     value: '₹ 45 Crores'
   },
   {
     id: 'T003',
     title: 'Solar Power Plant Installation',
     department: 'Ministry of New & Renewable Energy',
-    deadline: '2025-06-22',
+    deadline: '2025-10-22',
     value: '₹ 75 Crores'
   }
 ];
@@ -94,17 +96,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Tenders Section */}
+      {/* Future Tenders Section */}
       <section className="mb-10">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-primary font-cinzel">Featured Tenders</h2>
+          <h2 className="text-2xl font-bold text-primary font-cinzel">Future Tenders</h2>
           <Link to="/tenders" className="text-primary hover:text-primary/80 font-medium">
             View All →
           </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {featuredTenders.map(tender => (
+          {futureTenders.map(tender => (
             <div key={tender.id} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-primary/30 transition-all">
               <div className="flex justify-between items-start mb-3">
                 <span className="bg-primary/20 text-primary text-xs px-2 py-1 rounded">
@@ -152,6 +154,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Government Websites Section */}
+      <GovtWebsites />
+
+      {/* FAQ Section */}
+      <TenderFAQ />
 
       {/* Success & Failure Stories Section */}
       <section className="py-16 bg-gradient-to-b from-secondary to-secondary/80">
